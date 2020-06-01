@@ -1,10 +1,10 @@
-![Build and Deploy](https://github.com/wwt-ambassadors/star-life-cycle/workflows/Build%20and%20Deploy/badge.svg?branch=master&event=push)
+![Build and Deploy](https://github.com/wwt-ambassadors/solar-system-explorer/workflows/Build%20and%20Deploy/badge.svg?branch=master&event=push)
 
-# Life Cycle of Stars Interactive
+# Solar System Explorer Interactive
 
-WWT-based interactive resource for exploring the life cycle of stars, created in collaboration with WGBH for NASA's Bringing the Universe to America's Classroom project.
+WWT-based interactive resource for exploring the Solar System, created in collaboration with WGBH for NASA's Bringing the Universe to America's Classroom project.
 
-http://projects.wwtambassadors.org/star-life-cycle/
+http://projects.wwtambassadors.org/solar-system-explorer/
 
 
 ## Building and Testing
