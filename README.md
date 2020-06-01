@@ -1,6 +1,6 @@
 ![Build and Deploy](https://github.com/wwt-ambassadors/solar-system-explorer/workflows/Build%20and%20Deploy/badge.svg?branch=master&event=push)
 
-# Solar System Explorer Interactive
+# Solar System Interactive
 
 WWT-based interactive resource for exploring the Solar System, created in collaboration with WGBH for NASA's Bringing the Universe to America's Classroom project.
 
