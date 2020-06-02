@@ -36,6 +36,7 @@
   function wwt_ready() {
     wwt_ctl = wwtlib.WWTControl.singleton;
 
+    wwt_si.setBackgroundImageByName("Solar System");
     wwt_si.settings.set_showConstellationBoundries(false);
     wwt_si.settings.set_showConstellationFigures(false);
     wwt_si.settings.set_showConstellationSelection(false);
@@ -147,7 +148,7 @@
           var desc_box = $('#description_container')[0];
           
           if(desc_box.scrollHeight > desc_box.clientHeight) {
-            console.log("need arrow");
+            //console.log("need arrow");
             $('.fa-arrow-down').show();
           } else {
             $('.fa-arrow-down').hide();
@@ -160,7 +161,7 @@
             // we need to find its associated wwtlib "Place" object and seek
             // to it thusly. The get_camParams() function calculates its
             // current RA and Dec.
-            wwt_si.setBackgroundImageByName('Digitized Sky Survey (Color)');
+            //wwt_si.setBackgroundImageByName('Digitized Sky Survey (Color)');
 
             //set the global variables: current target classification / name / RA / dec / FOV
             curr_clasification = place.attr('Classification');
@@ -170,68 +171,12 @@
             curr_FOV = null;
 
             $.each(folder.get_children(), function (i, wwtplace) {
+              console.log('1st solarsystem:',wwtplace);
               if (wwtplace.get_name() == place.attr('Name')) {
                 wwt_ctl.gotoTarget3(wwtplace.get_camParams(), false, is_dblclick);
               }
             });
-
-          // SHOULD BE ABLE TO REMOVE THIS BECAUSE CMB MOVED
-          // // check whether this target is the CMB
-          // } else if (place.attr('Name') == 'Cosmic Microwave Background') {
-
-          //   //disable the reset button
-          //   reset_enabled = false;
-
-          //   wwt_si.setBackgroundImageByName('Planck CMB');
-
-          //   wwt_si.gotoRaDecZoom(
-          //     parseFloat(place.attr('RA')) * 15,
-          //     place.attr('Dec'),
-          //     parseFloat(place.find('ImageSet').attr('FOV')),
-          //     false
-          //   );
-
-
-          // SHOULD BE ABLE TO REMOVE THIS BECAUSE CONSTELLATIONS MOVED
-          // check whether this target is a Constellation
-          // } else if (place.attr('Classification') == 'Constellation') {
-
-          //   wwt_si.setBackgroundImageByName('Digitized Sky Survey (Color)');
-          //   wwt_si.settings.set_showConstellationFigures(true);
-          //   wwt_si.settings.set_showConstellationLabels(true);
-
-          //   wwt_si.gotoRaDecZoom(
-          //     parseFloat(place.attr('RA')) * 15,
-          //     place.attr('Dec'),
-          //     parseFloat(place.find('ImageSet').attr('FOV')),
-          //     false
-          //   );
-
-          // everything else, which includes all non-solar system celestial objects
-          } else {
-
-            wwt_si.setBackgroundImageByName('Digitized Sky Survey (Color)');
-
-            //set the global variables: current target classification / name / RA / dec / FOV
-            curr_clasification = place.attr('Classification');
-            curr_name = place.attr('Name');
-            curr_RA = place.attr('RA');
-            curr_dec = place.attr('Dec');
-            curr_FOV = place.find('ImageSet').attr('FOV');
-
-            wwt_si.settings.set_showConstellationFigures(false);
-            wwt_si.settings.set_showConstellationLabels(false);
-
-            wwt_si.setForegroundImageByName(place.attr('Name'));
-
-            wwt_si.gotoRaDecZoom(
-              parseFloat(place.attr('RA')) * 15,
-              place.attr('Dec'),
-              parseFloat(place.find('ImageSet').attr('FOV')),
-              is_dblclick
-            );
-
-          }
+          } 
         }
 
         tmpthumb.find('a')
@@ -248,38 +193,14 @@
             on_click(element, true)
           });
 
-        // we'll probably be able to remove this
-        //  tmpthumb.find('i').attr({
-        //    'data-toggle': 'tooltip',
-        //    'data-placement': 'top',
-        //    title: 'Image Information'
-        //  })
-        //  .on('click', function(e) {
-        //    bootbox.dialog({
-        //      message: descText,
-        //      title: place.find('Description').attr('Title')
-        //    });
-
-        //    e.preventDefault();
-        //    e.stopPropagation();
-        //  });
 
         // Plug the set of thumbnails into the #destinationThumbs element
         $('#destinationThumbs').append(tmpthumb);
-
-        /* I don't think this code does anything, check with Peter
-        var fsThumb = tmp.clone(true).find('a');
-        fsThumb.find('label').remove();
-        $('.player-controls .btn').first().before(tmp);
-        */
           
         $("#description_container").append(tmpdesc);
 
         // tag the reload button with a click action to reload the most recent thumbnail
         $("#reset_target").on('click', function(event){
-
-          //set the background image to DSS for any target reset
-          wwt_si.setBackgroundImageByName('Digitized Sky Survey (Color)');
 
           console.log("should be resetting...");
 
@@ -291,192 +212,17 @@
             // current RA and Dec.
 
             $.each(folder.get_children(), function (i, wwtplace) {
+              console.log('2nd solarsystem:',wwtplace);
               if (wwtplace.get_name() == curr_name) {
                 wwt_ctl.gotoTarget3(wwtplace.get_camParams(), false, true);
               }
             });
 
-          } else {
-
-            // Every other object (ie not SolarSystem) represents one of the 
-            // other thumbnails of celestial objects. CMB and Constellations
-            // not included.
-
-            wwt_si.settings.set_showConstellationFigures(false);
-            wwt_si.settings.set_showConstellationLabels(false);
-
-            wwt_si.setForegroundImageByName(curr_name);
-
-            wwt_si.gotoRaDecZoom(
-              parseFloat(curr_RA) * 15,
-              curr_dec,
-              parseFloat(curr_FOV),
-              true
-            );
-
-          }
+          } 
 
           $("#reset_target").fadeOut(1000);
 
         })
-
-      });
-
-      // Add constellation links to text in description
-      constellations.each(function (i, pl) {
-
-        var constellation = $(pl);
-
-        function on_click(element, is_dblclick) {
-
-          if (wwt_si === null) {
-            return;
-          };
-
-          // display the reset button
-          $("#reset_target").show();
-
-          wwt_si.setBackgroundImageByName('Digitized Sky Survey (Color)');
-          wwt_si.settings.set_showConstellationFigures(true);
-          wwt_si.settings.set_showConstellationLabels(true);
-
-          wwt_si.gotoRaDecZoom(
-            parseFloat(constellation.attr('RA')) * 15,
-            constellation.attr('Dec'),
-            parseFloat(constellation.find('ImageSet').attr('FOV')),
-            false
-          );
-        
-        }
-
-        if (constellation.attr('Name') == "Orion Constellation") {
-          $(".orion_const").on('click', function(event){
-            console.log("clicked orion constellation link line 336 js")
-            var element = event.target;
-            on_click(element, false)
-          })
-        } else if (constellation.attr('Name') == "Taurus Constellation") {
-          $(".taurus_const").on('click', function(event){
-            console.log("clicked taurus constellation link line 342 js")
-            var element = event.target;
-            on_click(element, false)
-          })
-        } else if (constellation.attr('Name') == "Lyra Constellation") {
-          $(".lyra_const").on('click', function(event){
-            console.log("clicked lyra constellation link line 348 js")
-            var element = event.target;
-            on_click(element, false)
-          })
-        }
-
-      });
-
-
-      // Add CMB to the thumbnails gutter
-      cmb.each(function (i, pl) {
-        var cmb = $(pl);
-
-        // create a temporary object of a thumbnail and of a description element from the templates above 
-        var tmpthumb = $('<div class="col_thumb"><a href="javascript:void(0)" class="thumbnail border_white" id="cmb_thumb"><div class="thumbname">example</div</a></div>');
-        console.log("just cloned thumb template: ", cmb.find('.Thumbnail').html());
-        var tmpdesc = descTemplate.clone();
-
-        // locate the thumbnail name and replace html contents with content from WTML file
-        var thumbname = cmb.find('.Thumbnail').html();
-        tmpthumb.find('.thumbname').html(thumbname);
-
-        // grab the class = Name/What/Process/Elements/Properties/Dive html content for each Place from the WTML file
-        var targetname = cmb.find('.Name').html();
-        tmpdesc.find('.name').html(targetname);
-
-        var targetwhat = cmb.find('.What').html();
-        tmpdesc.find('.what').html(targetwhat);
-          
-        var targetprocess = cmb.find('.Process').html();
-        tmpdesc.find('.process').html(targetprocess);
-          
-        var targetelements = cmb.find('.Elements').html();
-        tmpdesc.find('.elements').html(targetelements);
-          
-        var targetproperties = cmb.find('.Properties').html();
-        tmpdesc.find('.properties').html(targetproperties);
-          
-        var targetdive = cmb.find('.Dive').html();
-        tmpdesc.find('.dive').html(targetdive);
-    
-          
-        // apply the unique target description class to the description template clone
-        var desc_class = cmb.find('Target').text().toLowerCase() + "_description";
-        console.log("CMB desc_class: ", desc_class);
-        tmpdesc.addClass(desc_class);
-
-        function on_click(element, is_dblclick) {
-
-          if (wwt_si === null) {
-            return;
-          };
-
-          //	Change the text color of the Cosmic Microwave Background
-          var element = element;
-            
-          $(".thumbnail img").removeClass("border_green").addClass("border_black");
-          $(".thumbname").removeClass("text_green");
-          $(element).parent().find(".thumbname").addClass("text_green");
-
-          // (disable and hide reset button if visible)
-          reset_enabled = false;
-          $("#reset_target").fadeOut(100);
-
-          /* hide all descriptions, then show description specific to this target on sgl/dbl click */
-          var toggle_class = "." + desc_class;
-          $("#description_box").find(".obj_desc").hide();
-          $('#begin_container').hide();
-          $('#description_container').scrollTop(0).show();
-            
-          $(toggle_class).show();
-            
-          // Make arrow appear only for overflow
-          var desc_box = $('#description_container')[0];
-          
-          if(desc_box.scrollHeight > desc_box.clientHeight) {
-            console.log("need arrow");
-            $('.fa-arrow-down').show();
-          } else {
-            $('.fa-arrow-down').hide();
-          }
-
-          wwt_si.setBackgroundImageByName('Planck CMB');
-          wwt_si.settings.set_showConstellationFigures(false);
-          wwt_si.settings.set_showConstellationLabels(false);
-
-          wwt_si.setForegroundImageByName('');
-
-          wwt_si.gotoRaDecZoom(
-            parseFloat(cmb.attr('RA')) * 15,
-            cmb.attr('Dec'),
-            parseFloat(cmb.find('ImageSet').attr('FOV')),
-            false
-          );
-        
-        };
-
-        tmpthumb.find('a')
-          .data('foreground-image', cmb.attr('Name'))
-          //'click' - false; 'dblclick' - true.  on('click', function () { on_click(false) });
-
-          .on('click', function(event){
-            var element = event.target;
-            on_click(element, false)
-          })
-
-          .on('dblclick', function(event){
-            var element = event.target;
-            on_click(element, true)
-          });
-
-        // Plug the set of thumbnails into the #destinationThumbs element
-        $('#destinationThumbs').append(tmpthumb);
-        $("#description_container").append(tmpdesc);
 
       });
 
@@ -504,10 +250,9 @@
           console.log({ a: a, b: b, c: c });
         }
       });
-      //console.log("ran ajax thing");
     }
 
-    var wtmlPath = "BUACStellarLifeCycles.wtml";
+    var wtmlPath = "BUACSolarSystem.wtml";
     wwt_si.loadImageCollection(wtmlPath);
     console.log("Loaded Image Collection");
     getWtml();
