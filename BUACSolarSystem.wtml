@@ -14,60 +14,6 @@
       <div class="Name">
         <h3>Our Sun <span class="stagename">main-sequence star</span></h3>
       </div>
-      <div class="What">
-        <h4>What is it?</h4>
-        <p>
-          Our Sun is a <strong>main-sequence star</strong>, a large glowing sphere of gas held together by gravity. It is the center of our Solar System, and it shines its light on all the planets, including Earth, and other objects like moons and asteroids. Our Sun is about 5 billion years old, and models predict that it will spend another 5 billion years in its current stage.
-        </p>
-      </div>
-      <div class="Before">
-        <h4>Where did it come from?</h4>
-        <p>
-          Before the Sun reached its current stage, it was a <strong>protostar</strong> that formed from gas and dust. The protostar stayed in balance when it was burning <a data-toggle="modal" href="#objectModal">deuterium</a> into <a data-toggle="modal" href="#objectModal">helium-3</a>.
-        </p>
-        <p>
-          There is only a small proportion of <a data-toggle="modal" href="#objectModal">deuterium</a> in a star’s gas. Once the <a data-toggle="modal" href="#objectModal">deuterium</a> in the Sun’s core ran out and deuterium-burning stopped, there was no outward radiation pressure to counteract gravity. Gravity compressed the gas further, and the core eventually reached a temperature where the more typical <a data-toggle="modal" href="#objectModal">hydrogen</a> atoms in the core could fuse to <a data-toggle="modal" href="#objectModal">helium</a>.
-        </p>
-      </div>
-      <div class="Process">
-        <h4>What is happening now?</h4>
-        <p>
-          Currently, <a data-toggle="modal" href="#objectModal">hydrogen</a> atoms in the core are fusing to <a data-toggle="modal" href="#objectModal">helium</a>. This fusion reaction releases the enormous amount of energy that allows the Sun to shine at visible wavelengths. The fusion also generates outward radiation pressure that balances the inward pressure created by gravity.
-        </p>
-        <p>
-          The Sun will stay in balance until the <a data-toggle="modal" href="#objectModal">hydrogen</a> in the core runs out, which models predict will happen in about 5 billion years.
-        </p>
-      </div>
-      <div class="Elements">
-        <h4>Element formation</h4>
-        <p>
-          <a data-toggle="modal" href="#objectModal">Hydrogen</a> atoms in the core are fusing to create <a data-toggle="modal" href="#objectModal">helium</a>. 
-        </p>
-        <ul>
-          <li><a data-toggle="modal" href="#objectModal">H</a> &#8594; <a data-toggle="modal" href="#objectModal">He</a></li>
-        </ul>
-      </div>
-      <div class="After">
-        <h4>What's next?</h4>
-        <p>
-          After the Sun runs out of <a data-toggle="modal" href="#objectModal">hydrogen</a> in its core, it will become a <strong>red giant</strong>. At this point, the star will grow significantly in size, and the core will become hot enough to begin fusing <a data-toggle="modal" href="#objectModal">helium</a> into <a data-toggle="modal" href="#objectModal">carbon</a>.
-        </p>
-      </div>
-      <div class="Properties">
-        <h4>Properties / Characteristics</h4>
-        <ul>
-          <li><strong>Distance from Earth:</strong> 1 Astronomical Unit (1.5 &#215; 10<sup>8</sup> km)</li>
-          <li><strong>Radius:</strong> 1 solar radius (7 &#215; 10<sup>5</sup> km)</li>
-          <li><strong>Mass:</strong> 1 solar mass (2 &#215; 10<sup>30</sup> kg)</li>
-          <li><strong>Temperature (surface):</strong> 5,500&#176;C</li>
-        </ul>
-      </div>
-      <div class="Dive">
-        <h4>Dive deeper</h4>
-        <p>
-          <a href="https://viewspace.org/video_library/videos/177-planetary_nebula_aha_720-322871100?tags=461" target="_new">Evolution of a Sun-like star</a>
-        </p>
-      </div>
     </Description>
   </Place>
 
@@ -83,59 +29,125 @@
       <div class="Name">
         <h3>Mercury<span class="stagename">inner planet</span></h3>
       </div>
-      <div class="What">
-        <h4>What is it?</h4>
-        <p>
-          Our Sun is a <strong>main-sequence star</strong>, a large glowing sphere of gas held together by gravity. It is the center of our Solar System, and it shines its light on all the planets, including Earth, and other objects like moons and asteroids. Our Sun is about 5 billion years old, and models predict that it will spend another 5 billion years in its current stage.
-        </p>
+    </Description>
+  </Place>
+
+    <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Venus" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+    <ImageSet>
+    <Target>Venus</Target>
+    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=venus</ThumbnailUrl>
+    </ImageSet>
+    <Description Title="Venus">
+      <div class="Thumbnail">
+        Venus
       </div>
-      <div class="Before">
-        <h4>Where did it come from?</h4>
-        <p>
-          Before the Sun reached its current stage, it was a <strong>protostar</strong> that formed from gas and dust. The protostar stayed in balance when it was burning <a data-toggle="modal" href="#objectModal">deuterium</a> into <a data-toggle="modal" href="#objectModal">helium-3</a>.
-        </p>
-        <p>
-          There is only a small proportion of <a data-toggle="modal" href="#objectModal">deuterium</a> in a star’s gas. Once the <a data-toggle="modal" href="#objectModal">deuterium</a> in the Sun’s core ran out and deuterium-burning stopped, there was no outward radiation pressure to counteract gravity. Gravity compressed the gas further, and the core eventually reached a temperature where the more typical <a data-toggle="modal" href="#objectModal">hydrogen</a> atoms in the core could fuse to <a data-toggle="modal" href="#objectModal">helium</a>.
-        </p>
+      <div class="Name">
+        <h3>Venus<span class="stagename">inner planet</span></h3>
       </div>
-      <div class="Process">
-        <h4>What is happening now?</h4>
-        <p>
-          Currently, <a data-toggle="modal" href="#objectModal">hydrogen</a> atoms in the core are fusing to <a data-toggle="modal" href="#objectModal">helium</a>. This fusion reaction releases the enormous amount of energy that allows the Sun to shine at visible wavelengths. The fusion also generates outward radiation pressure that balances the inward pressure created by gravity.
-        </p>
-        <p>
-          The Sun will stay in balance until the <a data-toggle="modal" href="#objectModal">hydrogen</a> in the core runs out, which models predict will happen in about 5 billion years.
-        </p>
+    </Description>
+  </Place>
+
+    <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Earth" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+    <ImageSet>
+    <Target>Earth</Target>
+    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=earth</ThumbnailUrl>
+    </ImageSet>
+    <Description Title="Earth">
+      <div class="Thumbnail">
+        Earth
       </div>
-      <div class="Elements">
-        <h4>Element formation</h4>
-        <p>
-          <a data-toggle="modal" href="#objectModal">Hydrogen</a> atoms in the core are fusing to create <a data-toggle="modal" href="#objectModal">helium</a>. 
-        </p>
-        <ul>
-          <li><a data-toggle="modal" href="#objectModal">H</a> &#8594; <a data-toggle="modal" href="#objectModal">He</a></li>
-        </ul>
+      <div class="Name">
+        <h3>Earth<span class="stagename">inner planet</span></h3>
       </div>
-      <div class="After">
-        <h4>What's next?</h4>
-        <p>
-          After the Sun runs out of <a data-toggle="modal" href="#objectModal">hydrogen</a> in its core, it will become a <strong>red giant</strong>. At this point, the star will grow significantly in size, and the core will become hot enough to begin fusing <a data-toggle="modal" href="#objectModal">helium</a> into <a data-toggle="modal" href="#objectModal">carbon</a>.
-        </p>
+    </Description>
+  </Place>
+
+    <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Mars" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+    <ImageSet>
+    <Target>Mars</Target>
+    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=mars</ThumbnailUrl>
+    </ImageSet>
+    <Description Title="Mars">
+      <div class="Thumbnail">
+        Mars
       </div>
-      <div class="Properties">
-        <h4>Properties / Characteristics</h4>
-        <ul>
-          <li><strong>Distance from Earth:</strong> 1 Astronomical Unit (1.5 &#215; 10<sup>8</sup> km)</li>
-          <li><strong>Radius:</strong> 1 solar radius (7 &#215; 10<sup>5</sup> km)</li>
-          <li><strong>Mass:</strong> 1 solar mass (2 &#215; 10<sup>30</sup> kg)</li>
-          <li><strong>Temperature (surface):</strong> 5,500&#176;C</li>
-        </ul>
+      <div class="Name">
+        <h3>Mars<span class="stagename">inner planet</span></h3>
       </div>
-      <div class="Dive">
-        <h4>Dive deeper</h4>
-        <p>
-          <a href="https://viewspace.org/video_library/videos/177-planetary_nebula_aha_720-322871100?tags=461" target="_new">Evolution of a Sun-like star</a>
-        </p>
+    </Description>
+  </Place>
+
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Jupiter" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+    <ImageSet>
+    <Target>jupiter</Target>
+    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=jupiter</ThumbnailUrl>
+    </ImageSet>
+    <Description Title="Jupiter">
+      <div class="Thumbnail">
+        Jupiter
+      </div>
+      <div class="Name">
+        <h3>Jupiter<span class="stagename">outer planet</span></h3>
+      </div>
+    </Description>
+  </Place>
+
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Saturn" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+    <ImageSet>
+    <Target>Saturn</Target>
+    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=saturn</ThumbnailUrl>
+    </ImageSet>
+    <Description Title="Saturn">
+      <div class="Thumbnail">
+        Saturn
+      </div>
+      <div class="Name">
+        <h3>Saturn<span class="stagename">outer planet</span></h3>
+      </div>
+    </Description>
+  </Place>
+
+    <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Uranus" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+    <ImageSet>
+    <Target>Uranus</Target>
+    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=uranus</ThumbnailUrl>
+    </ImageSet>
+    <Description Title="Uranus">
+      <div class="Thumbnail">
+        Uranus
+      </div>
+      <div class="Name">
+        <h3>Uranus<span class="stagename">outer planet</span></h3>
+      </div>
+    </Description>
+  </Place>
+
+    <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Neptune" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+    <ImageSet>
+    <Target>Neptune</Target>
+    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=neptune</ThumbnailUrl>
+    </ImageSet>
+    <Description Title="Neptune">
+      <div class="Thumbnail">
+        Neptune
+      </div>
+      <div class="Name">
+        <h3>Neptune<span class="stagename">outer planet</span></h3>
+      </div>
+    </Description>
+  </Place>
+
+    <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Pluto" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+    <ImageSet>
+    <Target>Pluto</Target>
+    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=pluto</ThumbnailUrl>
+    </ImageSet>
+    <Description Title="Pluto">
+      <div class="Thumbnail">
+        Pluto
+      </div>
+      <div class="Name">
+        <h3>Pluto<span class="stagename">outer planet</span></h3>
       </div>
     </Description>
   </Place>

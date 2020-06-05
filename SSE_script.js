@@ -13,8 +13,6 @@
   var reset_enabled = false;
   var curr_clasification = null;
   var curr_name = null;
-  var curr_RA = null;
-  var curr_dec = null;
   var curr_FOV = null;
 
   function initialize() {
@@ -37,6 +35,7 @@
     wwt_ctl = wwtlib.WWTControl.singleton;
 
     wwt_si.setBackgroundImageByName("Solar System");
+    wwt_si.settings.set_solarSystemScale(10);
     wwt_si.settings.set_showConstellationBoundries(false);
     wwt_si.settings.set_showConstellationFigures(false);
     wwt_si.settings.set_showConstellationSelection(false);
@@ -166,12 +165,9 @@
             //set the global variables: current target classification / name / RA / dec / FOV
             curr_clasification = place.attr('Classification');
             curr_name = place.attr('Name');
-            curr_RA = null;
-            curr_dec = null;
             curr_FOV = null;
 
             $.each(folder.get_children(), function (i, wwtplace) {
-              console.log('1st solarsystem:',wwtplace);
               if (wwtplace.get_name() == place.attr('Name')) {
                 wwt_ctl.gotoTarget(
                   wwtplace,  // the Place object
@@ -209,21 +205,16 @@
 
           console.log("should be resetting...");
 
-          if (curr_clasification == 'SolarSystem') {
-
-            // This is a solar system object. In order to view it correctly,
-            // we need to find its associated wwtlib "Place" object and seek
-            // to it thusly. The get_camParams() function calculates its
-            // current RA and Dec.
-
-            $.each(folder.get_children(), function (i, wwtplace) {
-              console.log('2nd solarsystem:',wwtplace);
-              if (wwtplace.get_name() == curr_name) {
-                wwt_ctl.gotoTarget3(wwtplace.get_camParams(), false, true);
-              }
-            });
-
-          } 
+          $.each(folder.get_children(), function (i, wwtplace) {
+            if (wwtplace.get_name() == curr_name) {
+              wwt_ctl.gotoTarget(
+                wwtplace,  // the Place object
+                true,  // noZoom -- false means zoom level is set to something "sensible" for the target
+                is_dblclick,  // instant -- whether to fly the almost-instantly
+                true  // trackObject -- whether to start the camera tracking this object
+              );
+            }
+          }); 
 
           $("#reset_target").fadeOut(1000);
 
