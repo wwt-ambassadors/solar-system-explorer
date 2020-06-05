@@ -49,24 +49,10 @@
       var places = $(xml).find('Place');
       var thumbTemplate = $('<div class="col_thumb"><a href="javascript:void(0)" class="thumbnail border_white"><img src=""/><div class="thumbname">example</div</a></div>');
       var descTemplate = $('<div class="obj_desc container-fluid"><div class="row"><div class="name col-xs-12 col-md-12 col-lg-12">name</div><div class="what col-xs-12 col-md-12 col-lg-12">what</div><div class="before col-xs-12 col-md-12 col-lg-12">before</div><div class="process col-xs-12 col-md-12 col-lg-12">process</div><div class="elements col-xs-12 col-md-12 col-lg-12">elements</div><div class="after col-xs-12 col-md-12 col-lg-12">after</div><div class="properties col-xs-12 col-md-12 col-lg-12">properties</div><div class="dive col-xs-12 col-md-12 col-lg-12">dive deeper</div></div></div>');
-      var constellations = $(xml).find('Constellation');
-      var cmb = $(xml).find('CMB');
       
       places.each(function (i, pl) {
         var place = $(pl);
         
-        // this is the pre-existing description text populator from Ron's code. Perhaps not relevant to ours
-        //   var descText = '', desc;
-        //   desc = place.find('Description').text().split('\n');
-
-        //   $.each(desc, function (i, item) {
-        //     if (item != undefined) {
-        //       descText += '<p>' + item + '</p>';
-        //     }
-        //   });
-        //   descText += '<hr><h4>Credits</h4>' + '<p><a href="' + place.find('CreditsUrl').text() + '" target=_blank >' + place.find('Credits').text() + '</p>';
-        //   end of Ron's description text code
-
         // create a temporary object of a thumbnail and of a description element from the templates above 
         var tmpthumb = thumbTemplate.clone();
         var tmpdesc = descTemplate.clone();
