@@ -173,7 +173,12 @@
             $.each(folder.get_children(), function (i, wwtplace) {
               console.log('1st solarsystem:',wwtplace);
               if (wwtplace.get_name() == place.attr('Name')) {
-                wwt_ctl.gotoTarget3(wwtplace.get_camParams(), false, is_dblclick);
+                wwt_ctl.gotoTarget(
+                  wwtplace,  // the Place object
+                  false,  // noZoom -- false means zoom level is set to something "sensible" for the target
+                  is_dblclick,  // instant -- whether to fly the almost-instantly
+                  true  // trackObject -- whether to start the camera tracking this object
+                );
               }
             });
           } 
