@@ -32,7 +32,7 @@
     </Description>
   </Place>
 
-    <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Venus" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Venus" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
     <ImageSet>
     <Target>Venus</Target>
     <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=venus</ThumbnailUrl>
@@ -47,7 +47,7 @@
     </Description>
   </Place>
 
-    <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Earth" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Earth" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
     <ImageSet>
     <Target>Earth</Target>
     <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=earth</ThumbnailUrl>
@@ -58,6 +58,21 @@
       </div>
       <div class="Name">
         <h3>Earth<span class="stagename">inner planet</span></h3>
+      </div>
+    </Description>
+  </Place>
+
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Moon" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+    <ImageSet>
+    <Target>Moon</Target>
+    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=moon</ThumbnailUrl>
+    </ImageSet>
+    <Description Title="Earth's Moon">
+      <div class="Thumbnail">
+        Earth's Moon
+      </div>
+      <div class="Name">
+        <h3>Moon<span class="stagename">Earth's moon</span></h3>
       </div>
     </Description>
   </Place>
@@ -88,6 +103,66 @@
       </div>
       <div class="Name">
         <h3>Jupiter<span class="stagename">outer planet</span></h3>
+      </div>
+    </Description>
+  </Place>
+
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Io" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+    <ImageSet>
+    <Target>Io</Target>
+    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=io</ThumbnailUrl>
+    </ImageSet>
+    <Description Title="Io">
+      <div class="Thumbnail">
+        Io
+      </div>
+      <div class="Name">
+        <h3>Io<span class="stagename">Jupiter's moon</span></h3>
+      </div>
+    </Description>
+  </Place>
+
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Europa" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+    <ImageSet>
+    <Target>Europa</Target>
+    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=europa</ThumbnailUrl>
+    </ImageSet>
+    <Description Title="Europa">
+      <div class="Thumbnail">
+        Europa
+      </div>
+      <div class="Name">
+        <h3>Europa<span class="stagename">Jupiter's moon</span></h3>
+      </div>
+    </Description>
+  </Place>
+
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Ganymede" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+    <ImageSet>
+    <Target>Ganymede</Target>
+    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=ganymede</ThumbnailUrl>
+    </ImageSet>
+    <Description Title="Ganymede">
+      <div class="Thumbnail">
+        Ganymede
+      </div>
+      <div class="Name">
+        <h3>Ganymede<span class="stagename">Jupiter's moon</span></h3>
+      </div>
+    </Description>
+  </Place>
+
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Callisto" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+    <ImageSet>
+    <Target>Callisto</Target>
+    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=callisto</ThumbnailUrl>
+    </ImageSet>
+    <Description Title="Callisto">
+      <div class="Thumbnail">
+        Callisto
+      </div>
+      <div class="Name">
+        <h3>Callisto<span class="stagename">Jupiter's moon</span></h3>
       </div>
     </Description>
   </Place>
