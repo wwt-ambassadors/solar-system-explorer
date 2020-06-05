@@ -49,8 +49,6 @@ a, a:hover {
 }
 
 
-
-
 /* Thumbnails. Flexbox of tiles for each image */
 
 .thumb_gutter {
@@ -63,15 +61,15 @@ a, a:hover {
 
 .thumbnail {
 	display: block;
-	margin: 0 20px 20px 0;
+	margin: 0 5px 5px 0;
 	padding: 2px;
-	border-radius: 4px;
+	border-radius: 2px;
 	width: fit-content;
 }
 
 .thumbname {
     padding: 0px 5px;
-    height: 18px;
+    height: 11px;
     background-color: black;
     font-size: 11px;
 }
@@ -239,24 +237,6 @@ a, a:hover {
     padding-left: 10px;
 }
 
-.constellation_link {
-    padding: 5px 10px;
-    border: 1px solid #41BEEC;
-    border-radius: 5px;
-}
-
-.constellation_para {
-    text-align: center;
-}
-
-.constellation_link:hover {
-    text-decoration: none;
-}
-
-#description_box .row .constellation_link:active {
-    background-color: #41BEEC;
-    color: #000;
-}
 .topbullet {
     margin: 10px 0 5px;
 }
