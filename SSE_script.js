@@ -34,6 +34,9 @@
 
     wwt_si.setBackgroundImageByName("Solar System");
     wwt_si.settings.set_solarSystemScale(10);
+    wwt_si.settings.set_solarSystemMilkyWay(false);
+    wwt_si.settings.set_solarSystemCosmos(false);
+    wwt_si.settings.set_solarSystemStars(false);
     wwt_si.settings.set_showConstellationBoundries(false);
     wwt_si.settings.set_showConstellationFigures(false);
     wwt_si.settings.set_showConstellationSelection(false);
