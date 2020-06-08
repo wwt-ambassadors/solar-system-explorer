@@ -11,9 +11,7 @@
 
   // global variables to hold the wwt_si navigation for the last thumbnail clicked, for use by the reset button
   var reset_enabled = false;
-  var curr_clasification = null;
   var curr_name = null;
-  var curr_FOV = null;
 
   function initialize() {
     // This function call is
@@ -139,31 +137,19 @@
             $('.fa-arrow-down').hide();
           }
 
-          // check whether this target is a Solar System object (only the Sun, in this case)
-          if (place.attr('Classification') == 'SolarSystem') {
+          curr_name = place.attr('Name');
 
-            // This is a solar system object. In order to view it correctly,
-            // we need to find its associated wwtlib "Place" object and seek
-            // to it thusly. The get_camParams() function calculates its
-            // current RA and Dec.
-            //wwt_si.setBackgroundImageByName('Digitized Sky Survey (Color)');
-
-            //set the global variables: current target classification / name / RA / dec / FOV
-            curr_clasification = place.attr('Classification');
-            curr_name = place.attr('Name');
-            curr_FOV = null;
-
-            $.each(folder.get_children(), function (i, wwtplace) {
-              if (wwtplace.get_name() == place.attr('Name')) {
-                wwt_ctl.gotoTarget(
-                  wwtplace,  // the Place object
-                  false,  // noZoom -- false means zoom level is set to something "sensible" for the target
-                  is_dblclick,  // instant -- whether to fly the almost-instantly
-                  true  // trackObject -- whether to start the camera tracking this object
-                );
-              }
-            });
-          } 
+          $.each(folder.get_children(), function (i, wwtplace) {
+            if (wwtplace.get_name() == place.attr('Name')) {
+              wwt_ctl.gotoTarget(
+                wwtplace,  // the Place object
+                false,  // noZoom -- false means zoom level is set to something "sensible" for the target
+                is_dblclick,  // instant -- whether to fly the almost-instantly
+                true  // trackObject -- whether to start the camera tracking this object
+              );
+            }
+          });
+           
         }
 
         tmpthumb.find('a')
@@ -414,7 +400,8 @@
         if (event.deltaY < 0)
           wwt_ctl.zoom(1.43);
         else
-          wwt_ctl.zoom(0.7);
+        /*we think this is the zoom out. Adjust this to have a hard outer limit */
+        wwt_ctl.zoom(0.7);
 
       }
     })(true));
