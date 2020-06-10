@@ -246,38 +246,22 @@
   function size_content() {
     var container = $("html");
     var top_container = $(".top_container");
-    var bottom_container = $(".bottom_container")
-    var thumb_gutter = $(".thumb_gutter");
 
     // Constants here must be synced with settings in style.css
-    const new_wwt_width = (top_container.width() - thumb_gutter.width());
-      // subtract 52 to account for the margin and border in .css file
-    const thumbs_height = thumb_gutter.outerHeight(true);
-    // const new_wwt_height = ((0.5 * container.height()) - 52);
-    const new_wwt_height = top_container.height() - 2;  //set wwt_canvas height to fill top_container, subtract 2 to account for border width
+    const new_wwt_width = top_container.width() - 2;
+    const new_wwt_height = top_container.height() - 2;  // set wwt_canvas height to fill top_container, subtract 2 to account for border width
     const colophon_height = $("#colophon").height();
-      // subtract 20 to account for the margin in .css file, and give a little wiggle room
     
-    const bottom_height = container.height() - top_container.outerHeight() - 50;
+    const bottom_height = container.height() - top_container.outerHeight() - 80;
     const description_height = bottom_height - colophon_height;
-    // const new_desc_height = (bottom_container.height() - colophon_height - 40);
-    // const new_desc_height = (0.35 * container.height());
-    console.log("html: ", container.height())
-    console.log("top: ", top_container.outerHeight())
-    console.log("bottom: ", bottom_height)
 
     $("#wwtcanvas").css({
       "width": new_wwt_width + "px",
       "height": new_wwt_height + "px"
     });
 
-    $(bottom_container).css({
-      "height": bottom_height + "px"
-    })
-
     $("#description_box").css({
       "height": description_height + "px"
-      // "height": new_desc_height + "px"
     });
 
   }

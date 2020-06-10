@@ -33,33 +33,47 @@
 	</head>
 	
 	<body>
-        <div class="top_container">
-            <div class="thumb_gutter">
-                <div id="destinationThumbs" class="d-flex flex-wrap"></div>
-            </div>
-            <div id="wwtcanvas">
-                <h1 id="page_title">Solar System Explorer</h1>
-                <i id="reset_target" class="fas fa-redo-alt"></i>
-                <div id="zoom_pan_container">
-                    <div id="zoom_pan_instrux">
-                        To zoom, scroll in and out (or press <strong>Z-X</strong> on your keyboard)<br>
-                        To pan around, click and drag (or press <strong>J-L-I-K</strong> on your keyboard)
+        <div class="left_col">
+            <div id="destinationThumbs"></div>
+        </div>
+        <div class="right_col">
+            <div class="top_container">
+<!--
+                <div class="thumb_gutter">
+                    <div id="destinationThumbs" class="d-flex flex-wrap"></div>
+                </div>
+-->
+                <div id="wwtcanvas">
+                    <h1 id="page_title">Solar System Explorer</h1>
+                    <i id="reset_target" class="fas fa-redo-alt"></i>
+                    <div id="zoom_pan_container">
+                        <div id="zoom_pan_instrux">
+                            To zoom, scroll in and out (or press <strong>Z-X</strong> on your keyboard)<br>
+                            To pan around, click and drag (or press <strong>J-L-I-K</strong> on your keyboard)
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="container-fluid bottom_container">
+                <div id="description_box">
+                    <div id="begin_container">
+                        <p>
+                            Click on one of the thumbnails above to fly to the selected object.
+                        </p>
+                        <p>
+                            Double-click on a thumbnail to arrive there immediately.
+                        </p>
+                        <p class="begin_ss">
+                            Our solar system is located in the Milky Way, one of many galaxies in the universe. The solar system formed from a cloud of gas and dust more than 4.5 billion years ago. All the planets orbit the Sun in the same direction along elliptical, or oval, paths and within a similar plane. The planets in the inner solar system are relatively close together and mostly composed of rock. The planets in the outer solar system are far apart and mostly composed of gases and icy fluids.
+                        </p>
+                    </div>
+                    <div id="description_container">
+                    </div>
+                    <i id="scroll_arrow" class="fas fa-arrow-down"></i>
+                </div>
+                <br>
+            </div>
         </div>
-		<div class="container-fluid bottom_container">
-			<div id="description_box" ss-container>
-				<div id="begin_container">
-					<p>Click on one of the thumbnails above to fly to the selected object.</p>
-					<p>Double-click on a thumbnail to arrive there immediately.</p>
-				</div>
-				<div id="description_container">
-				</div>
-				<i id="scroll_arrow" class="fas fa-arrow-down"></i>
-			</div>
-			<br>
-		</div>
         
     				
 							
