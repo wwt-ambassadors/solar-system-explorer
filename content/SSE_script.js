@@ -259,11 +259,11 @@
     var top_container = $(".top_container");
 
     // Constants here must be synced with settings in style.css
-    const new_wwt_width = (top_container.width());
+    const new_wwt_width = top_container.width() - 2;
     const new_wwt_height = top_container.height() - 2;  // set wwt_canvas height to fill top_container, subtract 2 to account for border width
     const colophon_height = $("#colophon").height();
     
-    const bottom_height = container.height() - top_container.outerHeight() - 50;
+    const bottom_height = container.height() - top_container.outerHeight() - 80;
     const description_height = bottom_height - colophon_height;
 
     $("#wwtcanvas").css({
