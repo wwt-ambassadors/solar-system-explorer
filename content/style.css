@@ -12,13 +12,22 @@ html {
 body {
 	position: relative;
 	overflow: hidden;
-	margin: 0px;
-	padding: 0px;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 30px 0 0 0;
 	color: #FFF;
 	height: 100%;
 	background-color: #111;
 	font-size: calc(11px + 0.6vw);
 }
+
+.left_col {
+    flex: 0 0 260px;
+}
+
+
+
 
 /* Generic element settings */
 
@@ -36,32 +45,24 @@ a, a:hover {
 
 .top_container {
     display: flex;
-    width: 90%;
     min-height: 50%;
-    margin: auto;
-    padding-top: 30px;
 }
 
 .bottom_container {
 	padding: 0;
-	width: 90%;
-	margin: 0px 5%;
 }
 
 
 /* Thumbnails. Flexbox of tiles for each image */
 
-.thumb_gutter {
-    width: 260px;
-    min-width: 260px;
-}
-
 #destinationThumbs {
+    display: flex;
+    flex-wrap: wrap-reverse;
 }
 
 .thumbnail {
 	display: block;
-	margin: 0 5px 5px 0;
+	margin: 0 20px 10px 0;
 	padding: 2px;
 	border-radius: 2px;
 	width: fit-content;
