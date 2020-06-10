@@ -188,6 +188,12 @@ a, a:hover {
 	text-align: center;
 }
 
+.begin_ss {
+    margin-top: 1em;
+    font-size: .9em;
+    text-align: left;
+}
+
 #description_container {
 	display: none;
 	height: 100%;
