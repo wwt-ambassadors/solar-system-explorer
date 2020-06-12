@@ -169,6 +169,21 @@ a, a:hover {
     border-radius: 25px;
 }
 
+#time_buttons {
+    margin-right: 25px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.fa-stack {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+#time_buttons i {
+    pointer-events: none;
+}
+
 
 
 
