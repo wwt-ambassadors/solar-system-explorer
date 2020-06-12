@@ -4,6 +4,9 @@
 
   // The WWT WWTControl singleton.
   var wwt_ctl = null;
+
+  // Space Time Controller
+  var wwt_stc = null;
     
   // track whether user has panned or zoomed yet.
   var click_counter = 0;
@@ -31,6 +34,7 @@
 
   function wwt_ready() {
     wwt_ctl = wwtlib.WWTControl.singleton;
+    wwt_stc = wwtlib.SpaceTimeController;
 
     wwt_si.setBackgroundImageByName("Solar System");
     wwt_si.settings.set_solarSystemScale(10);
@@ -424,24 +428,32 @@
   // 1. Reset Button (return to present time)
   $('#reset_time').on('click', function() {
     // REPLACE WITH CODE FOR RESET TIME
-    console.log("RESET TIME BUTTON CLICK")
+    var now = new Date();
+    wwt_stc.set_now(now);
+    console.log("Time is",wwt_stc.get_now());
+    console.log("RESET TIME BUTTON CLICK");
   })
 
   // 2. Stop Button (stop advancing time)
   $('#stop_time').on('click', function() {
     // REPLACE WITH CODE FOR STOP TIME
+    wwt_stc.set_timeRate(1);
     console.log("STOP TIME BUTTON CLICK")
   })
 
   // 3. Slower Button (advance time more slowly)
   $('#slower_time').on('click', function() {
     // REPLACE WITH CODE FOR SLOWER TIME
+    wwt_stc.get_timeRate()
+    wwt_stc.set_timeRate(wwt_stc.get_timeRate()/10);
     console.log("SLOWER TIME BUTTON CLICK")
   })
 
   // 4. Faster Button (advance time more quickly)
   $('#faster_time').on('click', function() {
     // REPLACE WITH CODE FOR FASTER TIME
+    wwt_stc.get_timeRate()
+    wwt_stc.set_timeRate(wwt_stc.get_timeRate()*10);
     console.log("FASTER TIME BUTTON CLICK")
   })
     
