@@ -248,7 +248,7 @@
     var top_container = $(".top_container");
 
     // Constants here must be synced with settings in style.css
-    const new_wwt_width = top_container.width() - 2;
+    // const new_wwt_width = top_container.width() - 2;
     const new_wwt_height = top_container.height() - 2;  // set wwt_canvas height to fill top_container, subtract 2 to account for border width
     const colophon_height = $("#colophon").height();
     
@@ -256,7 +256,7 @@
     const description_height = bottom_height - colophon_height;
 
     $("#wwtcanvas").css({
-      "width": new_wwt_width + "px",
+      // "width": new_wwt_width + "px",
       "height": new_wwt_height + "px"
     });
 
@@ -325,6 +325,8 @@
 
     window.addEventListener("keydown", function (event) {
       // "must check the deprecated keyCode property for Qt"
+
+      // Check whether keyboard events initiate zoom methods
       if (zoomCodes.hasOwnProperty(event.code) || zoomCodes.hasOwnProperty(event.keyCode)) {
         var action = zoomCodes.hasOwnProperty(event.code) ? zoomCodes[event.code] : zoomCodes[event.keyCode];
 
@@ -336,6 +338,7 @@
         canvas.dispatchEvent(action);
       }
 
+      // Check whether keyboard events initiate move methods
       if (moveCodes.hasOwnProperty(event.code) || moveCodes.hasOwnProperty(event.keyCode)) {
         var action = moveCodes.hasOwnProperty(event.code) ? moveCodes[event.code] : moveCodes[event.keyCode];
 
@@ -388,7 +391,7 @@
           wwt_ctl.zoom(1.43);
         else
         /*we think this is the zoom out. Adjust this to have a hard outer limit */
-        wwt_ctl.zoom(0.7);
+          wwt_ctl.zoom(0.7);
 
       }
     })(true));
@@ -407,7 +410,7 @@
     }
   })
     
-  // may use later, in order to identify when canvas has been interacted with
+  // remove zoom-pan instructions upon canvas click, after a 5 second delay
   $('#wwtcanvas').on('click', function() {
     $("#zoom_pan_instrux").delay(5000).fadeOut(1000);
 
@@ -415,6 +418,31 @@
       $("#reset_target").show();
     }
 
+  })
+
+  // FOUR EMPTY EVENT HANDLERS FOR PAT TO EXPERIMENT WITH TIME-SCALES
+  // 1. Reset Button (return to present time)
+  $('#reset_time').on('click', function() {
+    // REPLACE WITH CODE FOR RESET TIME
+    console.log("RESET TIME BUTTON CLICK")
+  })
+
+  // 2. Stop Button (stop advancing time)
+  $('#stop_time').on('click', function() {
+    // REPLACE WITH CODE FOR STOP TIME
+    console.log("STOP TIME BUTTON CLICK")
+  })
+
+  // 3. Slower Button (advance time more slowly)
+  $('#slower_time').on('click', function() {
+    // REPLACE WITH CODE FOR SLOWER TIME
+    console.log("SLOWER TIME BUTTON CLICK")
+  })
+
+  // 4. Faster Button (advance time more quickly)
+  $('#faster_time').on('click', function() {
+    // REPLACE WITH CODE FOR FASTER TIME
+    console.log("FASTER TIME BUTTON CLICK")
   })
     
     
