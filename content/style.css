@@ -134,8 +134,7 @@ a, a:hover {
     border-right: 3px solid #44ff44;
 	font-size: calc(12px + 1vw); 
 	font-weight: 700;
-	user-select: none;
-	-webkit-user-select: none;
+	pointer-events: none;
 }
 
 #reset_target {
@@ -159,6 +158,12 @@ a, a:hover {
     pointer-events: none;
 }
 
+@media screen and (max-width: 976px) {
+    #zoom_pan_container {
+        display: none;
+    }
+}
+
 #zoom_pan_instrux {
 	width: 600px;
     margin: 0 auto;
@@ -167,6 +172,11 @@ a, a:hover {
 	color: #EEEEEECC;
     background-color: #00000066;
     border-radius: 25px;
+}
+
+#zoom_pan_instrux strong {
+    font-family: monospace, Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+    color: #DDDDDD;
 }
 
 #time_buttons {
@@ -202,6 +212,8 @@ a, a:hover {
 #begin_container {
     margin-top: 50px;
 	text-align: center;
+    pointer-events: none;
+    user-select: none;
 }
 
 .begin_ss {
@@ -234,7 +246,7 @@ a, a:hover {
 
 #description_box .row h4 {
     margin-bottom: 4px;
-	color: #8aff8a;
+	color: #EFA928;  /* used to be #8AFF8A */
     font-size: calc(10px + 1.25vw);
 }
 
@@ -249,7 +261,7 @@ a, a:hover {
 #description_box i {
 	position: absolute;
 	bottom: 10px;
-	right: 25px;
+	right: -30px;
     font-family: "Font Awesome 5 Free";
 	font-style: normal;
 }
@@ -261,6 +273,7 @@ a, a:hover {
 
 .topbullet {
     margin: 10px 0 5px;
+    color: #8AFF8A;
 }
 
 #scroll_arrow {
@@ -281,11 +294,19 @@ a, a:hover {
 #colophon {
 	position: absolute;
 	bottom: 10px;
-	left: 15px;
+	left: 5%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+#colo_left {
+    min-width: 70px;
+    padding-bottom: 5px;
 }
 
 #colophon p {
-  font-size: 0.5em;
+  font-size: 9px; /* used to 0.5em */
   color: #BBB;
 }
 
@@ -297,5 +318,5 @@ a, a:hover {
     width: 1rem;
     height: 1rem;
     vertical-align: middle;
-    margin: 0 2px;
+    margin-right: 5px;
 }
