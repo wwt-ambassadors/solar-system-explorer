@@ -2,37 +2,6 @@
 <Folder MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="BUAC Stellar Life Cycles" Group="Explorer" Searchable="False" Type="Earth">
   <VersionDependent>false</VersionDependent>
 
-  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Pluto" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
-    <ImageSet>
-    <Target>Pluto</Target>
-    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=pluto</ThumbnailUrl>
-    </ImageSet>
-    <Description Title="Pluto">
-      <div class="Thumbnail">
-        Pluto
-      </div>
-      <div class="Name">
-        <h3>Pluto<span class="stagename">outer dwarf planet</span></h3>
-      </div>
-      <div class="What">
-        <h4>What is it?</h4>
-        <p>
-          Pluto is located in the Kuiper belt and classified as a dwarf planet. Dwarf planets share their neighborhood and orbit paths with other objects, although there is some controversy about the distinction between a planet and a dwarf planet. Pluto's orbit is very oval and inclined relative to the ecliptic plane. Its surface is mostly made of water ice and frozen nitrogen, and methane may form as frost or fall like snow on Pluto's surface. It has a huge nitrogen ice sheet called Sputnik Planitia that contains flowing nitrogen glaciers. Pluto's largest moon, Charon, is so big—it is about half the size of Pluto—that the two objects are sometimes referred to as a "double planet."
-        </p>
-      </div>
-      <div class="Properties">
-        <h4>Characteristics</h4>
-        <ul>
-          <li><strong>Radius:</strong> 0.186 Earth radii (1,200 km)</li>
-          <li><strong>Mass:</strong> 0.0025 Earth's mass (1 &#215; 10<sup>22</sup> kg)</li>
-          <li><strong>Average distance from Sun:</strong> 39.48 AU</li>
-          <li><strong>Length of year:</strong> 247.9 Earth years</li>
-          <li><strong>Known moons:</strong> 5</li>
-        </ul>
-      </div>
-    </Description>
-  </Place>
-
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Neptune" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
     <ImageSet>
       <Target>Neptune</Target>
@@ -64,32 +33,32 @@
     </Description>
   </Place>
 
-  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Uranus" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Pluto" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
     <ImageSet>
-      <Target>Uranus</Target>
-      <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=uranus</ThumbnailUrl>
+    <Target>Pluto</Target>
+    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=pluto</ThumbnailUrl>
     </ImageSet>
-    <Description Title="Uranus">
+    <Description Title="Pluto">
       <div class="Thumbnail">
-        Uranus
+        Pluto
       </div>
       <div class="Name">
-        <h3>Uranus<span class="stagename">outer planet</span></h3>
+        <h3>Pluto<span class="stagename">outer dwarf planet</span></h3>
       </div>
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          Uranus is an ice giant, with an icy fluid interior and an atmosphere that includes helium, hydrogen, and methane. The methane lends the planet its distinctive blue color. Like Venus, Uranus rotates in the opposite direction from most other planets, but its axis of rotation is tilted about 98 degrees. As a result, the planet rotates on its side, and its poles experience extreme seasons. For example, during northern summer, its north pole experiences 21 years of continuous sunlight.
+          Pluto is located in the Kuiper belt and classified as a dwarf planet. Dwarf planets share their neighborhood and orbit paths with other objects, although there is some controversy about the distinction between a planet and a dwarf planet. Pluto's orbit is very oval and inclined relative to the ecliptic plane. Its surface is mostly made of water ice and frozen nitrogen, and methane may form as frost or fall like snow on Pluto's surface. It has a huge nitrogen ice sheet called Sputnik Planitia that contains flowing nitrogen glaciers. Pluto's largest moon, Charon, is so big—it is about half the size of Pluto—that the two objects are sometimes referred to as a "double planet."
         </p>
       </div>
       <div class="Properties">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 4.01 Earth radii (25,000 km)</li>
-          <li><strong>Mass:</strong> 14.5 Earth's mass (9 &#215; 10<sup>25</sup> kg)</li>
-          <li><strong>Average distance from Sun:</strong> 19.14 AU</li>
-          <li><strong>Length of year:</strong> 84 Earth years</li>
-          <li><strong>Known moons:</strong> 27</li>
+          <li><strong>Radius:</strong> 0.186 Earth radii (1,200 km)</li>
+          <li><strong>Mass:</strong> 0.0025 Earth's mass (1 &#215; 10<sup>22</sup> kg)</li>
+          <li><strong>Average distance from Sun:</strong> 39.48 AU</li>
+          <li><strong>Length of year:</strong> 247.9 Earth years</li>
+          <li><strong>Known moons:</strong> 5</li>
         </ul>
       </div>
     </Description>
@@ -126,29 +95,32 @@
     </Description>
   </Place>
 
-  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Callisto" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Uranus" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
     <ImageSet>
-      <Target>Callisto</Target>
-      <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=callisto</ThumbnailUrl>
+      <Target>Uranus</Target>
+      <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=uranus</ThumbnailUrl>
     </ImageSet>
-    <Description Title="Callisto">
+    <Description Title="Uranus">
       <div class="Thumbnail">
-        Callisto
+        Uranus
       </div>
       <div class="Name">
-        <h3>Callisto<span class="stagename">Jupiter's moon</span></h3>
+        <h3>Uranus<span class="stagename">outer planet</span></h3>
       </div>
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          Description pending...
+          Uranus is an ice giant, with an icy fluid interior and an atmosphere that includes helium, hydrogen, and methane. The methane lends the planet its distinctive blue color. Like Venus, Uranus rotates in the opposite direction from most other planets, but its axis of rotation is tilted about 98 degrees. As a result, the planet rotates on its side, and its poles experience extreme seasons. For example, during northern summer, its north pole experiences 21 years of continuous sunlight.
         </p>
       </div>
       <div class="Properties">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 0.37 Earth radii (2,4 km)</li>
-          <li><strong>Mass:</strong> 0.018 Earth's mass (1 &#215; 10<sup>23</sup> kg)</li>
+          <li><strong>Radius:</strong> 4.01 Earth radii (25,000 km)</li>
+          <li><strong>Mass:</strong> 14.5 Earth's mass (9 &#215; 10<sup>25</sup> kg)</li>
+          <li><strong>Average distance from Sun:</strong> 19.14 AU</li>
+          <li><strong>Length of year:</strong> 84 Earth years</li>
+          <li><strong>Known moons:</strong> 27</li>
         </ul>
       </div>
     </Description>
@@ -182,29 +154,29 @@
     </Description>
   </Place>
 
-  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Europa" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Callisto" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
     <ImageSet>
-      <Target>Europa</Target>
-      <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=europa</ThumbnailUrl>
+      <Target>Callisto</Target>
+      <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=callisto</ThumbnailUrl>
     </ImageSet>
-    <Description Title="Europa">
+    <Description Title="Callisto">
       <div class="Thumbnail">
-        Europa
+        Callisto
       </div>
       <div class="Name">
-        <h3>Europa<span class="stagename">Jupiter's moon</span></h3>
+        <h3>Callisto<span class="stagename">Jupiter's moon</span></h3>
       </div>
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          Europa has a surface of mostly water ice with many cracks and streaks but not many craters. It has a salty ocean underneath a shell of ice and may contain twice the amount of water of Earth. Europa may be geologically active and may have occasional plumes of water erupting from its surface.
+          Description pending...
         </p>
       </div>
       <div class="Properties">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 0.25 Earth radii (1,600 km)</li>
-          <li><strong>Mass:</strong> 0.015 Earth's mass (5 &#215; 10<sup>22</sup> kg)</li>
+          <li><strong>Radius:</strong> 0.37 Earth radii (2,4 km)</li>
+          <li><strong>Mass:</strong> 0.018 Earth's mass (1 &#215; 10<sup>23</sup> kg)</li>
         </ul>
       </div>
     </Description>
@@ -238,32 +210,29 @@
     </Description>
   </Place>
 
-  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Jupiter" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Europa" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
     <ImageSet>
-      <Target>jupiter</Target>
-      <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=jupiter</ThumbnailUrl>
+      <Target>Europa</Target>
+      <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=europa</ThumbnailUrl>
     </ImageSet>
-    <Description Title="Jupiter">
+    <Description Title="Europa">
       <div class="Thumbnail">
-        Jupiter
+        Europa
       </div>
       <div class="Name">
-        <h3>Jupiter<span class="stagename">outer planet</span></h3>
+        <h3>Europa<span class="stagename">Jupiter's moon</span></h3>
       </div>
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          Jupiter is the largest planet in our solar system—its mass is equal to approximately 2.5 times the combined mass of all the other planets in the solar system. Eleven Earths could fit across its diameter. Jupiter is a gas giant made up mainly of hydrogen and helium, similar to the Sun. If Jupiter were larger, the temperatures at the core would cause it to ignite into a star. Jupiter's Great Red Spot is a huge storm that has existed for more than 100 years.
+          Europa has a surface of mostly water ice with many cracks and streaks but not many craters. It has a salty ocean underneath a shell of ice and may contain twice the amount of water of Earth. Europa may be geologically active and may have occasional plumes of water erupting from its surface.
         </p>
       </div>
       <div class="Properties">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 11.2 Earth radii (70,000 km)</li>
-          <li><strong>Mass:</strong> 318 Earth's mass (2 &#215; 10<sup>27</sup> kg)</li>
-          <li><strong>Average distance from Sun:</strong> 5.2 AU</li>
-          <li><strong>Length of year:</strong> 11.9 Earth years</li>
-          <li><strong>Known moons:</strong> 79 (including Io, Europa, Ganymede, Callisto)</li>
+          <li><strong>Radius:</strong> 0.25 Earth radii (1,600 km)</li>
+          <li><strong>Mass:</strong> 0.015 Earth's mass (5 &#215; 10<sup>22</sup> kg)</li>
         </ul>
       </div>
     </Description>
@@ -300,29 +269,32 @@
     </Description>
   </Place>
 
-  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Moon" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Jupiter" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
     <ImageSet>
-      <Target>Moon</Target>
-      <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=moon</ThumbnailUrl>
+      <Target>jupiter</Target>
+      <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=jupiter</ThumbnailUrl>
     </ImageSet>
-    <Description Title="Earth's Moon">
+    <Description Title="Jupiter">
       <div class="Thumbnail">
-        Earth's Moon
+        Jupiter
       </div>
       <div class="Name">
-        <h3>Moon<span class="stagename">Earth's moon</span></h3>
+        <h3>Jupiter<span class="stagename">outer planet</span></h3>
       </div>
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          The Moon is the biggest and brightest object visible in the night sky. It is rocky and its surface has many craters. The Moon was likely formed after a Mars-sized object collided with Earth long ago. Earth's Moon is the only other object in the solar system that human beings have visited.
+          Jupiter is the largest planet in our solar system—its mass is equal to approximately 2.5 times the combined mass of all the other planets in the solar system. Eleven Earths could fit across its diameter. Jupiter is a gas giant made up mainly of hydrogen and helium, similar to the Sun. If Jupiter were larger, the temperatures at the core would cause it to ignite into a star. Jupiter's Great Red Spot is a huge storm that has existed for more than 100 years.
         </p>
       </div>
       <div class="Properties">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 0.27 Earth radii (1,700 km)</li>
-          <li><strong>Mass:</strong> 0.012 Earth's mass (7 &#215; 10<sup>22</sup> kg)</li>
+          <li><strong>Radius:</strong> 11.2 Earth radii (70,000 km)</li>
+          <li><strong>Mass:</strong> 318 Earth's mass (2 &#215; 10<sup>27</sup> kg)</li>
+          <li><strong>Average distance from Sun:</strong> 5.2 AU</li>
+          <li><strong>Length of year:</strong> 11.9 Earth years</li>
+          <li><strong>Known moons:</strong> 79 (including Io, Europa, Ganymede, Callisto)</li>
         </ul>
       </div>
     </Description>
@@ -359,32 +331,29 @@
     </Description>
   </Place>
 
-  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Venus" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Moon" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
     <ImageSet>
-      <Target>Venus</Target>
-      <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=venus</ThumbnailUrl>
+      <Target>Moon</Target>
+      <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=moon</ThumbnailUrl>
     </ImageSet>
-    <Description Title="Venus">
+    <Description Title="Earth's Moon">
       <div class="Thumbnail">
-        Venus
+        Earth's Moon
       </div>
       <div class="Name">
-        <h3>Venus<span class="stagename">inner planet</span></h3>
+        <h3>Moon<span class="stagename">Earth's moon</span></h3>
       </div>
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          Venus is the hottest planet in our solar system because of the greenhouse effect from its thick, carbon dioxide atmosphere. The planet is difficult to study because telescopes cannot see through its atmosphere and its toxic and extreme environment quickly damages probes and landers. Venus has over a thousand major volcanoes. It has a retrograde rotation, which means that it spins in the opposite direction from most of the planets. This results in the Sun rising in the west and setting in the east.
+          The Moon is the biggest and brightest object visible in the night sky. It is rocky and its surface has many craters. The Moon was likely formed after a Mars-sized object collided with Earth long ago. Earth's Moon is the only other object in the solar system that human beings have visited.
         </p>
       </div>
       <div class="Properties">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 0.95 Earth radii (6,100 km)</li>
-          <li><strong>Mass:</strong> 0.82 Earth's mass (5 &#215; 10<sup>24</sup> kg)</li>
-          <li><strong>Average distance from Sun:</strong> 0.72 AU</li>
-          <li><strong>Length of year:</strong> 0.62 Earth years</li>
-          <li><strong>Known moons:</strong> None</li>
+          <li><strong>Radius:</strong> 0.27 Earth radii (1,700 km)</li>
+          <li><strong>Mass:</strong> 0.012 Earth's mass (7 &#215; 10<sup>22</sup> kg)</li>
         </ul>
       </div>
     </Description>
@@ -415,6 +384,37 @@
           <li><strong>Mass:</strong> 0.055 Earth's mass (3 &#215; 10<sup>23</sup> kg)</li>
           <li><strong>Average distance from Sun:</strong> 0.38 AU</li>
           <li><strong>Length of year:</strong> 0.24 Earth years</li>
+          <li><strong>Known moons:</strong> None</li>
+        </ul>
+      </div>
+    </Description>
+  </Place>
+
+  <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Venus" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4">
+    <ImageSet>
+      <Target>Venus</Target>
+      <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=venus</ThumbnailUrl>
+    </ImageSet>
+    <Description Title="Venus">
+      <div class="Thumbnail">
+        Venus
+      </div>
+      <div class="Name">
+        <h3>Venus<span class="stagename">inner planet</span></h3>
+      </div>
+      <div class="What">
+        <h4>What is it?</h4>
+        <p>
+          Venus is the hottest planet in our solar system because of the greenhouse effect from its thick, carbon dioxide atmosphere. The planet is difficult to study because telescopes cannot see through its atmosphere and its toxic and extreme environment quickly damages probes and landers. Venus has over a thousand major volcanoes. It has a retrograde rotation, which means that it spins in the opposite direction from most of the planets. This results in the Sun rising in the west and setting in the east.
+        </p>
+      </div>
+      <div class="Properties">
+        <h4>Characteristics</h4>
+        <ul>
+          <li><strong>Radius:</strong> 0.95 Earth radii (6,100 km)</li>
+          <li><strong>Mass:</strong> 0.82 Earth's mass (5 &#215; 10<sup>24</sup> kg)</li>
+          <li><strong>Average distance from Sun:</strong> 0.72 AU</li>
+          <li><strong>Length of year:</strong> 0.62 Earth years</li>
           <li><strong>Known moons:</strong> None</li>
         </ul>
       </div>
