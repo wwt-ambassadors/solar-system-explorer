@@ -328,6 +328,9 @@
 
       // Check whether keyboard events initiate zoom methods
       if (zoomCodes.hasOwnProperty(event.code) || zoomCodes.hasOwnProperty(event.keyCode)) {
+        // remove the zoom_pan instructions
+        $("#zoom_pan_instrux").delay(5000).fadeOut(1000);
+
         var action = zoomCodes.hasOwnProperty(event.code) ? zoomCodes[event.code] : zoomCodes[event.keyCode];
 
         if (event.shiftKey)
@@ -340,6 +343,9 @@
 
       // Check whether keyboard events initiate move methods
       if (moveCodes.hasOwnProperty(event.code) || moveCodes.hasOwnProperty(event.keyCode)) {
+        // remove the zoom_pan instructions
+        $("#zoom_pan_instrux").delay(5000).fadeOut(1000);
+
         var action = moveCodes.hasOwnProperty(event.code) ? moveCodes[event.code] : moveCodes[event.keyCode];
 
         if (event.shiftKey)
