@@ -15,6 +15,10 @@
   // global variables to hold the wwt_si navigation for the last thumbnail clicked, for use by the reset button
   var reset_enabled = false;
   var curr_name = null;
+  var thumbnails_loaded = 0;
+
+  // global variable to hold the current rate of time-elapse
+  var curr_time = 1;
 
   function initialize() {
     // This function call is
@@ -176,6 +180,28 @@
 
         // Plug the set of thumbnails into the #destinationThumbs element
         $('#destinationThumbs').append(tmpthumb);
+        thumbnails_loaded = thumbnails_loaded + 1;
+        if (thumbnails_loaded == 15) {
+          console.log("adding lighting button");
+          var lighting_buttons = $('<div class="col_thumb"><div class="thumbnail lighting_buttons"><span id="halflight" class="fa-stack fa-sm"><i class="fas fa-globe-europe fa-rotate-180 fa-stack-2x"></i><i class="fas fa-adjust fa-stack-2x fa-rotate-180"></i></span><span id="fulllight" class="inactive fa-stack fa-sm"><i class="fas fa-globe-europe fa-rotate-180 fa-stack-2x"></i><i class="far fa-circle fa-stack-2x fa-rotate-180"></i></span></div></div>');
+          $('#destinationThumbs').append(lighting_buttons);
+        }
+
+        // TWO EVENT HANDLERS FOR PAT TO EXPERIMENT WITH LIGHTING
+        // 1. Half lighting
+        $('#fulllight').on('click', function() {
+          $('#fulllight').removeClass("inactive");
+          $('#halflight').addClass("inactive");
+          // FOR PAT TO FILL OUT WITH LIGHTING CODE
+        })
+      
+        // 2. Full Lighting
+        $('#halflight').click(function() {
+          $('#halflight').removeClass("inactive");
+          $('#fulllight').addClass("inactive");
+          // FOR PAT TO FILL OUT WITH LIGHTING CODE
+        })
+        
           
         $("#description_container").append(tmpdesc);
 
@@ -202,6 +228,7 @@
       });
 
     });
+
   };
 
   // Load data from wtml file
@@ -430,38 +457,49 @@
 
   })
 
-  // FOUR EMPTY EVENT HANDLERS FOR PAT TO EXPERIMENT WITH TIME-SCALES
+  // FOUR EVENT HANDLERS FOR PAT TO EXPERIMENT WITH TIME-SCALES
   // 1. Reset Button (return to present time)
   $('#reset_time').on('click', function() {
-    // REPLACE WITH CODE FOR RESET TIME
+    curr_time = 1;
+    wwt_stc.set_timeRate(curr_time);
     var now = new Date();
     wwt_stc.set_now(now);
-    console.log("Time is",wwt_stc.get_now());
-    console.log("RESET TIME BUTTON CLICK");
+
+    $('.speedometer').html('now');
   })
 
   // 2. Stop Button (stop advancing time)
   $('#stop_time').on('click', function() {
-    // REPLACE WITH CODE FOR STOP TIME
-    wwt_stc.set_timeRate(1);
-    console.log("STOP TIME BUTTON CLICK")
+    if ($('.speedometer').html() != 'now') {
+      curr_time = 1;
+      wwt_stc.set_timeRate(curr_time);
+  
+      $('.speedometer').html(curr_time + 'x');
+    }
   })
 
   // 3. Slower Button (advance time more slowly)
   $('#slower_time').on('click', function() {
-    // REPLACE WITH CODE FOR SLOWER TIME
-    wwt_stc.get_timeRate()
-    wwt_stc.set_timeRate(wwt_stc.get_timeRate()/10);
-    console.log("SLOWER TIME BUTTON CLICK")
+    if ($('.speedometer').html() != 'now') {
+      if (curr_time > 1) {
+        curr_time = wwt_stc.get_timeRate()/10;
+        wwt_stc.set_timeRate(curr_time);
+      }
+      $('.speedometer').html(curr_time + 'x');
+    }
   })
 
   // 4. Faster Button (advance time more quickly)
   $('#faster_time').on('click', function() {
-    // REPLACE WITH CODE FOR FASTER TIME
-    wwt_stc.get_timeRate()
-    wwt_stc.set_timeRate(wwt_stc.get_timeRate()*10);
-    console.log("FASTER TIME BUTTON CLICK")
+    if (curr_time < 1000000000) {
+      curr_time = wwt_stc.get_timeRate()*10;
+      wwt_stc.set_timeRate(curr_time);
+    }
+    $('.speedometer').html(curr_time + 'x');
   })
+
+  $('.speedometer').html('now');
+
     
     
 })();
