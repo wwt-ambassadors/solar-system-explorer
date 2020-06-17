@@ -37,24 +37,7 @@
 	
 	<body>
         <div class="left_col">
-            <div id="destinationThumbs"></div>
-            <div id="time_buttons">
-                <span id="reset_time" class="fa-stack fa-sm">
-                    <i class="far fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-hourglass-start fa-stack-1x"></i>
-                </span>
-                <span id="stop_time" class="fa-stack fa-sm">
-                    <i class="far fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-stop fa-stack-1x"></i>
-                </span>
-                <span id="slower_time" class="fa-stack fa-sm">
-                    <i class="far fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-angle-right fa-stack-1x"></i>
-                </span>
-                <span id="faster_time" class="fa-stack fa-sm">
-                    <i class="far fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-angle-double-right fa-stack-1x"></i>
-                </span>
+            <div id="destinationThumbs">
             </div>
         </div>
         <div class="right_col">
@@ -66,6 +49,27 @@
 -->
                 <div id="wwtcanvas">
                     <h1 id="page_title">Solar System Explorer</h1>
+                    <div id="time_buttons">
+                        <span class="speedometer">
+                        </span>
+                        <span id="reset_time" class="fa-stack fa-sm">
+                            <i class="far fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-globe-africa fa-stack-1x"></i>
+                        </span>
+                        <span id="stop_time" class="fa-stack fa-sm">
+                            <i class="far fa-circle fa-stack-2x fa-rotate-180"></i>
+                            <i class="fas fa-play fa-stack-1x"></i>
+                        </span>
+                        <span id="slower_time" class="fa-stack fa-sm">
+                            <i class="far fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-angle-double-down fa-stack-1x"></i>
+                        </span>
+                        <span id="faster_time" class="fa-stack fa-sm">
+                            <i class="far fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-angle-double-up fa-stack-1x"></i>
+                        </span>
+                    </div>
+                    
                     <i id="reset_target" class="fas fa-redo-alt"></i>
                     <div id="zoom_pan_container">
                         <div id="zoom_pan_instrux">
@@ -79,7 +83,7 @@
                 <div id="description_box">
                     <div id="begin_container">
                         <p>
-                            Click on one of the thumbnails above to fly to the selected object.
+                            Click on one of the thumbnails to the left to fly to the selected object.
                         </p>
                         <p>
                             Double-click on a thumbnail to arrive there immediately.
