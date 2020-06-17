@@ -485,7 +485,30 @@
         curr_time = wwt_stc.get_timeRate()/10;
         wwt_stc.set_timeRate(curr_time);
       }
-      $('.speedometer').html(curr_time + 'x');
+      if (curr_time<1000){
+        $('.speedometer').html(curr_time + 'x');
+      }
+      if (curr_time==1000){
+        $('.speedometer').html('1,000x');
+      }
+      if (curr_time==10000){
+        $('.speedometer').html('10,000x');
+      }
+      if (curr_time==100000){
+        $('.speedometer').html('100,000x');
+      }
+      if (curr_time==1000000){
+        $('.speedometer').html('1,000,000x');
+      }
+      if (curr_time==10000000){
+        $('.speedometer').html('10,000,000x');
+      }
+      if (curr_time==100000000){
+        $('.speedometer').html('100,000,000x');
+      }
+      if (curr_time==1000000000){
+        $('.speedometer').html('1,000,000,000x');
+      }
     }
   })
 
@@ -495,7 +518,31 @@
       curr_time = wwt_stc.get_timeRate()*10;
       wwt_stc.set_timeRate(curr_time);
     }
-    $('.speedometer').html(curr_time + 'x');
+    if (curr_time<1000){
+      $('.speedometer').html(curr_time + 'x');
+    }
+    if (curr_time==1000){
+      $('.speedometer').html('1,000x');
+    }
+    if (curr_time==10000){
+      $('.speedometer').html('10,000x');
+    }
+    if (curr_time==100000){
+      $('.speedometer').html('100,000x');
+    }
+    if (curr_time==1000000){
+      $('.speedometer').html('1,000,000x');
+    }
+    if (curr_time==10000000){
+      $('.speedometer').html('10,000,000x');
+    }
+    if (curr_time==100000000){
+      $('.speedometer').html('100,000,000x');
+    }
+    if (curr_time==1000000000){
+      $('.speedometer').html('1,000,000,000x');
+    }
+
   })
 
   $('.speedometer').html('now');
