@@ -39,6 +39,10 @@ a, a:hover {
   color: #FFF;
 }
 
+.fa-stack {
+    cursor: pointer;
+}
+
 
 
 /* The containers, top and bottom */
@@ -70,7 +74,7 @@ a, a:hover {
 
 .thumbname {
     padding: 0px 5px;
-    height: 11px;
+/*    height: 11px;*/
     background-color: black;
     font-size: 11px;
 }
@@ -95,15 +99,24 @@ a, a:hover {
 	color: #44ff44;
 }
 
-#cmb_thumb {
-    margin-bottom: 0px;
-    width: 232px;
-    text-align: center;
+.lighting_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 106px;
+    height: 71px;
 }
 
-#cmb_thumb .thumbname {
-    font-size: 13px;
-    height: auto;
+.lighting_buttons .fa-stack {
+    color: #44FF44;
+}
+
+.lighting_buttons .inactive {
+    color: gray;
+}
+
+.lighting_buttons .inactive:hover {
+    color: white;
 }
 
 
@@ -127,6 +140,46 @@ a, a:hover {
     background-color: black;
     color: #44ff44;
     opacity: .80;
+}
+
+#wwtcanvas:hover #time_buttons {
+    display: inline-block;
+}
+
+#time_buttons {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    width: 350px;
+    margin-top: 10px;
+    padding-right: 35px;
+    text-align: right;
+}
+
+#time_buttons .fa-stack {
+/*    margin-right: 8px;*/
+}
+
+#time_buttons i {
+    pointer-events: none;
+}
+
+#time_buttons .fa-stack:hover .fa-stack-1x {
+    color: #44FF44;
+}
+
+#time_buttons .fa-stack:active {
+    color: #44FF44;
+}
+
+#time_buttons .speedometer {
+    margin-right: 5px;
+    border: solid 2px dimgray;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 15px;
+    color: #44FF44;
 }
 
 #wwtcanvas h1 {
@@ -177,21 +230,6 @@ a, a:hover {
 #zoom_pan_instrux strong {
     font-family: monospace, Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
     color: #DDDDDD;
-}
-
-#time_buttons {
-    margin-right: 25px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.fa-stack {
-    margin-right: 8px;
-    cursor: pointer;
-}
-
-#time_buttons i {
-    pointer-events: none;
 }
 
 
@@ -278,7 +316,7 @@ a, a:hover {
 
 #scroll_arrow {
     display: none;
-	color: #44ff44; /* considered #FBCB1F alternate color */
+	color: #EFA928; /* considered #FBCB1F alternate color */
 }
 
 .fa-arrow-down {
@@ -294,8 +332,10 @@ a, a:hover {
 #colophon {
 	position: absolute;
 	bottom: 10px;
+/*
 	left: 5%;
     width: 90%;
+*/
     display: flex;
     align-items: center;
 }
