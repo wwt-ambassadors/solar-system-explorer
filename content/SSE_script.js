@@ -470,6 +470,7 @@
   // FOUR EVENT HANDLERS FOR PAT TO EXPERIMENT WITH TIME-SCALES
   // 1. Reset Button (return to present time)
   $('#reset_time').on('click', function() {
+    wwt_stc.set_syncToClock(true); 
     curr_time = 1;
     wwt_stc.set_timeRate(curr_time);
     var now = new Date();
@@ -481,16 +482,16 @@
   // This will become pause/play button - needs to be updated
   // 2. Stop Button (stop advancing time)
   $('#stop_time').on('click', function() {
-    if ($('.speedometer').html() != 'Speed: Real time') {
-      curr_time = 0;
-      wwt_stc.set_timeRate(curr_time);
-  
-      $('.speedometer').html(curr_time + 'x');
-    }
+      wwt_stc.set_syncToClock(false);
+      $('.speedometer').html('Speed: paused');
+    // To make time move again when toggling to "play" mode
+    //      wwt_stc.set_syncToClock(true); 
+    //  <add stack of .speedometer times>
   })
 
   // 3. Slower Button (advance time more slowly)
   $('#slower_time').on('click', function() {
+    wwt_stc.set_syncToClock(true); 
     if ($('.speedometer').html() != 'Speed: Real time') {
       if (curr_time > 1) {
         curr_time = wwt_stc.get_timeRate()/10;
@@ -531,6 +532,7 @@
     if (curr_time < 1000000000) {
       curr_time = wwt_stc.get_timeRate()*10;
       wwt_stc.set_timeRate(curr_time);
+      wwt_stc.set_syncToClock(true); 
     }
     if (curr_time==1){
       $('.speedometer').html('Speed: Real time');
