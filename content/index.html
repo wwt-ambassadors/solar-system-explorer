@@ -50,24 +50,25 @@
                 <div id="wwtcanvas">
                     <h1 id="page_title">Solar System Explorer</h1>
                     <div id="time_buttons">
-                        <span class="speedometer">
-                        </span>
-                        <span id="reset_time" class="fa-stack fa-sm">
+                        <span id="reset_time" class="fa-stack fa-sm text_orange">
                             <i class="far fa-circle fa-stack-2x"></i>
-                            <i class="fas fa-globe-africa fa-stack-1x"></i>
+                            <span id="now_text">NOW</span>
                         </span>
-                        <span id="stop_time" class="fa-stack fa-sm">
+                        <span id="playpause_time" class="fa-stack fa-sm time_active">
                             <i class="far fa-circle fa-stack-2x fa-rotate-180"></i>
-                            <i class="fas fa-play fa-stack-1x"></i>
+                            <i id="playpause" class="fas fa-pause fa-stack-1x"></i>
                         </span>
                         <span id="slower_time" class="fa-stack fa-sm">
                             <i class="far fa-circle fa-stack-2x"></i>
                             <i class="fas fa-angle-double-down fa-stack-1x"></i>
                         </span>
-                        <span id="faster_time" class="fa-stack fa-sm">
+                        <span id="faster_time" class="fa-stack fa-sm time_active">
                             <i class="far fa-circle fa-stack-2x"></i>
                             <i class="fas fa-angle-double-up fa-stack-1x"></i>
                         </span>
+                    </div>
+                    <div id="speedometer">
+                        Speed: <span id="speed">REAL TIME</span>
                     </div>
                     
                     <i id="reset_target" class="fas fa-redo-alt"></i>
