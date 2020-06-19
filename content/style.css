@@ -74,7 +74,7 @@ a, a:hover {
     background-color: black;
     font-size: 11px;
 }
-.thumbnail:hover {
+.thumbnail.border_white:hover {
     text-decoration: none;
     color: #44FF44;
 }
@@ -101,23 +101,19 @@ a, a:hover {
 
 .lighting_buttons {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 106px;
     height: 71px;
 }
 
-.lighting_buttons .fa-stack {
-    color: #44FF44;
+.rl_text {
+    font-size: 12px;
 }
 
-.lighting_buttons .inactive {
-    color: gray;
+.lighting_buttons .fas {
     cursor: pointer;
-}
-
-.lighting_buttons .inactive:hover {
-    color: white;
 }
 
 
@@ -185,6 +181,26 @@ a, a:hover {
 
 .times {
     padding-left: 2px;
+}
+
+.slide_container {
+    position: absolute;
+    top: 160px;
+    right: 0px;
+    width: 275px;
+    text-align: left;
+}
+
+.slider {
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
 }
 
 #wwtcanvas h1 {
