@@ -39,10 +39,6 @@ a, a:hover {
   color: #FFF;
 }
 
-.fa-stack {
-    cursor: pointer;
-}
-
 
 
 /* The containers, top and bottom */
@@ -99,6 +95,10 @@ a, a:hover {
 	color: #44ff44;
 }
 
+.text_orange {
+    color: #EFA928;
+}
+
 .lighting_buttons {
     display: flex;
     justify-content: center;
@@ -113,6 +113,7 @@ a, a:hover {
 
 .lighting_buttons .inactive {
     color: gray;
+    cursor: pointer;
 }
 
 .lighting_buttons .inactive:hover {
@@ -142,44 +143,48 @@ a, a:hover {
     opacity: .80;
 }
 
-#wwtcanvas:hover #time_buttons {
-    display: inline-block;
-}
-
 #time_buttons {
-    display: none;
     position: absolute;
-    top: 80px;
+    top: 90px;
     right: 0px;
-    width: 350px;
-    margin-top: 10px;
+    width: 275px;
     padding-right: 35px;
-    text-align: right;
+    text-align: left;
+    color: #666;
+    cursor: default;
 }
 
-#time_buttons .fa-stack {
-/*    margin-right: 8px;*/
+#time_buttons .time_active {
+    color: white;
+    cursor: pointer;
 }
 
 #time_buttons i {
     pointer-events: none;
 }
 
-#time_buttons .fa-stack:hover .fa-stack-1x {
+#time_buttons .time_active:hover .fa-stack-1x {
     color: #44FF44;
 }
 
-#time_buttons .fa-stack:active {
+#time_buttons .time_active:active {
     color: #44FF44;
 }
 
-#time_buttons .speedometer {
-    margin-right: 5px;
-    border: solid 2px dimgray;
-    border-radius: 10px;
-    padding: 6px;
-    font-size: 15px;
-    color: #44FF44;
+#reset_time {
+    display: flex;
+    float: left;
+    margin-right: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+#now_text {
+    font-size: 10px;
+}
+
+.times {
+    padding-left: 2px;
 }
 
 #wwtcanvas h1 {
@@ -199,6 +204,22 @@ a, a:hover {
     font-size: 1.25em;
     display: none;
 }
+
+#speedometer {
+    position: absolute;
+    top: 130px;
+    right: 0px;
+    width: 275px;
+    padding: 0 6px;
+    text-align: left;
+    font-size: 15px;
+}
+
+#speed {
+    font-family: monospace, Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+    color: #44FF44;
+}
+
 
 #reset_target:hover{
     color: #41BEEC;
