@@ -470,6 +470,7 @@
   // FOUR EVENT HANDLERS FOR PAT TO EXPERIMENT WITH TIME-SCALES
   // 1. Reset Button (return to present time)
   $('#reset_time').on('click', function() {
+    wwt_stc.set_syncToClock(true); 
     curr_time = 1;
     wwt_stc.set_timeRate(curr_time);
     var now = new Date();
@@ -488,13 +489,15 @@
   $('#playpause_time').on('click', function() {
     if (curr_time != 0) {
       curr_time = 0;
-      wwt_stc.set_timeRate(curr_time);
+      wwt_stc.set_syncToClock(false);
+ //     wwt_stc.set_timeRate(curr_time);
   
       $('#faster_time').removeClass('time_active');
       $('#speed').html('PAUSE');
     }
     else {
       curr_time = 1;
+      wwt_stc.set_syncToClock(true); 
       wwt_stc.set_timeRate(curr_time);
 
       $('#faster_time').addClass('time_active');
