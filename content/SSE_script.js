@@ -475,54 +475,49 @@
     var now = new Date();
     wwt_stc.set_now(now);
 
-    $('.speedometer').html('Speed: Real time');
+    $('#reset_time').removeClass('time_active').addClass('text_orange');
+    $('#playpause').removeClass('fa-play').addClass('fa-pause');
+    $('#slower_time').removeClass('time_active');
+    $('#faster_time').addClass('time_active');
+
+    $('#speed').html('REAL TIME');
   })
 
   // This will become pause/play button - needs to be updated
-  // 2. Stop Button (stop advancing time)
-  $('#stop_time').on('click', function() {
-    if ($('.speedometer').html() != 'Speed: Real time') {
+  // 2. Play/Pause Button (play/pause advancing time)
+  $('#playpause_time').on('click', function() {
+    if (curr_time != 0) {
       curr_time = 0;
       wwt_stc.set_timeRate(curr_time);
   
-      $('.speedometer').html(curr_time + 'x');
+      $('#faster_time').removeClass('time_active');
+      $('#speed').html('PAUSE');
     }
+    else {
+      curr_time = 1;
+      wwt_stc.set_timeRate(curr_time);
+
+      $('#faster_time').addClass('time_active');
+      print_time(curr_time);
+    }
+    $('#slower_time').removeClass('time_active');
+    $('#playpause').toggleClass('fa-play').toggleClass('fa-pause');
+    $('#reset_time').removeClass('text_orange').addClass('time_active');
   })
 
   // 3. Slower Button (advance time more slowly)
   $('#slower_time').on('click', function() {
-    if ($('.speedometer').html() != 'Speed: Real time') {
+    if ($('#speed').html() != 'REAL TIME') {
       if (curr_time > 1) {
         curr_time = wwt_stc.get_timeRate()/10;
         wwt_stc.set_timeRate(curr_time);
+        $('#faster_time').addClass('time_active');
       }
-      if (curr_time==1){
-        $('.speedometer').html('Speed: Real time');
+      if (curr_time <= 1) {
+        $('#slower_time').removeClass('time_active');
       }
-      if (curr_time==10 | curr_time==100){
-        $('.speedometer').html('Speed: ' + curr_time + 'x');
-      }
-      if (curr_time==1000){
-        $('.speedometer').html('Speed: 1,000x');
-      }
-      if (curr_time==10000){
-        $('.speedometer').html('Speed: 10,000x');
-      }
-      if (curr_time==100000){
-        $('.speedometer').html('Speed: 100,000x');
-      }
-      if (curr_time==1000000){
-        $('.speedometer').html('Speed: 1,000,000x');
-      }
-      if (curr_time==10000000){
-        $('.speedometer').html('Speed: 10,000,000x');
-      }
-      if (curr_time==100000000){
-        $('.speedometer').html('Speed: 100,000,000x');
-      }
-      if (curr_time==1000000000){
-        $('.speedometer').html('Speed: 1,000,000,000x');
-      }
+
+      print_time(curr_time);
     }
   })
 
@@ -531,38 +526,49 @@
     if (curr_time < 1000000000) {
       curr_time = wwt_stc.get_timeRate()*10;
       wwt_stc.set_timeRate(curr_time);
+      $('#slower_time').addClass('time_active');
+      $('#reset_time').removeClass('text_orange').addClass('time_active');
     }
-    if (curr_time==1){
-      $('.speedometer').html('Speed: Real time');
-    }
-    if (curr_time==10 | curr_time==100){
-      $('.speedometer').html('Speed: ' + curr_time + 'x');
-    }
-    if (curr_time==1000){
-      $('.speedometer').html('Speed: 1,000x');
-    }
-    if (curr_time==10000){
-      $('.speedometer').html('Speed: 10,000x');
-    }
-    if (curr_time==100000){
-      $('.speedometer').html('Speed: 100,000x');
-    }
-    if (curr_time==1000000){
-      $('.speedometer').html('Speed: 1,000,000x');
-    }
-    if (curr_time==10000000){
-      $('.speedometer').html('Speed: 10,000,000x');
-    }
-    if (curr_time==100000000){
-      $('.speedometer').html('Speed: 100,000,000x');
-    }
-    if (curr_time==1000000000){
-      $('.speedometer').html('Speed: 1,000,000,000x');
+    if (curr_time >= 1000000000) {
+      $('#faster_time').removeClass('time_active');
     }
 
+    print_time(curr_time);
   })
 
-  $('.speedometer').html('Speed: Real Time');
+  $('#speed').html('REAL TIME');
+
+
+  function print_time(num) {
+    console.log("print time");
+    if (num==1){
+      $('#speed').html('REAL TIME');
+    }
+    else if (num==10 | num==100) {
+      $('#speed').html(num + '<span class="times">&#215;</span>');
+    }
+    else if (num==1000) {
+      $('#speed').html('1,000<span class="times">&#215;</span>');
+    }
+    else if (num==10000) {
+      $('#speed').html('10,000<span class="times">&#215;</span>');
+    }
+    else if (num==100000) {
+      $('#speed').html('100,000<span class="times">&#215;</span>');
+    }
+    else if (num==1000000) {
+      $('#speed').html('1,000,000<span class="times">&#215;</span>');
+    }
+    else if (num==10000000) {
+      $('#speed').html('10,000,000<span class="times">&#215;</span>');
+    }
+    else if (num==100000000) {
+      $('#speed').html('100,000,000<span class="times">&#215;</span>');
+    }
+    else if (num==1000000000) {
+      $('#speed').html('1,000,000,000<span class="times">&#215;</span>');
+    }
+  }
 
     
     
