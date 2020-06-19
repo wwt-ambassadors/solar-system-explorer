@@ -183,15 +183,15 @@
         thumbnails_loaded = thumbnails_loaded + 1;
         if (thumbnails_loaded == 15) {
           console.log("adding lighting button");
-          var lighting_buttons = $('<div class="col_thumb"><div class="thumbnail lighting_buttons"><span id="halflight" class="fa-stack fa-sm"><i class="fas fa-globe-europe fa-rotate-180 fa-stack-2x"></i><i class="fas fa-adjust fa-stack-2x fa-rotate-180"></i></span><span id="fulllight" class="inactive fa-stack fa-sm"><i class="fas fa-globe-europe fa-rotate-180 fa-stack-2x"></i><i class="far fa-circle fa-stack-2x fa-rotate-180"></i></span></div></div>');
+          var lighting_buttons = $('<div class="col_thumb"><div class="thumbnail lighting_buttons"><div class="rl_text">realistic lighting</div><div><i class="fas halflight fa-toggle-off fa-2x"></i></div></div></div>');
           $('#destinationThumbs').append(lighting_buttons);
         }
 
         // TWO EVENT HANDLERS FOR PAT TO EXPERIMENT WITH LIGHTING
         // 1. Half lighting
-        $('#fulllight').on('click', function() {
-          $('#fulllight').removeClass("inactive");
-          $('#halflight').addClass("inactive");
+        $('.fulllight').on('click', function() {
+          $('.fulllight').removeClass("inactive");
+          $('.halflight').addClass("inactive");
 
           // FOR PAT TO FILL OUT WITH LIGHTING CODE
           wwt_si.settings.set_solarSystemLighting(true);
@@ -199,9 +199,9 @@
         })
       
         // 2. Full Lighting
-        $('#halflight').click(function() {
-          $('#halflight').removeClass("inactive");
-          $('#fulllight').addClass("inactive");
+        $('.halflight').click(function() {
+          $('.halflight').removeClass("inactive");
+          $('.fulllight').addClass("inactive");
           // FOR PAT TO FILL OUT WITH LIGHTING CODE
           wwt_si.settings.set_solarSystemLighting(false);
         })
