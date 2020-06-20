@@ -183,25 +183,26 @@
         thumbnails_loaded = thumbnails_loaded + 1;
         if (thumbnails_loaded == 15) {
           console.log("adding lighting button");
-          var lighting_buttons = $('<div class="col_thumb"><div class="thumbnail lighting_buttons"><div class="rl_text">realistic lighting</div><div><i class="fas halflight fa-toggle-off fa-2x"></i></div></div></div>');
+          var lighting_buttons = $('<div class="col_thumb"><div class="thumbnail lighting_buttons"><div class="rl_text">realistic lighting</div><div><i class="fas reallight fa-toggle-on"></i><i class="fas fulllight fa-toggle-off button_hide"></i></div></div></div>');
           $('#destinationThumbs').append(lighting_buttons);
         }
 
         // TWO EVENT HANDLERS FOR PAT TO EXPERIMENT WITH LIGHTING
-        // 1. Half lighting
-        $('.fulllight').on('click', function() {
-          $('.fulllight').removeClass("inactive");
-          $('.halflight').addClass("inactive");
+        // 1. Full lighting
+        $('.fulllight').click(function() {
+          $('.fulllight').addClass("button_hide")
+          $('.reallight').removeClass('button_hide');
 
           // FOR PAT TO FILL OUT WITH LIGHTING CODE
           wwt_si.settings.set_solarSystemLighting(true);
 
         })
       
-        // 2. Full Lighting
-        $('.halflight').click(function() {
-          $('.halflight').removeClass("inactive");
-          $('.fulllight').addClass("inactive");
+        // 2. Real Lighting
+        $('.reallight').click(function() {
+          $('.reallight').addClass("button_hide")
+          $('.fulllight').removeClass('button_hide');
+
           // FOR PAT TO FILL OUT WITH LIGHTING CODE
           wwt_si.settings.set_solarSystemLighting(false);
         })
