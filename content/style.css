@@ -198,23 +198,31 @@ a, a:hover {
 
 .slide_container {
     position: absolute;
-    top: 160px;
+    top: 170px;
     right: 0px;
     width: 275px;
     text-align: left;
 }
 
 .slider {
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.3;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    width: 10em;
+}
+
+.size_text {
+    width: 10em;
+    text-align: center;
 }
 
 .slider:hover {
   opacity: 1;
 }
+
+
 
 #wwtcanvas h1 {
 	margin: 0;

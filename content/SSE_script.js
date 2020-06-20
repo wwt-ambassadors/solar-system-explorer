@@ -7,14 +7,11 @@
 
   // Space Time Controller
   var wwt_stc = null;
-    
-  // track whether user has panned or zoomed yet.
-  var click_counter = 0;
-  var zoom_counter = 0;
 
   // global variables to hold the wwt_si navigation for the last thumbnail clicked, for use by the reset button
   var reset_enabled = false;
   var curr_name = null;
+  var curr_obj = null;
   var thumbnails_loaded = 0;
 
   // global variable to hold the current rate of time-elapse
@@ -152,6 +149,9 @@
 
           $.each(folder.get_children(), function (i, wwtplace) {
             if (wwtplace.get_name() == place.attr('Name')) {
+              // store the object whose thumbnail was just clicked
+              curr_obj = wwtplace;
+
               wwt_ctl.gotoTarget(
                 wwtplace,  // the Place object
                 false,  // noZoom -- false means zoom level is set to something "sensible" for the target
@@ -215,16 +215,12 @@
 
           console.log("should be resetting...");
 
-          $.each(folder.get_children(), function (i, wwtplace) {
-            if (wwtplace.get_name() == curr_name) {
-              wwt_ctl.gotoTarget(
-                wwtplace,  // the Place object
-                true,  // noZoom -- false means zoom level is set to something "sensible" for the target
-                is_dblclick,  // instant -- whether to fly the almost-instantly
-                true  // trackObject -- whether to start the camera tracking this object
-              );
-            }
-          }); 
+          wwt_ctl.gotoTarget(
+            curr_obj,  // the Place object
+            true,  // noZoom -- false means zoom level is set to something "sensible" for the target
+            true,  // instant -- whether to fly the almost-instantly
+            true  // trackObject -- whether to start the camera tracking this object
+          );
 
           $("#reset_target").fadeOut(1000);
 
