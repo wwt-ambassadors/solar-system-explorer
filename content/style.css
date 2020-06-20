@@ -114,6 +114,19 @@ a, a:hover {
 
 .lighting_buttons .fas {
     cursor: pointer;
+    font-size: 1.5em;
+}
+
+.lighting_buttons .button_hide {
+    display: none;
+}
+
+.reallight {
+    color: #EFA928;
+}
+
+.fulllight {
+    color: lightgray;
 }
 
 
@@ -176,7 +189,7 @@ a, a:hover {
 }
 
 #now_text {
-    font-size: 10px;
+    font-size: 0.5em;
 }
 
 .times {
@@ -255,7 +268,7 @@ a, a:hover {
 }
 
 #zoom_pan_instrux {
-	width: 600px;
+	width: 500px;
     margin: 0 auto;
 	text-align: center;
 	font-size: 0.8rem;
@@ -293,8 +306,9 @@ a, a:hover {
 
 .begin_ss {
     margin-top: 1em;
-    font-size: .9em;
+    font-size: 1.3em;
     text-align: left;
+    color: #44ff44;
 }
 
 #description_container {
