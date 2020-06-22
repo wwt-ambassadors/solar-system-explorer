@@ -23,6 +23,10 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
         
+        <!-- Javascript/css links to create and style the slider(s) -->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        
         <!-- load favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
 		
@@ -68,12 +72,12 @@
                         </span>
                     </div>
                     <div id="speedometer">
-                        Speed: <span id="speed">REAL TIME</span>
+                        speed: <span id="speed">REAL TIME</span>
                     </div>
       
                     <div class="slide_container">
-                        <div class="size_text">planet size</div>
-                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                        <div class="size_text">planet size: <span id="size"></span></div>
+                        <div id="size_slider"></div>
                     </div>
                     
                     <i id="reset_target" class="fas fa-redo-alt"></i>
