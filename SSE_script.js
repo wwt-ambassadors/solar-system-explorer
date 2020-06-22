@@ -17,6 +17,9 @@
   // global variable to hold the current rate of time-elapse
   var curr_time = 1;
 
+  // global variable to hold planet size
+  var object_size = 10;
+
   function initialize() {
     // This function call is
     // wwt-web-client/HTML5SDK/wwtlib/WWTControl.cs:WWTControl::InitControlParam.
@@ -123,9 +126,10 @@
           $(element).parent().find("img").removeClass("border_black").addClass("border_green");
           $(element).parent().find(".thumbname").addClass("text_green");
 
+          // RESET NOT IN USE, NOT NEEDED FOR SSE MODULE
           // enable the reset button (and hide if visible)
-          reset_enabled = true;
-          $("#reset_target").fadeOut(100);
+          // reset_enabled = true;
+          // $("#reset_target").fadeOut(100);
 
           /* hide all descriptions, reset scrolls, then show description specific to this target on sgl/dbl click */
           var toggle_class = "." + place.find('Target').text().toLowerCase() + "_description";
@@ -458,9 +462,10 @@
   $('#wwtcanvas').on('click', function() {
     $("#zoom_pan_instrux").delay(5000).fadeOut(1000);
 
-    if(reset_enabled) {
-      $("#reset_target").show();
-    }
+    // RESET NOT IN USE, NOT NEEDED FOR SSE MODULE
+    // if(reset_enabled) {
+    //   $("#reset_target").show();
+    // }
 
   })
 
@@ -507,33 +512,35 @@
 
   // 3. Slower Button (advance time more slowly)
   $('#slower_time').on('click', function() {
-    if ($('#speed').html() != 'REAL TIME') {
+    // if ($('#speed').html() != ('REAL TIME' | 'PAUSE')) {
       if (curr_time > 1) {
         curr_time = wwt_stc.get_timeRate()/10;
         wwt_stc.set_timeRate(curr_time);
         $('#faster_time').addClass('time_active');
+
+        print_time(curr_time);
       }
       if (curr_time <= 1) {
         $('#slower_time').removeClass('time_active');
       }
-
-      print_time(curr_time);
-    }
+    // }
   })
 
   // 4. Faster Button (advance time more quickly)
   $('#faster_time').on('click', function() {
-    if (curr_time < 1000000000) {
-      curr_time = wwt_stc.get_timeRate()*10;
-      wwt_stc.set_timeRate(curr_time);
-      $('#slower_time').addClass('time_active');
-      $('#reset_time').removeClass('text_orange').addClass('time_active');
-    }
-    if (curr_time >= 1000000000) {
-      $('#faster_time').removeClass('time_active');
-    }
+    // if () {
+      if (curr_time > 0 && curr_time < 1000000000) {
+        curr_time = wwt_stc.get_timeRate()*10;
+        wwt_stc.set_timeRate(curr_time);
+        $('#slower_time').addClass('time_active');
+        $('#reset_time').removeClass('text_orange').addClass('time_active');
 
-    print_time(curr_time);
+        print_time(curr_time);
+      }
+      if (curr_time >= 1000000000) {
+        $('#faster_time').removeClass('time_active');
+      }
+    // }
   })
 
   $('#speed').html('REAL TIME');
@@ -572,60 +579,57 @@
 
   // 5. Planet Scale Slider (Planet Size smaller/larger)
   $('#size_slider').slider({
-    value: 2,
+    value: 3,
     min: 1,
-    max: 5,
+    max: 6,
     step: 1,
-    slide: function(event, ui, planet_scale) {
-      $("#size").html(ui.value);
-      //FOR PAT TO FILL IN WITH SLIDER VALUES
-      switch(ui.value) {
-        case 1:
-          console.log("smallest size");
-          planet_scale=1;
-          wwt_si.settings.set_solarSystemScale(planet_scale); 
-          print_planet_scale(planet_scale);
-          break;
-        case 2:
-          console.log("smaller size");
-          planet_scale=10;
-          wwt_si.settings.set_solarSystemScale(planet_scale); 
-          print_planet_scale(planet_scale);
-          break;
-        case 3:
-          console.log("medium size");
-          planet_scale=25;
-          wwt_si.settings.set_solarSystemScale(planet_scale); 
-          print_planet_scale(planet_scale);
-          break;
-        case 4:
-          console.log("bigger size");
-          planet_scale=50;
-          wwt_si.settings.set_solarSystemScale(planet_scale); 
-          print_planet_scale(planet_scale);
-          break;
-        case 5:
-          console.log("biggest size");
-          planet_scale=100;
-          wwt_si.settings.set_solarSystemScale(planet_scale); 
-          print_planet_scale(planet_scale);
-          break;
-      }
+    slide: function(event, ui) {
+      process_planet_scale(ui.value);
     }
   })
 
-  function print_planet_scale(num) {
-    console.log("Planet scale", num);
-    if (num == 1) {
-      $("#size").html("Actual");
+  function process_planet_scale(num) {
+    console.log("Object size: ", num);
+    switch(num) {
+      case 1:
+        console.log("smallest size");
+        object_size = 1;
+        wwt_si.settings.set_solarSystemScale(object_size);
+        break;
+      case 2:
+        console.log("smallish size");
+        object_size = 5;
+        wwt_si.settings.set_solarSystemScale(object_size); 
+        break;
+      case 3:
+        console.log("medium size" + object_size);
+        object_size = 10;
+        wwt_si.settings.set_solarSystemScale(object_size); 
+        break;
+      case 4:
+        console.log("biggish size");
+        object_size = 25;
+        wwt_si.settings.set_solarSystemScale(object_size); 
+        break;
+      case 5:
+        console.log("bigger size");
+        object_size = 50;
+        wwt_si.settings.set_solarSystemScale(object_size); 
+        break;
+      case 6:
+        console.log("biggest size");
+        object_size=100;
+        wwt_si.settings.set_solarSystemScale(object_size); 
+        break;
+    }
+    if (object_size == 1) {
+      $("#size").html("TRUE SCALE");
     }
     else {
-      $("#size").html(num + "x");
+      $("#size").html(object_size + '<span class="times">&#215;</span>');
     }
   }
-
-
-
-
+  $("#size").html(object_size + '<span class="times">&#215;</span>');
+  process_planet_scale(object_size);
 
 })();
