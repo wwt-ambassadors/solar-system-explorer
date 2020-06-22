@@ -6,11 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>WWTA | Solar System Explorer</title>
 		
-		<!-- load personal stylesheet and Bootstrap stylesheet -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		<link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="modal.css">
-		
 		<!-- import Roboto font -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 		
@@ -26,11 +21,14 @@
         <!-- Javascript/css links to create and style the slider(s) -->
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		
+		<!-- load personal stylesheet and Bootstrap stylesheet -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="modal.css">
         
         <!-- load favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
-		
-		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
         
         <!--  load font-awesome version 5, can prob remove the link to FA-4 above  -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
@@ -53,31 +51,32 @@
 -->
                 <div id="wwtcanvas">
                     <h1 id="page_title">Solar System Explorer</h1>
-                    <div id="time_buttons">
-                        <span id="reset_time" class="fa-stack fa-sm text_orange">
-                            <i class="far fa-circle fa-stack-2x"></i>
-                            <span id="now_text">NOW</span>
-                        </span>
-                        <span id="playpause_time" class="fa-stack fa-sm time_active">
-                            <i class="far fa-circle fa-stack-2x fa-rotate-180"></i>
-                            <i id="playpause" class="fas fa-pause fa-stack-1x"></i>
-                        </span>
-                        <span id="slower_time" class="fa-stack fa-sm">
-                            <i class="far fa-circle fa-stack-2x"></i>
-                            <i class="fas fa-angle-double-down fa-stack-1x"></i>
-                        </span>
-                        <span id="faster_time" class="fa-stack fa-sm time_active">
-                            <i class="far fa-circle fa-stack-2x"></i>
-                            <i class="fas fa-angle-double-up fa-stack-1x"></i>
-                        </span>
-                    </div>
-                    <div id="speedometer">
-                        speed: <span id="speed">REAL TIME</span>
-                    </div>
-      
-                    <div class="slide_container">
-                        <div class="size_text">planet size: <span id="size"></span></div>
+                    <div id="speed_scale_container">
+                        <div id="time_buttons">
+                            <span id="reset_time" class="fa-stack fa-sm text_orange">
+                                <i class="far fa-circle fa-stack-2x"></i>
+                                <div id="now_container">
+                                    <span id="now_text">NOW</span>
+                                </div>
+                            </span>
+                            <span id="playpause_time" class="fa-stack fa-sm time_active">
+                                <i class="far fa-circle fa-stack-2x fa-rotate-180"></i>
+                                <i id="playpause" class="fas fa-pause fa-stack-1x"></i>
+                            </span>
+                            <span id="slower_time" class="fa-stack fa-sm">
+                                <i class="far fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-angle-double-down fa-stack-1x"></i>
+                            </span>
+                            <span id="faster_time" class="fa-stack fa-sm time_active">
+                                <i class="far fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-angle-double-up fa-stack-1x"></i>
+                            </span>
+                        </div>
+                        <div id="speedometer">
+                            speed: <span id="speed">REAL TIME</span>
+                        </div>
                         <div id="size_slider"></div>
+                        <div id="size_text">object size: <span id="size"></span></div>
                     </div>
                     
                     <i id="reset_target" class="fas fa-redo-alt"></i>
