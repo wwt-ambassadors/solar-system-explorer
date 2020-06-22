@@ -71,9 +71,24 @@ a, a:hover {
 .thumbname {
     padding: 0px 5px;
 /*    height: 11px;*/
-    background-color: black;
+    background-color: #000000AA;
     font-size: 11px;
 }
+
+@media screen and (max-height: 768px) {
+    .thumbnail {
+        position: relative;
+    }
+    
+    .thumbname {
+        position: absolute;
+        bottom: 4px;
+        left: 4px;
+        font-weight: bold;
+        width: 96px;
+    }
+}
+
 .thumbnail.border_white:hover {
     text-decoration: none;
     color: #44FF44;
@@ -301,17 +316,23 @@ a, a:hover {
 }
 
 #begin_container {
-    margin-top: 50px;
 	text-align: center;
     pointer-events: none;
     user-select: none;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.thumbs_expl {
+    padding: 20px;
+    color: #EFA928;
+    border-bottom: dotted #44FF44 2px;
 }
 
 .begin_ss {
     margin-top: 1em;
     font-size: 1.3em;
     text-align: left;
-    color: #44ff44;
 }
 
 #description_container {
