@@ -538,42 +538,6 @@
 
   $('#speed').html('REAL TIME');
 
-  // 5. Planet Scale Slider (Planet Size smaller/larger)
-  $('#size_slider').slider({
-    value: 1,
-    min: 1,
-    max: 5,
-    step: 1,
-    slide: function(event, ui) {
-      $("#size").html(ui.value);
-      //FOR PAT TO FILL IN WITH SLIDER VALUES
-      switch(ui.value) {
-        case 1:
-          console.log("smallest size");
-          // FILL IN FOR SMALLEST SIZE
-          break;
-        case 2:
-          console.log("smaller size");
-          // FILL IN FOR SMALLER SIZE
-          break;
-        case 3:
-          console.log("medium size");
-          // FILL IN FOR MEDIUM SIZE
-          break;
-        case 4:
-          console.log("bigger size");
-          // FILL IN FOR BIGGER SIZE
-          break;
-        case 5:
-          console.log("biggest size");
-          // FILL IN FOR BIGGEST SIZE
-          break;
-      }
-    }
-  })
-  $("#size").html($("#size_slider").slider("value"));
-
-
   function print_time(num) {
     console.log("print time");
     if (num==1){
@@ -605,6 +569,63 @@
     }
   }
 
-    
-    
+
+  // 5. Planet Scale Slider (Planet Size smaller/larger)
+  $('#size_slider').slider({
+    value: 2,
+    min: 1,
+    max: 5,
+    step: 1,
+    slide: function(event, ui, planet_scale) {
+      $("#size").html(ui.value);
+      //FOR PAT TO FILL IN WITH SLIDER VALUES
+      switch(ui.value) {
+        case 1:
+          console.log("smallest size");
+          planet_scale=1;
+          wwt_si.settings.set_solarSystemScale(planet_scale); 
+          print_planet_scale(planet_scale);
+          break;
+        case 2:
+          console.log("smaller size");
+          planet_scale=10;
+          wwt_si.settings.set_solarSystemScale(planet_scale); 
+          print_planet_scale(planet_scale);
+          break;
+        case 3:
+          console.log("medium size");
+          planet_scale=25;
+          wwt_si.settings.set_solarSystemScale(planet_scale); 
+          print_planet_scale(planet_scale);
+          break;
+        case 4:
+          console.log("bigger size");
+          planet_scale=50;
+          wwt_si.settings.set_solarSystemScale(planet_scale); 
+          print_planet_scale(planet_scale);
+          break;
+        case 5:
+          console.log("biggest size");
+          planet_scale=100;
+          wwt_si.settings.set_solarSystemScale(planet_scale); 
+          print_planet_scale(planet_scale);
+          break;
+      }
+    }
+  })
+
+  function print_planet_scale(num) {
+    console.log("Planet scale", num);
+    if (num == 1) {
+      $("#size").html("Actual");
+    }
+    else {
+      $("#size").html(num + "x");
+    }
+  }
+
+
+
+
+
 })();
