@@ -165,15 +165,36 @@ a, a:hover {
     background-color: black;
     color: #44ff44;
     opacity: .80;
+	margin: 0;
+    border-right: 3px solid #44ff44;
+	font-size: calc(12px + 1vw); 
+	font-weight: 700;
+	pointer-events: none;
+}
+
+#reset_target {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: "Font Awesome 5 Free";
+    color: #41BEECC0;
+    font-size: 1.25em;
+    display: none;
+}
+
+#reset_target:hover{
+    color: #41BEEC;
+}
+
+#speed_scale_container {
+    position: absolute;
+    top: 120px;
+    right: 0px;
+    padding-right: 35px;
+    text-align: left;
 }
 
 #time_buttons {
-    position: absolute;
-    top: 90px;
-    right: 0px;
-    width: 275px;
-    padding-right: 35px;
-    text-align: left;
     color: #666;
     cursor: default;
 }
@@ -195,10 +216,8 @@ a, a:hover {
     color: #44FF44;
 }
 
-#reset_time {
+#now_container{
     display: flex;
-    float: left;
-    margin-right: 4px;
     justify-content: center;
     align-items: center;
 }
@@ -211,65 +230,37 @@ a, a:hover {
     padding-left: 2px;
 }
 
-.slide_container {
-    position: absolute;
-    top: 170px;
-    right: 0px;
-    width: 275px;
-    text-align: left;
+#speedometer, #size_text {
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    font-size: 0.75em;
 }
 
-#size_slider {
-    width: 200px;
-}
-
-.size_text {
-    width: 10em;
-    text-align: center;
-}
-
-.slider:hover {
-  opacity: 1;
-}
-
-
-
-#wwtcanvas h1 {
-	margin: 0;
-    border-right: 3px solid #44ff44;
-	font-size: calc(12px + 1vw); 
-	font-weight: 700;
-	pointer-events: none;
-}
-
-#reset_target {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    font-family: "Font Awesome 5 Free";
-    color: #41BEECC0;
-    font-size: 1.25em;
-    display: none;
-}
-
-#speedometer {
-    position: absolute;
-    top: 130px;
-    right: 0px;
-    width: 275px;
-    padding: 0 6px;
-    text-align: left;
-    font-size: 15px;
-}
-
-#speed {
+#speed, #size {
     font-family: monospace, Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
     color: #44FF44;
 }
 
+#size_slider {
+    width: 9.3em;
+    border-radius: 12em;
+    height: 0.6em;
+}
 
-#reset_target:hover{
-    color: #41BEEC;
+#size_slider .ui-slider-handle {
+    top: -.35em;
+    background-color: #EFA928;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+#size_slider .ui-slider-handle:hover {
+    background-color: #44FF44;
+}
+
+#size_slider .ui-slider-handle:active {
+    background-color: #00000088;
+    border: 2px solid #44FF44;
 }
 
 #zoom_pan_container{
@@ -317,7 +308,6 @@ a, a:hover {
 
 #begin_container {
 	text-align: center;
-    pointer-events: none;
     user-select: none;
     height: 100%;
     overflow-y: auto;
