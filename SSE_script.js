@@ -538,6 +538,41 @@
 
   $('#speed').html('REAL TIME');
 
+  // 5. Planet Scale Slider (Planet Size smaller/larger)
+  $('#size_slider').slider({
+    value: 1,
+    min: 1,
+    max: 5,
+    step: 1,
+    slide: function(event, ui) {
+      $("#size").html(ui.value);
+      //FOR PAT TO FILL IN WITH SLIDER VALUES
+      switch(ui.value) {
+        case 1:
+          console.log("smallest size");
+          // FILL IN FOR SMALLEST SIZE
+          break;
+        case 2:
+          console.log("smaller size");
+          // FILL IN FOR SMALLER SIZE
+          break;
+        case 3:
+          console.log("medium size");
+          // FILL IN FOR MEDIUM SIZE
+          break;
+        case 4:
+          console.log("bigger size");
+          // FILL IN FOR BIGGER SIZE
+          break;
+        case 5:
+          console.log("biggest size");
+          // FILL IN FOR BIGGEST SIZE
+          break;
+      }
+    }
+  })
+  $("#size").html($("#size_slider").slider("value"));
+
 
   function print_time(num) {
     console.log("print time");

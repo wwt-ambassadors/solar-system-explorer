@@ -204,13 +204,8 @@ a, a:hover {
     text-align: left;
 }
 
-.slider {
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.3;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-    width: 10em;
+#size_slider {
+    width: 200px;
 }
 
 .size_text {
