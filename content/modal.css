@@ -7,6 +7,10 @@
 
 /* Styling for Target Object modal pop-up */
 
+.modal-content {
+    background-color: #00000088;
+}
+
 .modal-header{
 	padding: 0;
 }
@@ -17,7 +21,7 @@
 }
 
 .modal-header{
-    background-color: #222;
+    background-color: #222222CC;
 }
 
 .modal-header h3{
@@ -25,6 +29,15 @@
 	color: #44FF44;
 	font-weight: bold;
 	font-size: 32px;
+}
+
+.modal-body {
+    color: white;
+    background-color: #00000066;
+}
+
+.modal-footer {
+    background-color: #222222CC;
 }
 
 .modal img{
@@ -43,8 +56,14 @@
 }
 
 .modal .btn{
-    background-color: #41BEEC;
-    border-color: #41BEEC;
-    color: white;
+    background: 0;
+    border: 3px solid #41BEEC;
+    color: #41BEEC;
 }
 
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: none;
+        margin: .5rem;
+    }
+}
