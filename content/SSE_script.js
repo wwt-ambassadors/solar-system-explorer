@@ -57,7 +57,7 @@
       // store each of the Place objects from the WTML file in places
       var places = $(xml).find('Place');
       var thumbTemplate = $('<div class="col_thumb"><a href="javascript:void(0)" class="thumbnail border_white"><img src=""/><div class="thumbname">example</div</a></div>');
-      var descTemplate = $('<div class="obj_desc container-fluid"><div class="row"><div class="name col-xs-12 col-md-12 col-lg-12">name</div><div class="what col-xs-12 col-md-12 col-lg-12">what</div><div class="before col-xs-12 col-md-12 col-lg-12">before</div><div class="process col-xs-12 col-md-12 col-lg-12">process</div><div class="elements col-xs-12 col-md-12 col-lg-12">elements</div><div class="after col-xs-12 col-md-12 col-lg-12">after</div><div class="properties col-xs-12 col-md-12 col-lg-12">properties</div><div class="dive col-xs-12 col-md-12 col-lg-12">dive deeper</div></div></div>');
+      var descTemplate = $('<div class="obj_desc container-fluid"><div class="row"><div class="name col-xs-12 col-md-12 col-lg-12">name</div><div class="what col-xs-12 col-md-12 col-lg-12">what</div><div class="characteristics col-xs-12 col-md-12 col-lg-12">characteristics</div></div></div>');
       
       places.each(function (i, pl) {
         var place = $(pl);
@@ -87,23 +87,8 @@
         var targetwhat = place.find('.What').html();
         tmpdesc.find('.what').html(targetwhat);
           
-        var targetbefore = place.find('.Before').html();
-        tmpdesc.find('.before').html(targetbefore);
-          
-        var targetprocess = place.find('.Process').html();
-        tmpdesc.find('.process').html(targetprocess);
-          
-        var targetafter = place.find('.After').html();
-        tmpdesc.find('.after').html(targetafter);
-          
-        var targetelements = place.find('.Elements').html();
-        tmpdesc.find('.elements').html(targetelements);
-          
-        var targetproperties = place.find('.Properties').html();
-        tmpdesc.find('.properties').html(targetproperties);
-          
-        var targetdive = place.find('.Dive').html();
-        tmpdesc.find('.dive').html(targetdive);
+        var targetcharacteristics = place.find('.Characteristics').html();
+        tmpdesc.find('.characteristics').html(targetcharacteristics);
     
           
         // apply the unique target description class to the description template clone

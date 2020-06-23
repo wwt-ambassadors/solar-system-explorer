@@ -45,7 +45,8 @@ a, a:hover {
 
 .top_container {
     display: flex;
-    min-height: 50%;
+    min-height: 60%;
+    max-height: 75%;
 }
 
 .bottom_container {
@@ -167,11 +168,12 @@ a, a:hover {
     opacity: .80;
 	margin: 0;
     border-right: 3px solid #44ff44;
-	font-size: calc(12px + 1vw); 
+	font-size: calc(4px + 1.5vw);
 	font-weight: 700;
 	pointer-events: none;
 }
 
+/*
 #reset_target {
     position: absolute;
     bottom: 20px;
@@ -185,18 +187,50 @@ a, a:hover {
 #reset_target:hover{
     color: #41BEEC;
 }
+*/
 
 #speed_scale_container {
     position: absolute;
-    top: 120px;
+    bottom:10px;
     right: 0px;
-    padding-right: 35px;
+    padding-right: 25px;
     text-align: left;
+    pointer-events: none;
+}
+
+#tips_button {
+    text-align: right;
+    margin-bottom: 30px;
+    pointer-events: all;
+}
+
+#tips_text {
+    border: 3px solid #41BEEC;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 0.75em;
+}
+
+#tips_text:hover {
+    background-color: #41BEEC22;
+}
+
+#tips_text:active {
+    background-color: #41BEEC44;
+}
+
+#tips_text a {
+    color: #41BEEC;
+    text-decoration: none;
 }
 
 #time_buttons {
     color: #666;
     cursor: default;
+}
+
+#time_buttons .fa-stack {
+    pointer-events: all;
 }
 
 #time_buttons .time_active {
@@ -216,7 +250,7 @@ a, a:hover {
     color: #44FF44;
 }
 
-#now_container{
+#now_container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -232,8 +266,11 @@ a, a:hover {
 
 #speedometer, #size_text {
     padding: 10px 5px;
-    margin-bottom: 20px;
     font-size: 0.75em;
+}
+
+#speedometer {
+    margin-bottom: 20px;
 }
 
 #speed, #size {
@@ -245,6 +282,7 @@ a, a:hover {
     width: 9.3em;
     border-radius: 12em;
     height: 0.6em;
+    pointer-events: all;
 }
 
 #size_slider .ui-slider-handle {
@@ -256,6 +294,10 @@ a, a:hover {
 
 #size_slider .ui-slider-handle:hover {
     background-color: #44FF44;
+}
+
+#size_slider span:focus {
+    outline: none;
 }
 
 #size_slider .ui-slider-handle:active {
@@ -270,17 +312,17 @@ a, a:hover {
     pointer-events: none;
 }
 
-@media screen and (max-width: 976px) {
+@media screen and (max-width: 1440px) {
     #zoom_pan_container {
         display: none;
     }
 }
 
 #zoom_pan_instrux {
-	width: 500px;
+    width: 27em;
     margin: 0 auto;
 	text-align: center;
-	font-size: 0.8rem;
+	font-size: 0.8em;
 	color: #EEEEEECC;
     background-color: #00000066;
     border-radius: 25px;
@@ -321,7 +363,6 @@ a, a:hover {
 
 .begin_ss {
     margin-top: 1em;
-    font-size: 1.3em;
     text-align: left;
 }
 
@@ -347,7 +388,7 @@ a, a:hover {
     font-size: calc(10px + 1.5vw);
 }
 
-#description_box .row h4 {
+#description_box .row h4, #tipsModal h4 {
     margin-bottom: 4px;
 	color: #EFA928;  /* used to be #8AFF8A */
     font-size: calc(10px + 1.25vw);
