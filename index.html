@@ -52,6 +52,9 @@
                 <div id="wwtcanvas">
                     <h1 id="page_title">Solar System Explorer</h1>
                     <div id="speed_scale_container">
+                        <div id="tips_button">
+                            <span id="tips_text"><a data-toggle="modal" href="#tipsModal">TIPS</a></span>
+                        </div>
                         <div id="time_buttons">
                             <span id="reset_time" class="fa-stack fa-sm text_orange">
                                 <i class="far fa-circle fa-stack-2x"></i>
@@ -79,7 +82,7 @@
                         <div id="size_text">object size: <span id="size"></span></div>
                     </div>
                     
-                    <i id="reset_target" class="fas fa-redo-alt"></i>
+<!--                    <i id="reset_target" class="fas fa-redo-alt"></i>-->
                     <div id="zoom_pan_container">
                         <div id="zoom_pan_instrux">
                             to zoom, scroll in or out (or use the <strong>Z-X</strong> keys)<br>
@@ -93,7 +96,7 @@
                     <div id="begin_container">
                         <div class="thumbs_expl">
                             <p>
-                                Click on one of the thumbnails to the left to fly to the selected object.
+                                Click on one of the thumbnails to the left to fly to that object.
                             </p>
                             <p>
                                 Double-click on a thumbnail to arrive there immediately.
@@ -114,17 +117,37 @@
     				
 							
         <!-- beginning of target object description modal -->
-        <div class="modal fade" id="objectModal">
+        <div class="modal fade" id="tipsModal">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3 class="modal-title">The Periodic Table</h3>
+                        <h3 class="modal-title">TIPS</h3>
                     </div>
-                    <div class="modal-body text-info">
-                        <!--<img src="PeriodicTablePlaceholder@0.75x.png" class="object_banner" alt="banner">-->
+                    <div class="modal-body">
+                        <h4>Don’t see anything?</h4>
+                        <ul>
+                            <li>Sometimes you’re facing the nighttime side of a planet. Try panning around the object to get to the daytime side.</li>
+                            <li>Sometimes the image data loads slowly - if you’re sure you’re not on the nighttime side, wait a few moments for the object imagery to load.</li>
+                        </ul>
+                        <h4>Object size:</h4>
+                        <ul>
+                            <li>By default, objects in the Solar System are displayed 10x larger than their actual size (i.e. NOT to scale).</li>
+                            <li>The more you move the slider to the left, the more exaggerated the object sizes will be (and the further they will be from their actual scale).</li>
+                        </ul>
+                        <h4>Time controls:</h4>
+                        <ul>
+                            <li>By default, time runs at actual speed. (If you watch Earth for 24 hours, it would spin around once).</li>
+                            <li>Speed time up a little to watch most planets and moons spin on their axes and experience day and night.</li>
+                            <li>Speed time up a lot to watch planets orbit around the Sun and experience a year (or to watch moons orbit their planets).</li>
+                        </ul>
+                        <h4>Realistic Lighting:</h4>
+                        <ul>
+                            <li>Leave “on” if you want to observe day/night on planets and moons.</li>
+                            <li>Turn “off” if you want to look for features on planets and moons that are on the dark nighttime sides.</li>
+                        </ul>
                     </div>
                     <div class="modal-footer">
-                        <span class="target_object_description">This is the Periodic Table description</span>
+                        <span class="target_object_description"></span>
                         <button type="button" class="btn btn-info" data-dismiss="modal">close</button>
                     </div>
                 </div>
