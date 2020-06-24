@@ -23,7 +23,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 3.88 Earth radii (25,000 km)</li>
+          <li><strong>Radius:</strong> <a id="neptune_scale" href="#">3.88 Earth radii</a> (25,000 km)</li>
           <li><strong>Mass:</strong> 17.1 Earth's mass (1 &#215; 10<sup>26</sup> kg)</li>
           <li><strong>Average distance from Sun:</strong> 30.02 AU</li>
           <li><strong>Length of year:</strong> 164.8 Earth years</li>
@@ -54,7 +54,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 0.186 Earth radii (1,200 km)</li>
+          <li><strong>Radius:</strong> <a id="pluto_scale" href="#">0.186 Earth radii</a> (1,200 km)</li>
           <li><strong>Mass:</strong> 0.0025 Earth's mass (1 &#215; 10<sup>22</sup> kg)</li>
           <li><strong>Average distance from Sun:</strong> 39.48 AU</li>
           <li><strong>Length of year:</strong> 247.9 Earth years</li>
@@ -85,7 +85,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 9.5 Earth radii (58,000 km)</li>
+          <li><strong>Radius:</strong> <a id="saturn_scale" href="#">9.5 Earth radii</a> (58,000 km)</li>
           <li><strong>Mass:</strong> 95.2 Earth's mass (6 &#215; 10<sup>26</sup> kg)</li>
           <li><strong>Average distance from Sun:</strong> 9.58 AU</li>
           <li><strong>Length of year:</strong> 29.5 Earth years</li>
@@ -116,7 +116,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 4.01 Earth radii (25,000 km)</li>
+          <li><strong>Radius:</strong> <a id="uranus_scale" href="#">4.01 Earth radii</a> (25,000 km)</li>
           <li><strong>Mass:</strong> 14.5 Earth's mass (9 &#215; 10<sup>25</sup> kg)</li>
           <li><strong>Average distance from Sun:</strong> 19.14 AU</li>
           <li><strong>Length of year:</strong> 84 Earth years</li>
@@ -147,7 +147,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 0.41 Earth radii (2,600 km)</li>
+          <li><strong>Radius:</strong> <a id="ganymede_scale" href="#">0.41 Earth radii</a> (2,600 km)</li>
           <li><strong>Mass:</strong> 0.025 Earth's mass (1 &#215; 10<sup>23</sup> kg)</li>
         </ul>
       </div>
@@ -175,7 +175,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 0.37 Earth radii (2,4 km)</li>
+          <li><strong>Radius:</strong> <a id="callisto_scale" href="#">0.37 Earth radii</a> (2,4 km)</li>
           <li><strong>Mass:</strong> 0.018 Earth's mass (1 &#215; 10<sup>23</sup> kg)</li>
         </ul>
       </div>
@@ -203,7 +203,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 0.29 Earth radii (1,800 km)</li>
+          <li><strong>Radius:</strong> <a id="io_scale" href="#">0.29 Earth radii</a> (1,800 km)</li>
           <li><strong>Mass:</strong> 0.015 Earth's mass (9 &#215; 10<sup>22</sup> kg)</li>
         </ul>
       </div>
@@ -231,7 +231,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 0.25 Earth radii (1,600 km)</li>
+          <li><strong>Radius:</strong> <a id="europa_scale" href="#">0.25 Earth radii</a> (1,600 km)</li>
           <li><strong>Mass:</strong> 0.015 Earth's mass (5 &#215; 10<sup>22</sup> kg)</li>
         </ul>
       </div>
@@ -259,7 +259,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 0.53 Earth radii (3,400 km)</li>
+          <li><strong>Radius:</strong> <a id="mars_scale" href="#">0.53 Earth radii</a> (3,400 km)</li>
           <li><strong>Mass:</strong> 0.11 Earth's mass (6 &#215; 10<sup>23</sup> kg)</li>
           <li><strong>Average distance from Sun:</strong> 1.52 AU</li>
           <li><strong>Length of year:</strong> 1.88 Earth years</li>
@@ -290,7 +290,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 11.2 Earth radii (70,000 km)</li>
+          <li><strong>Radius:</strong> <a id="jupiter_scale" href="#">11.2 Earth radii</a> (70,000 km)</li>
           <li><strong>Mass:</strong> 318 Earth's mass (2 &#215; 10<sup>27</sup> kg)</li>
           <li><strong>Average distance from Sun:</strong> 5.2 AU</li>
           <li><strong>Length of year:</strong> 11.9 Earth years</li>
@@ -352,7 +352,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 0.27 Earth radii (1,700 km)</li>
+          <li><strong>Radius:</strong> <a id="moon_scale" href="#">0.27 Earth radii</a> (1,700 km)</li>
           <li><strong>Mass:</strong> 0.012 Earth's mass (7 &#215; 10<sup>22</sup> kg)</li>
         </ul>
       </div>
@@ -380,7 +380,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 0.38 Earth radii (2,400 km)</li>
+          <li><strong>Radius:</strong> <a id="mercury_scale" href="#">0.38 Earth radii</a> (2,400 km)</li>
           <li><strong>Mass:</strong> 0.055 Earth's mass (3 &#215; 10<sup>23</sup> kg)</li>
           <li><strong>Average distance from Sun:</strong> 0.38 AU</li>
           <li><strong>Length of year:</strong> 0.24 Earth years</li>
@@ -411,7 +411,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 0.95 Earth radii (6,100 km)</li>
+          <li><strong>Radius:</strong> <a id="venus_scale" href="#">0.95 Earth radii</a> (6,100 km)</li>
           <li><strong>Mass:</strong> 0.82 Earth's mass (5 &#215; 10<sup>24</sup> kg)</li>
           <li><strong>Average distance from Sun:</strong> 0.72 AU</li>
           <li><strong>Length of year:</strong> 0.62 Earth years</li>
@@ -442,7 +442,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> 108 Earth radii (700,000 km)</li>
+          <li><strong>Radius:</strong> <a id="sun_scale" href="#">108 Earth radii</a> (700,000 km)</li>
           <li><strong>Mass:</strong> 330,000 Earth's mass (2 &#215; 10<sup>30</sup> kg)</li>
         </ul>
       </div>
