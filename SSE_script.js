@@ -166,6 +166,15 @@
             on_click(element, true)
           });
 
+        tmpdesc.find('a').mouseenter(function() {
+          var popup_id = "#" + place.attr('Name').toLowerCase() + "_scale"
+          $(popup_id).show();
+        })
+        tmpdesc.find('a').mouseleave(function() {
+          var popup_id = "#" + place.attr('Name').toLowerCase() + "_scale"
+          $(popup_id).hide();
+        })
+
 
         // Plug the set of thumbnails into the #destinationThumbs element
         $('#destinationThumbs').append(tmpthumb);
@@ -196,7 +205,7 @@
           wwt_si.settings.set_solarSystemLighting(false);
         })
         
-          
+        // Add description to the container
         $("#description_container").append(tmpdesc);
 
         // tag the reload button with a click action to reload the most recent thumbnail

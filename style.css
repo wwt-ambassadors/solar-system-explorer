@@ -273,6 +273,7 @@ a, a:hover {
     margin-bottom: 20px;
 }
 
+
 #speed, #size {
     font-family: monospace, Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
     color: #44FF44;
@@ -305,6 +306,7 @@ a, a:hover {
     border: 2px solid #44FF44;
 }
 
+
 #zoom_pan_container{
 	position: absolute;
 	bottom: 20px;
@@ -331,6 +333,23 @@ a, a:hover {
 #zoom_pan_instrux strong {
     font-family: monospace, Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
     color: #EFA928;
+}
+
+
+.scale_popup {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 25%;
+    border: 2px solid #333333BB;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.scale_popup img {
+    width: 100%;
+    height: auto;
 }
 
 
