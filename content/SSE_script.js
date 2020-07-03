@@ -18,7 +18,7 @@
   var curr_time = 1;
 
   // global variable to hold planet size
-  var object_size = 10;
+  var object_size = 25;
 
   function initialize() {
     // This function call is
@@ -41,7 +41,7 @@
     wwt_stc = wwtlib.SpaceTimeController;
 
     wwt_si.setBackgroundImageByName("Solar System");
-    wwt_si.settings.set_solarSystemScale(10);
+    wwt_si.settings.set_solarSystemScale(25);
     wwt_si.settings.set_solarSystemMilkyWay(false);
     wwt_si.settings.set_solarSystemCosmos(false);
     wwt_si.settings.set_solarSystemStars(false);
@@ -79,6 +79,10 @@
           'data-container': 'body',
           title: place.find('Description').attr('Title')
         });
+
+        if (place.attr('Name') == "Sun") {
+          tmpthumb.find('img').removeClass("border_black").addClass("border_green");
+        }
 
         // locate the thumbnail name and replace html contents with content from WTML file
         var thumbname = place.find('.Thumbnail').html();
@@ -579,7 +583,7 @@
   $('#size_slider').slider({
     value: 3,
     min: 1,
-    max: 6,
+    max: 5,
     step: 1,
     slide: function(event, ui) {
       process_planet_scale(ui.value);
@@ -595,26 +599,21 @@
         wwt_si.settings.set_solarSystemScale(object_size);
         break;
       case 2:
-        console.log("smallish size");
-        object_size = 5;
-        wwt_si.settings.set_solarSystemScale(object_size); 
-        break;
-      case 3:
         console.log("medium size" + object_size);
         object_size = 10;
         wwt_si.settings.set_solarSystemScale(object_size); 
         break;
-      case 4:
+      case 3:
         console.log("biggish size");
         object_size = 25;
         wwt_si.settings.set_solarSystemScale(object_size); 
         break;
-      case 5:
+      case 4:
         console.log("bigger size");
         object_size = 50;
         wwt_si.settings.set_solarSystemScale(object_size); 
         break;
-      case 6:
+      case 5:
         console.log("biggest size");
         object_size=100;
         wwt_si.settings.set_solarSystemScale(object_size); 
