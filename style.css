@@ -111,10 +111,6 @@ a, a:hover {
 	color: #44ff44;
 }
 
-.text_orange {
-    color: #EFA928;
-}
-
 .lighting_buttons {
     display: flex;
     flex-direction: column;
@@ -233,22 +229,23 @@ a, a:hover {
     pointer-events: none;
 }
 
-#time_buttons {
+#time_buttons a {
     color: #666;
     cursor: default;
 }
 
+#time_buttons .text_orange {
+    color: #EFA928;
+}
+
 #time_buttons .fa-stack {
-    pointer-events: all;
-}
-
-#time_buttons .time_active {
-    color: white;
-    cursor: pointer;
-}
-
-#time_buttons i {
     pointer-events: none;
+}
+
+#time_buttons .fa-stack.time_active {
+    color: white;
+    pointer-events: all;
+    cursor: pointer;
 }
 
 #time_buttons .time_active:hover .fa-stack-1x {
@@ -295,22 +292,24 @@ a, a:hover {
     pointer-events: all;
 }
 
-#size_slider .ui-slider-handle {
+#size_slider span {
     top: -.35em;
     background-color: #EFA928;
     border: 2px solid black;
     border-radius: 12px;
 }
 
-#size_slider .ui-slider-handle:hover {
+#size_slider span:hover {
     background-color: #44FF44;
 }
 
 #size_slider span:focus {
     outline: none;
+    background-color: #00000088;
+    border: 2px solid #44FF44;
 }
 
-#size_slider .ui-slider-handle:active {
+#size_slider span:active {
     background-color: #00000088;
     border: 2px solid #44FF44;
 }

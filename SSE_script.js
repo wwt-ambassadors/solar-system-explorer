@@ -66,6 +66,10 @@
         var tmpthumb = thumbTemplate.clone();
         var tmpdesc = descTemplate.clone();
 
+        tmpthumb.find('a').attr({
+          tabindex: place.attr('Index')
+        });
+
         tmpthumb.find('img').attr({
           src: place.find('ThumbnailUrl').text(),
           class: 'border_black',
