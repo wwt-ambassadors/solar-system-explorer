@@ -127,8 +127,7 @@
           /* hide all descriptions, reset scrolls, then show description specific to this target on sgl/dbl click */
           var toggle_class = "." + place.find('Target').text().toLowerCase() + "_description";
           $("#description_box").find(".obj_desc").hide();
-          $('#begin_container').hide();
-          $('#description_container').scrollTop(0).show();
+          $('#description_container').scrollTop(0);
             
           $(toggle_class).show();
             
