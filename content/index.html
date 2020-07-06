@@ -53,21 +53,21 @@
                     <h1 id="page_title">Solar System Explorer</h1>
                     <div id="speed_scale_container">
                         <div id="time_buttons">
-                            <a id="reset_time" class="fa-stack fa-sm text_orange" href="#">
+                            <a id="reset_time" class="fa-stack fa-sm text_orange" href="#" data-toggle="tooltip" data-placement="top" title="reset time to Now">
                                 <i class="far fa-circle fa-stack-2x"></i>
                                 <div id="now_container">
                                     <span id="now_text">NOW</span>
                                 </div>
                             </a>
-                            <a id="playpause_time" class="fa-stack fa-sm time_active" href="#">
+                            <a id="playpause_time" class="fa-stack fa-sm time_active" href="#" data-toggle="tooltip" data-placement="top" title="play / pause">
                                 <i class="far fa-circle fa-stack-2x fa-rotate-180"></i>
                                 <i id="playpause" class="fas fa-pause fa-stack-1x"></i>
                             </a>
-                            <a id="slower_time" class="fa-stack fa-sm" href="#">
+                            <a id="slower_time" class="fa-stack fa-sm" href="#" data-toggle="tooltip" data-placement="top" title="Slow down time 10&#215;">
                                 <i class="far fa-circle fa-stack-2x"></i>
                                 <i class="fas fa-angle-double-down fa-stack-1x"></i>
                             </a>
-                            <a id="faster_time" class="fa-stack fa-sm time_active" href="#">
+                            <a id="faster_time" class="fa-stack fa-sm time_active" href="#" data-toggle="tooltip" data-placement="top" title="speed up time 10&#215;">
                                 <i class="far fa-circle fa-stack-2x"></i>
                                 <i class="fas fa-angle-double-up fa-stack-1x"></i>
                             </a>
@@ -214,6 +214,11 @@
 		</div>
 
 	    <script src="SSE_script.js"></script>
+        <script>
+            $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
 	</body>
 
 
