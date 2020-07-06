@@ -169,7 +169,7 @@
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          Description pending...
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
       <div class="Characteristics">
@@ -271,7 +271,7 @@
 
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Jupiter" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="7">
     <ImageSet>
-      <Target>jupiter</Target>
+      <Target>Jupiter</Target>
       <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=jupiter</ThumbnailUrl>
     </ImageSet>
     <Description Title="Jupiter">
