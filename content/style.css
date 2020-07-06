@@ -39,6 +39,13 @@ a, a:hover {
   color: #FFF;
 }
 
+.ui-tooltip {
+    border-color: dimgray;
+    background-color: black;
+    color: white;
+    font-size: 11px;
+}
+
 
 
 /* The containers, top and bottom */
