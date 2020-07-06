@@ -329,7 +329,7 @@ a, a:hover {
     pointer-events: none;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1140px) {
     #zoom_pan_container {
         display: none;
     }
@@ -339,7 +339,7 @@ a, a:hover {
     width: 27em;
     margin: 0 auto;
 	text-align: center;
-	font-size: 0.8em;
+	font-size: 0.6em;
 	color: #EEEEEECC;
     background-color: #00000066;
     border-radius: 25px;
@@ -382,14 +382,9 @@ a, a:hover {
 	box-shadow: 0px 0px 15px #000 inset;
 }
 
-#begin_container {
-	text-align: center;
-    user-select: none;
-    height: 100%;
-    overflow-y: auto;
-}
-
 .thumbs_expl {
+    user-select: none;
+	text-align: center;
     padding: 20px;
     color: #EFA928;
     border-bottom: dotted #44FF44 2px;
@@ -401,7 +396,7 @@ a, a:hover {
 }
 
 #description_container {
-	display: none;
+	display: show;
 	height: 100%;
 	overflow-y: auto;
 }
