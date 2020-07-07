@@ -20,6 +20,9 @@
   // global variable to hold planet size
   var object_size = 25;
 
+  // global variable for lighting
+  var real_lighting = true;
+
   function initialize() {
     // This function call is
     // wwt-web-client/HTML5SDK/wwtlib/WWTControl.cs:WWTControl::InitControlParam.
@@ -187,8 +190,7 @@
         $('#destinationThumbs').append(tmpthumb);
         thumbnails_loaded = thumbnails_loaded + 1;
         if (thumbnails_loaded == 15) {
-          console.log("adding lighting button");
-          var lighting_buttons = $('<div class="col_thumb"><div class="thumbnail lighting_buttons"><div class="rl_text">realistic lighting</div><div><i class="fas reallight fa-toggle-on"></i><i class="fas fulllight fa-toggle-off button_hide"></i></div></div></div>');
+          var lighting_buttons = $('<div class="col_thumb"><div class="thumbnail lighting_buttons"><div class="rl_text">realistic lighting</div><div class="lighting_toggle" tabindex="16"><i class="fas reallight fa-toggle-on"></i><i class="fas fulllight fa-toggle-off button_hide"></i></div></div></div>');
           $('#destinationThumbs').append(lighting_buttons);
         }
 
@@ -199,7 +201,8 @@
           $('.reallight').removeClass('button_hide');
 
           // FOR PAT TO FILL OUT WITH LIGHTING CODE
-          wwt_si.settings.set_solarSystemLighting(true);
+          real_lighting = (true);
+          wwt_si.settings.set_solarSystemLighting(real_lighting);
 
         })
       
@@ -209,8 +212,26 @@
           $('.fulllight').removeClass('button_hide');
 
           // FOR PAT TO FILL OUT WITH LIGHTING CODE
-          wwt_si.settings.set_solarSystemLighting(false);
+          real_lighting = (false);
+          wwt_si.settings.set_solarSystemLighting(real_lighting);
         })
+
+        $('.lighting_toggle').keydown(function() {
+          if (event.which == 13) {
+            $('.fulllight').toggleClass("button_hide")
+            $('.reallight').toggleClass('button_hide');
+
+            // FOR PAT TO FILL OUT WITH LIGHTING CODE
+            if (real_lighting == true) {
+              real_lighting = false;
+            }
+            else if (real_lighting == false) {
+              real_lighting = true;
+            }
+            wwt_si.settings.set_solarSystemLighting(real_lighting);
+          }
+        })
+
         
         // Add description to the container
         $("#description_container").append(tmpdesc);
@@ -359,6 +380,8 @@
       76: mouse_right,
       75: mouse_down
     };
+
+    const lightCodes = 
 
     window.addEventListener("keydown", function (event) {
       // "must check the deprecated keyCode property for Qt"
