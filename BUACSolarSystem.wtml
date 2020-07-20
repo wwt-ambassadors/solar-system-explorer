@@ -177,7 +177,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> <a id="callisto_scale" href="#">0.37 Earth radii</a> (2,400 km)</li>
+          <li><strong>Radius:</strong> <a id="callisto_scale" href="#">0.378 Earth radii</a> (2,410 km)</li>
           <li><strong>Mass:</strong> 0.018 Earth's mass (1.1 &#215; 10<sup>23</sup> kg)</li>
           <li><strong>Average distance from Jupiter:</strong> 150 Earth diameters (1.9 &#215; 10<sup>6</sup> km)</li>
           <li><strong>Orbital period:</strong> 17 Earth days</li>
@@ -390,7 +390,7 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> <a id="mercury_scale" href="#">0.38 Earth radii</a> (2,400 km)</li>
+          <li><strong>Radius:</strong> <a id="mercury_scale" href="#">0.382 Earth radii</a> (2,440 km)</li>
           <li><strong>Mass:</strong> 0.055 Earth's mass (3.3 &#215; 10<sup>23</sup> kg)</li>
           <li><strong>Average distance from Sun:</strong> 0.39 AU (5.7 &#215; 10<sup>7</sup> km)</li>
           <li><strong>Length of year:</strong> 0.24 Earth years</li>
