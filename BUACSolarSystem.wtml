@@ -2,6 +2,7 @@
 <Folder MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="BUAC Stellar Life Cycles" Group="Explorer" Searchable="False" Type="Earth">
   <VersionDependent>false</VersionDependent>
 
+
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Neptune" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="14">
     <ImageSet>
       <Target>Neptune</Target>
@@ -33,6 +34,7 @@
       </div>
     </Description>
   </Place>
+
 
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Pluto" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="15">
     <ImageSet>
@@ -66,6 +68,7 @@
     </Description>
   </Place>
 
+
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Saturn" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="12">
     <ImageSet>
       <Target>Saturn</Target>
@@ -97,6 +100,7 @@
       </div>
     </Description>
   </Place>
+
 
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Uranus" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="13">
     <ImageSet>
@@ -130,6 +134,7 @@
     </Description>
   </Place>
 
+
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Ganymede" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="10">
     <ImageSet>
       <Target>Ganymede</Target>
@@ -160,6 +165,7 @@
       </div>
     </Description>
   </Place>
+
 
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Callisto" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="11">
     <ImageSet>
@@ -192,6 +198,7 @@
     </Description>
   </Place>
 
+
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Io" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="8">
     <ImageSet>
       <Target>Io</Target>
@@ -223,6 +230,7 @@
     </Description>
   </Place>
 
+
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Europa" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="9">
     <ImageSet>
       <Target>Europa</Target>
@@ -253,6 +261,7 @@
       </div>
     </Description>
   </Place>
+
 
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Mars" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="6">
     <ImageSet>
@@ -286,6 +295,7 @@
     </Description>
   </Place>
 
+
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Jupiter" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="7">
     <ImageSet>
       <Target>Jupiter</Target>
@@ -317,6 +327,7 @@
       </div>
     </Description>
   </Place>
+
 
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Earth" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="4">
     <ImageSet>
@@ -350,6 +361,7 @@
     </Description>
   </Place>
 
+
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Moon" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="5">
     <ImageSet>
       <Target>Moon</Target>
@@ -380,6 +392,7 @@
       </div>
     </Description>
   </Place>
+
 
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Mercury" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="2">
     <ImageSet>
@@ -413,6 +426,7 @@
     </Description>
   </Place>
 
+
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Venus" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="3">
     <ImageSet>
       <Target>Venus</Target>
@@ -444,6 +458,7 @@
       </div>
     </Description>
   </Place>
+
 
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Sun" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="1">
     <ImageSet>
