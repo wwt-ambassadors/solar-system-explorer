@@ -2,7 +2,6 @@
 <Folder MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="BUAC Stellar Life Cycles" Group="Explorer" Searchable="False" Type="Earth">
   <VersionDependent>false</VersionDependent>
 
-
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Neptune" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="14">
     <ImageSet>
       <Target>Neptune</Target>
@@ -38,8 +37,8 @@
 
   <Place MSRCommunityId="0" MSRComponentId="0" Permission="0" Name="Pluto" DataSetType="Sky" RA="0.21833333" Dec="1.41694444" Constellation="PSC" Classification="SolarSystem" Magnitude="-26.73" Distance="0.99690962291948559" ZoomLevel="4" Rotation="0" Angle="0" DomeAlt="0" DomeAz="0" Opacity="100" AngularSize="4" Index="15">
     <ImageSet>
-    <Target>Pluto</Target>
-    <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=pluto</ThumbnailUrl>
+      <Target>Pluto</Target>
+      <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=pluto</ThumbnailUrl>
     </ImageSet>
     <Description Title="Pluto">
       <div class="Thumbnail">
