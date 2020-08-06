@@ -9,8 +9,6 @@
   var wwt_stc = null;
 
   // global variables to hold the wwt_si navigation for the last thumbnail clicked, for use by the reset button
-  var reset_enabled = false;
-  var curr_name = null;
   var curr_obj = null;
   var thumbnails_loaded = 0;
 
@@ -19,6 +17,9 @@
 
   // global variable to hold planet size
   var object_size = 25;
+
+  // global variable for popup clicks
+  var popup_open = false;
 
   // global variable for lighting
   var real_lighting = true;
@@ -37,12 +38,14 @@
     wwt_si.add_ready(wwt_ready);
   }
 
+  // upon load of page
   $(document).ready(initialize);
 
   function wwt_ready() {
     wwt_ctl = wwtlib.WWTControl.singleton;
     wwt_stc = wwtlib.SpaceTimeController;
 
+    // apply initial WWT settings
     wwt_si.setBackgroundImageByName("Solar System");
     wwt_si.settings.set_solarSystemScale(25);
     wwt_si.settings.set_solarSystemMilkyWay(true);
@@ -59,9 +62,11 @@
 
       // store each of the Place objects from the WTML file in places
       var places = $(xml).find('Place');
+      // create templates of the thumbnail and the description text to clone from
       var thumbTemplate = $('<div class="col_thumb"><a href="javascript:void(0)" class="thumbnail border_white"><img src=""/><div class="thumbname">example</div</a></div>');
       var descTemplate = $('<div class="obj_desc container-fluid"><div class="row"><div class="name col-xs-12 col-md-12 col-lg-12">name</div><div class="what col-xs-12 col-md-12 col-lg-12">what</div><div class="characteristics col-xs-12 col-md-12 col-lg-12">characteristics</div></div></div>');
       
+      // for each of the places in the WTML file
       places.each(function (i, pl) {
         var place = $(pl);
         
@@ -69,10 +74,12 @@
         var tmpthumb = thumbTemplate.clone();
         var tmpdesc = descTemplate.clone();
 
+        // find the a element for the thumbnail -- and specify the tab-accessibility index
         tmpthumb.find('a').attr({
           tabindex: place.attr('Index')
         });
 
+        // find the img element for the thumbnail, and set some attributes/css
         tmpthumb.find('img').attr({
           src: place.find('ThumbnailUrl').text(),
           class: 'border_black',
@@ -114,37 +121,35 @@
             return;
           };
 
-          //	Change the border color of the selected thumbnail
+          // this creates a variable to hold the element clicked
           var element = element;
             
+          //	Change the border color of the selected thumbnail
           $(".thumbnail img").removeClass("border_green").addClass("border_black");
           $(".thumbname").removeClass("text_green");
           $(element).parent().find("img").removeClass("border_black").addClass("border_green");
           $(element).parent().find(".thumbname").addClass("text_green");
 
-          // RESET NOT IN USE, NOT NEEDED FOR SSE MODULE
-          // enable the reset button (and hide if visible)
-          // reset_enabled = true;
-          // $("#reset_target").fadeOut(100);
-
-          /* hide all descriptions, reset scrolls, then show description specific to this target on sgl/dbl click */
-          var toggle_class = "." + place.find('Target').text().toLowerCase() + "_description";
+          /* hide all descriptions, then show description specific to this target on sgl/dbl click , scrolled to top */
           $("#description_box").find(".obj_desc").hide();
           $('#description_container').scrollTop(0);
             
+          var toggle_class = "." + place.find('Target').text().toLowerCase() + "_description";
           $(toggle_class).show();
             
           // Make arrow appear only for overflow
           var desc_box = $('#description_container')[0];
           
           if(desc_box.scrollHeight > desc_box.clientHeight) {
-            //console.log("need arrow");
             $('.fa-arrow-down').show();
           } else {
             $('.fa-arrow-down').hide();
           }
 
-          curr_name = place.attr('Name');
+          // hide all scale popups
+          $(".scale_popup").hide();
+          popup_open = false;
+
 
           $.each(folder.get_children(), function (i, wwtplace) {
             if (wwtplace.get_name() == place.attr('Name')) {
@@ -176,13 +181,24 @@
             on_click(element, true)
           });
 
+        
+        var popup_id = "#" + place.attr('Name').toLowerCase() + "_scale"
+
         tmpdesc.find('a').mouseenter(function() {
-          var popup_id = "#" + place.attr('Name').toLowerCase() + "_scale"
-          $(popup_id).show();
+          if (!(popup_open)) {
+            $(popup_id).show();
+          }
         })
         tmpdesc.find('a').mouseleave(function() {
-          var popup_id = "#" + place.attr('Name').toLowerCase() + "_scale"
-          $(popup_id).hide();
+          if (!(popup_open)) {
+            $(popup_id).hide();
+          }
+        })
+        tmpdesc.find('a').click(function() {
+          popup_open = !(popup_open);
+          if (!(popup_open)) {
+            $(popup_id).hide();
+          }
         })
 
 
@@ -194,13 +210,11 @@
           $('#destinationThumbs').append(lighting_buttons);
         }
 
-        // TWO EVENT HANDLERS FOR PAT TO EXPERIMENT WITH LIGHTING
         // 1. Full lighting
         $('.fulllight').click(function() {
           $('.fulllight').addClass("button_hide")
           $('.reallight').removeClass('button_hide');
 
-          // FOR PAT TO FILL OUT WITH LIGHTING CODE
           real_lighting = (true);
           wwt_si.settings.set_solarSystemLighting(real_lighting);
 
@@ -211,17 +225,16 @@
           $('.reallight').addClass("button_hide")
           $('.fulllight').removeClass('button_hide');
 
-          // FOR PAT TO FILL OUT WITH LIGHTING CODE
           real_lighting = (false);
           wwt_si.settings.set_solarSystemLighting(real_lighting);
         })
 
+        // 3. Lighting - Key Events, toggle with focus
         $('.lighting_toggle').keydown(function() {
           if (event.which == 13) {
             $('.fulllight').toggleClass("button_hide")
             $('.reallight').toggleClass('button_hide');
 
-            // FOR PAT TO FILL OUT WITH LIGHTING CODE
             if (real_lighting == true) {
               real_lighting = false;
             }
@@ -232,25 +245,8 @@
           }
         })
 
-        
-        // Add description to the container
+        // Add description to the desc_container
         $("#description_container").append(tmpdesc);
-
-        // tag the reload button with a click action to reload the most recent thumbnail
-        $("#reset_target").on('click', function(event){
-
-          console.log("should be resetting...");
-
-          wwt_ctl.gotoTarget(
-            curr_obj,  // the Place object
-            true,  // noZoom -- false means zoom level is set to something "sensible" for the target
-            true,  // instant -- whether to fly the almost-instantly
-            true  // trackObject -- whether to start the camera tracking this object
-          );
-
-          $("#reset_target").fadeOut(1000);
-
-        })
 
       });
 
@@ -264,7 +260,6 @@
 
     //This is what Ron calls getXml
     function getWtml() {
-      //console.log("in getWtml function");
       if (hasLoaded) { return; }
       hasLoaded = true;
       $.ajax({
@@ -281,6 +276,7 @@
       });
     }
 
+    // Load the image collection
     var wtmlPath = "BUACSolarSystem.wtml";
     wwt_si.loadImageCollection(wtmlPath);
     console.log("Loaded Image Collection");
@@ -299,14 +295,14 @@
   };
 
 
-  // Backend details: auto-resizing the WWT canvas.
-
+  // Backend details:
+  
+  // auto-resizing the WWT canvas.
   function size_content() {
     var container = $("html");
     var top_container = $(".top_container");
 
     // Constants here must be synced with settings in style.css
-    // const new_wwt_width = top_container.width() - 2;
     const new_wwt_height = top_container.height() - 2;  // set wwt_canvas height to fill top_container, subtract 2 to account for border width
     const colophon_height = $("#colophon").height();
     
@@ -314,7 +310,6 @@
     const description_height = bottom_height - colophon_height;
 
     $("#wwtcanvas").css({
-      // "width": new_wwt_width + "px",
       "height": new_wwt_height + "px"
     });
 
@@ -380,8 +375,6 @@
       76: mouse_right,
       75: mouse_down
     };
-
-    const lightCodes = 
 
     window.addEventListener("keydown", function (event) {
       // "must check the deprecated keyCode property for Qt"
@@ -460,7 +453,6 @@
           console.log("zoom level =", wwt_ctl.get_zoom);
         }
         else {
-        /*we think this is the zoom out. Adjust this to have a hard outer limit */
           wwt_ctl.zoom(0.7);
           console.log("zoom level =", wwt_ctl.get_zoom);
         }
@@ -485,12 +477,6 @@
   // remove zoom-pan instructions upon canvas click, after a 5 second delay
   $('#wwtcanvas').on('click', function() {
     $("#zoom_pan_instrux").delay(5000).fadeOut(1000);
-
-    // RESET NOT IN USE, NOT NEEDED FOR SSE MODULE
-    // if(reset_enabled) {
-    //   $("#reset_target").show();
-    // }
-
   })
 
   // FOUR EVENT HANDLERS FOR PAT TO EXPERIMENT WITH TIME-SCALES
@@ -650,5 +636,11 @@
   }
   $("#size").html(object_size + '<span class="times">&#215;</span>');
   process_planet_scale(object_size);
+
+  // Close scale popups when clicking the close icon
+  $(".close_scale").click(function() {
+    $(".scale_popup").hide();
+    popup_open = false;
+  })
 
 })();
