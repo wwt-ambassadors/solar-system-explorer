@@ -155,6 +155,7 @@
           $(".scale_popup").hide();
           popup_open = false;
 
+          
           // identify from WTML file where WWT should fly to (and parse click-type)
           $.each(folder.get_children(), function (i, wwtplace) {
             if (wwtplace.get_name() == place.attr('Name')) {
@@ -196,10 +197,10 @@
           }
         })
         tmpdesc.find('a').click(function() {
-          popup_open = !(popup_open);
-          if (!(popup_open)) {
+          if (popup_open) {
             $(popup_id).hide();
           }
+          popup_open = !(popup_open);
         })
 
 
@@ -612,6 +613,7 @@
 
   // Initialize the object_size readout to the hardcoded initial value
   process_planet_scale(object_size);
+
 
   // Close scale popups when clicking the close icon
   $(".close_scale").click(function() {
