@@ -396,7 +396,7 @@ a, a:hover {
 }
 
 #description_container {
-	display: show;
+	display: block;
 	height: 100%;
 	overflow-y: auto;
 }
