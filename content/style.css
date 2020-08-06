@@ -28,15 +28,14 @@ body {
 
 
 
-
 /* Generic element settings */
 
 p {
-  margin: 0px 0px 0.1rem 0px;
+    margin: 0px 0px 0.1rem 0px;
 }
 
 a, a:hover {
-  color: #FFF;
+    color: #FFF;
 }
 
 .ui-tooltip {
@@ -61,6 +60,7 @@ a, a:hover {
 }
 
 
+
 /* Thumbnails. Flexbox of tiles for each image */
 
 #destinationThumbs {
@@ -78,7 +78,6 @@ a, a:hover {
 
 .thumbname {
     padding: 0px 5px;
-/*    height: 11px;*/
     background-color: #000000AA;
     font-size: 11px;
 }
@@ -117,6 +116,10 @@ a, a:hover {
 .text_green {
 	color: #44ff44;
 }
+
+
+
+/* Lighting buttons */
 
 .lighting_buttons {
     display: flex;
@@ -158,8 +161,8 @@ a, a:hover {
 /* WWT canvas */
 
 #wwtcanvas {
-	width: 90%;  /* note: overridden in script.js */
-	height: 100%;  /* note: overridden in script.js */
+	width: 90%;  /* note: overridden in SSE_script.js */
+	height: 100%;  /* note: overridden in SSE_script.js */
 	margin: auto;
 	border: solid 1px #333;
 	position: relative;
@@ -181,21 +184,6 @@ a, a:hover {
 	pointer-events: none;
 }
 
-/*
-#reset_target {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    font-family: "Font Awesome 5 Free";
-    color: #41BEECC0;
-    font-size: 1.25em;
-    display: none;
-}
-
-#reset_target:hover{
-    color: #41BEEC;
-}
-*/
 
 #tips_container {
     position: absolute;
@@ -232,7 +220,7 @@ a, a:hover {
 }
 
 
-#speed_scale_container {
+#time_size_container {
     position: absolute;
     bottom:10px;
     right: 0px;
@@ -295,7 +283,6 @@ a, a:hover {
     margin-bottom: 20px;
 }
 
-
 #time_rate, #size {
     font-family: monospace, Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
     color: #44FF44;
@@ -331,7 +318,7 @@ a, a:hover {
 }
 
 
-#zoom_pan_container{
+#zoom_pan_container {
 	position: absolute;
 	bottom: 20px;
 	width: 100%;
@@ -360,6 +347,9 @@ a, a:hover {
 }
 
 
+
+/* Object Scale popup images */
+
 .scale_popup {
     display: none;
     position: absolute;
@@ -386,10 +376,8 @@ a, a:hover {
 }
 
 .close_scale:hover {
-/*    color: #44FF44;*/
     cursor: pointer;
 }
-
 
 
 
@@ -399,7 +387,7 @@ a, a:hover {
 	position: relative;
 	margin-top: 20px;
 	padding: 10px;
-	border: solid 1px #44ff44; /* considered #FBCB1F alternate color */
+	border: solid 1px #44ff44;
 	border-radius: 5px;
 	background-color: #222223;
 	box-shadow: 0px 0px 15px #000 inset;
@@ -442,7 +430,7 @@ a, a:hover {
 
 #description_box .row h4, #tipsModal h4 {
     margin-bottom: 4px;
-	color: #EFA928;  /* used to be #8AFF8A */
+	color: #EFA928;
     font-size: calc(10px + 1.25vw);
 }
 
@@ -461,6 +449,7 @@ a, a:hover {
     font-family: "Font Awesome 5 Free";
 	font-style: normal;
 }
+
 .stagename {
     font-size: 80%;
     color: #44FF44;
@@ -474,7 +463,7 @@ a, a:hover {
 
 #scroll_arrow {
     display: none;
-	color: #EFA928; /* considered #FBCB1F alternate color */
+	color: #EFA928;
 }
 
 .fa-arrow-down {
@@ -483,17 +472,11 @@ a, a:hover {
 
 
 
-
-
 /* Colophon section */
 
 #colophon {
 	position: absolute;
 	bottom: 10px;
-/*
-	left: 5%;
-    width: 90%;
-*/
     display: flex;
     align-items: center;
 }
@@ -504,8 +487,8 @@ a, a:hover {
 }
 
 #colophon p {
-  font-size: 9px; /* used to 0.5em */
-  color: #BBB;
+    font-size: 9px;
+    color: #BBB;
 }
 
 .colophon_link {
@@ -518,3 +501,7 @@ a, a:hover {
     vertical-align: middle;
     margin-right: 5px;
 }
+
+
+
+
