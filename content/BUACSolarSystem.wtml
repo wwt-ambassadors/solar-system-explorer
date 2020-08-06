@@ -24,10 +24,11 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> <a id="neptune_scale" href="#">3.88 Earth radii</a> (25,000 km)</li>
-          <li><strong>Mass:</strong> 17.1 Earth's mass (1 &#215; 10<sup>26</sup> kg)</li>
-          <li><strong>Average distance from Sun:</strong> 30.02 AU</li>
-          <li><strong>Length of year:</strong> 164.8 Earth years</li>
+          <li><strong>Radius:</strong> <a id="neptune_scale" href="#">3.9 Earth radii</a> (25,000 km)</li>
+          <li><strong>Mass:</strong> 17 Earth's mass (1.0 &#215; 10<sup>26</sup> kg)</li>
+          <li><strong>Surface composition:</strong> Gaseous</li>
+          <li><strong>Average distance from Sun:</strong> 30 AU (4.5 &#215; 10<sup>9</sup> km)</li>
+          <li><strong>Length of year:</strong> 160 Earth years</li>
           <li><strong>Known moons:</strong> 14</li>
         </ul>
       </div>
@@ -50,16 +51,17 @@
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          Pluto is located in the Kuiper belt and classified as a dwarf planet. Dwarf planets share their neighborhood and orbit paths with other objects, although there is some controversy about the distinction between a planet and a dwarf planet. Pluto's orbit is very oval and inclined relative to the ecliptic plane. Its surface is mostly made of water ice and frozen nitrogen, and methane may form as frost or fall like snow on Pluto's surface. It has a huge nitrogen ice sheet called Sputnik Planitia that contains flowing nitrogen glaciers. Pluto's largest moon, Charon, is so big—it is about half the size of Pluto—that the two objects are sometimes referred to as a "double planet."
+          Pluto is located in the Kuiper belt and is classified as a dwarf planet. Unlike regular planets, dwarf planets share their neighborhood and orbit paths with other objects similar to their size. Pluto's orbit is very elliptical and inclined relative to the ecliptic plane. Its surface is mostly made of water ice and frozen nitrogen, and methane may form as frost or fall like snow on Pluto's surface. It has a huge nitrogen ice sheet called Sputnik Planitia that contains flowing nitrogen glaciers. Pluto's largest moon, Charon, is so big—it is about half the size of Pluto—that the two objects are sometimes referred to as a "double planet."
         </p>
       </div>
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> <a id="pluto_scale" href="#">0.186 Earth radii</a> (1,200 km)</li>
-          <li><strong>Mass:</strong> 0.0025 Earth's mass (1 &#215; 10<sup>22</sup> kg)</li>
-          <li><strong>Average distance from Sun:</strong> 39.48 AU</li>
-          <li><strong>Length of year:</strong> 247.9 Earth years</li>
+          <li><strong>Radius:</strong> <a id="pluto_scale" href="#">0.19 Earth radii</a> (1,200 km)</li>
+          <li><strong>Mass:</strong> 0.0025 Earth's mass (1.5 &#215; 10<sup>22</sup> kg)</li>
+          <li><strong>Surface composition:</strong> Icy</li>
+          <li><strong>Average distance from Sun:</strong> 39 AU (5.9 &#215; 10<sup>9</sup> km)</li>
+          <li><strong>Length of year:</strong> 250 Earth years</li>
           <li><strong>Known moons:</strong> 5</li>
         </ul>
       </div>
@@ -82,16 +84,17 @@
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          Saturn is also a gas giant, and its density is so low that it would float in water. It has a giant hexagon-shaped storm at its north pole. Saturn is most famous for its rings. Although other planets also have rings, Saturn's are especially spectacular. The rings are as thin as a few meters in some places but extend over 100,000 kilometers from Saturn's equator. They are made up mostly of water ice and surrounded by a thin layer of oxygen. Many rocky fragments and moons orbiting the planet interact with the water ice and may form gaps and features in the rings.
+          Saturn is also a gas giant, and it is most famous for its rings. Although other planets also have rings, Saturn's are especially spectacular. The rings are as thin as a few meters in some places but extend over 100,000 kilometers in distance from Saturn's equator. They are made up mostly of water ice and surrounded by a thin layer of oxygen. Many rocky fragments and moons orbiting the planet interact with the water ice and may form gaps and features in the rings. 
         </p>
       </div>
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
           <li><strong>Radius:</strong> <a id="saturn_scale" href="#">9.5 Earth radii</a> (58,000 km)</li>
-          <li><strong>Mass:</strong> 95.2 Earth's mass (6 &#215; 10<sup>26</sup> kg)</li>
-          <li><strong>Average distance from Sun:</strong> 9.58 AU</li>
-          <li><strong>Length of year:</strong> 29.5 Earth years</li>
+          <li><strong>Mass:</strong> 95 Earth's mass (5.7 &#215; 10<sup>26</sup> kg)</li>
+          <li><strong>Surface composition:</strong> Gaseous</li>
+          <li><strong>Average distance from Sun:</strong> 9.6 AU (1.4 &#215; 10<sup>9</sup> km)</li>
+          <li><strong>Length of year:</strong> 29 Earth years</li>
           <li><strong>Known moons:</strong> 82</li>
         </ul>
       </div>
@@ -120,9 +123,10 @@
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> <a id="uranus_scale" href="#">4.01 Earth radii</a> (25,000 km)</li>
-          <li><strong>Mass:</strong> 14.5 Earth's mass (9 &#215; 10<sup>25</sup> kg)</li>
-          <li><strong>Average distance from Sun:</strong> 19.14 AU</li>
+          <li><strong>Radius:</strong> <a id="uranus_scale" href="#">4.0 Earth radii</a> (25,000 km)</li>
+          <li><strong>Mass:</strong> 15 Earth's mass (8.7 &#215; 10<sup>25</sup> kg)</li>
+          <li><strong>Surface composition:</strong> Gaseous</li>
+          <li><strong>Average distance from Sun:</strong> 19.1 AU (2.9 &#215; 10<sup>9</sup> km)</li>
           <li><strong>Length of year:</strong> 84 Earth years</li>
           <li><strong>Known moons:</strong> 27</li>
         </ul>
@@ -146,14 +150,17 @@
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          Ganymede is Jupiter's largest moon and the largest moon in the solar system. It is larger than Mercury and has a core of metallic iron surrounded by a layer of rock and a shell of mostly ice. Ganymede is the only moon known to have its own internally generated magnetic field.
+          Ganymede is Jupiter's largest moon and the largest moon in the solar system. It is larger than Mercury in size (but it has only about half of Mercury's mass). Ganymede has a core of metallic iron surrounded by a layer of rock and a shell of mostly ice. Ganymede is the only moon known to have its own internally generated magnetic field.
         </p>
       </div>
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
           <li><strong>Radius:</strong> <a id="ganymede_scale" href="#">0.41 Earth radii</a> (2,600 km)</li>
-          <li><strong>Mass:</strong> 0.025 Earth's mass (1 &#215; 10<sup>23</sup> kg)</li>
+          <li><strong>Mass:</strong> 0.025 Earth's mass (1.5 &#215; 10<sup>23</sup> kg)</li>
+          <li><strong>Surface composition:</strong> Icy </li>
+          <li><strong>Average distance from Jupiter:</strong> 84 Earth diameters (1.1 &#215; 10<sup>6</sup> km)</li>
+          <li><strong>Orbital period:</strong> 7.2 Earth days</li>
         </ul>
       </div>
     </Description>
@@ -175,14 +182,17 @@
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Callisto, Jupiter's 2nd largest moon, is just about the same size as the planet Mercury (but Mercury has a higher density and has about 3 times more mass than Callisto). Beneath its seemingly unremarkable surface, Callisto may be harboring a salty ocean, making it one of the places within our solar system that could sustain life beyond Earth.
         </p>
       </div>
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> <a id="callisto_scale" href="#">0.37 Earth radii</a> (2,4 km)</li>
-          <li><strong>Mass:</strong> 0.018 Earth's mass (1 &#215; 10<sup>23</sup> kg)</li>
+          <li><strong>Radius:</strong> <a id="callisto_scale" href="#">0.378 Earth radii</a> (2,410 km)</li>
+          <li><strong>Mass:</strong> 0.018 Earth's mass (1.1 &#215; 10<sup>23</sup> kg)</li>
+          <li><strong>Surface composition:</strong> Icy</li>
+          <li><strong>Average distance from Jupiter:</strong> 150 Earth diameters (1.9 &#215; 10<sup>6</sup> km)</li>
+          <li><strong>Orbital period:</strong> 17 Earth days</li>
         </ul>
       </div>
     </Description>
@@ -211,7 +221,10 @@
         <h4>Characteristics</h4>
         <ul>
           <li><strong>Radius:</strong> <a id="io_scale" href="#">0.29 Earth radii</a> (1,800 km)</li>
-          <li><strong>Mass:</strong> 0.015 Earth's mass (9 &#215; 10<sup>22</sup> kg)</li>
+          <li><strong>Mass:</strong> 0.015 Earth's mass (8.9 &#215; 10<sup>22</sup> kg)</li>
+          <li><strong>Surface composition:</strong> Rocky</li>
+          <li><strong>Average distance from Jupiter:</strong> 33 Earth diameters (4.2 &#215; 10<sup>5</sup> km)</li>
+          <li><strong>Orbital period:</strong> 42 hours</li>
         </ul>
       </div>
     </Description>
@@ -233,14 +246,17 @@
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          Europa has a surface of mostly water ice with many cracks and streaks but not many craters. It has a salty ocean underneath a shell of ice and may contain twice the amount of water of Earth. Europa may be geologically active and may have occasional plumes of water erupting from its surface.
+          Europa has a surface of mostly water ice with many cracks and streaks but not many craters. It has a salty ocean underneath a shell of ice and may contain twice the amount of water of Earth. This subsurface ocean makes Europa a target of interest in the search for extraterrestrial life in our solar system. Europa may be geologically active and may have occasional plumes of water erupting from its surface.
         </p>
       </div>
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
           <li><strong>Radius:</strong> <a id="europa_scale" href="#">0.25 Earth radii</a> (1,600 km)</li>
-          <li><strong>Mass:</strong> 0.015 Earth's mass (5 &#215; 10<sup>22</sup> kg)</li>
+          <li><strong>Mass:</strong> 0.015 Earth's mass (4.8 &#215; 10<sup>22</sup> kg)</li>
+          <li><strong>Surface composition:</strong> Icy</li>
+          <li><strong>Average distance from Jupiter:</strong> 52 Earth diameters (6.7 &#215; 10<sup>5</sup> km)</li>
+          <li><strong>Orbital period:</strong> 3.5 Earth days</li>
         </ul>
       </div>
     </Description>
@@ -262,16 +278,17 @@
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          The red color of Mars comes from iron-rich minerals on its surface. Like Earth, Mars has visible seasons as well as ice and snow. Mars has the largest volcano in the solar system, which has a base the size of New Mexico. River valleys, lakebeds, and the presence of certain minerals indicate that liquid water likely once existed on the surface of Mars. By gathering data about Martian climate change and ancient water systems, we can learn a great deal about how planets and our solar system developed.
+          The red color of Mars comes from iron-rich minerals on its surface. Like Earth, Mars has visible seasons as well as ice and snow. Mars has the largest volcano in the solar system, Olympus Mons, which has a base the size of New Mexico. River valleys, lakebeds, and the presence of certain minerals indicate that liquid water likely once existed on the surface of Mars. By gathering data about Martian climate change and ancient water systems, we can learn a great deal about how planets and our solar system developed.
         </p>
       </div>
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
           <li><strong>Radius:</strong> <a id="mars_scale" href="#">0.53 Earth radii</a> (3,400 km)</li>
-          <li><strong>Mass:</strong> 0.11 Earth's mass (6 &#215; 10<sup>23</sup> kg)</li>
-          <li><strong>Average distance from Sun:</strong> 1.52 AU</li>
-          <li><strong>Length of year:</strong> 1.88 Earth years</li>
+          <li><strong>Mass:</strong> 0.11 Earth's mass (6.4 &#215; 10<sup>23</sup> kg)</li>
+          <li><strong>Surface composition:</strong> Rocky</li>
+          <li><strong>Average distance from Sun:</strong> 1.5 AU (2.3 &#215; 10<sup>8</sup> km)</li>
+          <li><strong>Length of year:</strong> 1.9 Earth years</li>
           <li><strong>Known moons:</strong> 2</li>
         </ul>
       </div>
@@ -294,16 +311,17 @@
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          Jupiter is the largest planet in our solar system—its mass is equal to approximately 2.5 times the combined mass of all the other planets in the solar system. Eleven Earths could fit across its diameter. Jupiter is a gas giant made up mainly of hydrogen and helium, similar to the Sun. If Jupiter were larger, the temperatures at the core would cause it to ignite into a star. Jupiter's Great Red Spot is a huge storm that has existed for more than 100 years.
+          Jupiter is the largest planet in our solar system—its mass is equal to approximately 2.5 times the combined mass of all the other planets in the solar system. Eleven Earths could fit across its diameter. Jupiter is a gas giant made up mainly of hydrogen and helium, similar to the Sun. If Jupiter were 100 times larger in mass, the temperatures at the core would cause it to ignite into a star. Jupiter's Great Red Spot is a huge storm that has existed for more than 100 years.
         </p>
       </div>
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> <a id="jupiter_scale" href="#">11.2 Earth radii</a> (70,000 km)</li>
-          <li><strong>Mass:</strong> 318 Earth's mass (2 &#215; 10<sup>27</sup> kg)</li>
-          <li><strong>Average distance from Sun:</strong> 5.2 AU</li>
-          <li><strong>Length of year:</strong> 11.9 Earth years</li>
+          <li><strong>Radius:</strong> <a id="jupiter_scale" href="#">11 Earth radii</a> (71,000 km)</li>
+          <li><strong>Mass:</strong> 320 Earth's mass (1.9 &#215; 10<sup>27</sup> kg)</li>
+          <li><strong>Surface composition:</strong> Gaseous</li>
+          <li><strong>Average distance from Sun:</strong> 5.2 AU (7.8 &#215; 10<sup>8</sup> km)</li>
+          <li><strong>Length of year:</strong> 12 Earth years</li>
           <li><strong>Known moons:</strong> 79 (including Io, Europa, Ganymede, Callisto)</li>
         </ul>
       </div>
@@ -326,15 +344,16 @@
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          Our planet is the only planet known to have stable bodies of liquid water on its surface and to have living things. Earth is also the only planet that is confirmed to have plate tectonics. It takes 24 hours for Earth to complete one rotation and 365 days to complete one orbit around the Sun. The ecliptic plane is defined as the plane of Earth's orbit around the Sun. As with all other planets, seasons are determined by the tilt of Earth's rotational axis and its orientation relative to the Sun. Earth experiences four seasons—summer, autumn, winter, and spring—of approximately equal length.
+          Our planet is the only planet known to have stable bodies of liquid water on its surface and to have living things. Earth is also the only planet that is confirmed to have plate tectonics. It takes 24 hours for Earth to complete one rotation and 365.25 days to complete one orbit around the Sun. The ecliptic plane is defined as the plane of Earth's orbit around the Sun. As with all other planets, seasons are determined by the tilt of Earth's rotational axis and its orientation relative to the Sun. Earth experiences four seasons—summer, autumn, winter, and spring—of approximately equal length.
         </p>
       </div>
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
           <li><strong>Radius:</strong> 1 Earth radius (6,400 km)</li>
-          <li><strong>Mass:</strong> 1 Earth's mass (6 &#215; 10<sup>24</sup> kg)</li>
-          <li><strong>Average distance from Sun:</strong> 1 AU</li>
+          <li><strong>Mass:</strong> 1 Earth's mass (6.0 &#215; 10<sup>24</sup> kg)</li>
+          <li><strong>Surface composition:</strong> Rocky</li>
+          <li><strong>Average distance from Sun:</strong> 1 AU (1.5&#215; 10<sup>8</sup> km)</li>
           <li><strong>Length of year:</strong> 1 Earth year</li>
           <li><strong>Known moons:</strong> 1 (the Moon)</li>
         </ul>
@@ -358,14 +377,17 @@
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          The Moon is the biggest and brightest object visible in the night sky. It is rocky and its surface has many craters. The Moon was likely formed after a Mars-sized object collided with Earth long ago. Earth's Moon is the only other object in the solar system that human beings have visited.
+          The Moon is the biggest and brightest object visible in the night sky. Depending on its phase, the Moon is also frequently visible during the day. It is rocky and its surface has many craters. The Moon was likely formed after a Mars-sized object collided with Earth long ago. Earth's Moon is the only other object in the solar system that human beings have visited.
         </p>
       </div>
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
           <li><strong>Radius:</strong> <a id="moon_scale" href="#">0.27 Earth radii</a> (1,700 km)</li>
-          <li><strong>Mass:</strong> 0.012 Earth's mass (7 &#215; 10<sup>22</sup> kg)</li>
+          <li><strong>Mass:</strong> 0.012 Earth's mass (7.3 &#215; 10<sup>22</sup> kg)</li>
+          <li><strong>Surface composition:</strong> Rocky</li>
+          <li><strong>Average distance from Earth:</strong> 30 Earth diameters (3.8 &#215; 10<sup>5</sup> km)</li>
+          <li><strong>Orbital period:</strong> roughly 1 month (27 Earth days)</li>
         </ul>
       </div>
     </Description>
@@ -387,15 +409,16 @@
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          Mercury is the closest planet to the Sun and slightly bigger than Earth's Moon. From Earth, it is possible to see Mercury transit, or pass across, the Sun about 13 times every 100 years. The planet rotates so slowly that a day lasts almost as long as two months on Earth. Mercury's atmosphere is too thin to protect the surface from temperature extremes; its surface temperature can range from -173°C to 472°C.
+          Mercury is the closest planet to the Sun and slightly bigger in size than Earth's Moon. From Earth, it is possible to see Mercury transit, or pass across, the Sun about 13 times every 100 years. The planet rotates so slowly that a day lasts almost as long as two months on Earth. Mercury's atmosphere is too thin to protect the surface from temperature extremes; its surface temperature can range from -170°C on the nighttime side to 470°C on the daytime side.
         </p>
       </div>
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
-          <li><strong>Radius:</strong> <a id="mercury_scale" href="#">0.38 Earth radii</a> (2,400 km)</li>
-          <li><strong>Mass:</strong> 0.055 Earth's mass (3 &#215; 10<sup>23</sup> kg)</li>
-          <li><strong>Average distance from Sun:</strong> 0.38 AU</li>
+          <li><strong>Radius:</strong> <a id="mercury_scale" href="#">0.382 Earth radii</a> (2,440 km)</li>
+          <li><strong>Mass:</strong> 0.055 Earth's mass (3.3 &#215; 10<sup>23</sup> kg)</li>
+          <li><strong>Surface composition:</strong> Rocky</li>
+          <li><strong>Average distance from Sun:</strong> 0.39 AU (5.7 &#215; 10<sup>7</sup> km)</li>
           <li><strong>Length of year:</strong> 0.24 Earth years</li>
           <li><strong>Known moons:</strong> None</li>
         </ul>
@@ -426,8 +449,9 @@
         <h4>Characteristics</h4>
         <ul>
           <li><strong>Radius:</strong> <a id="venus_scale" href="#">0.95 Earth radii</a> (6,100 km)</li>
-          <li><strong>Mass:</strong> 0.82 Earth's mass (5 &#215; 10<sup>24</sup> kg)</li>
-          <li><strong>Average distance from Sun:</strong> 0.72 AU</li>
+          <li><strong>Mass:</strong> 0.82 Earth's mass (4.9 &#215; 10<sup>24</sup> kg)</li>
+          <li><strong>Surface composition:</strong> Rocky</li>
+          <li><strong>Average distance from Sun:</strong> 0.72 AU (1.1 &#215; 10<sup>8</sup> km)</li>
           <li><strong>Length of year:</strong> 0.62 Earth years</li>
           <li><strong>Known moons:</strong> None</li>
         </ul>
@@ -451,14 +475,15 @@
       <div class="What">
         <h4>What is it?</h4>
         <p>
-          Some solar systems in the galaxy have more than one star, but ours has just one: the Sun. With a diameter of 1,380,000 kilometers, the Sun is by far the largest object in our solar system. The Sun is a rotating ball of hot gases, mainly hydrogen. Temperatures reach 10,000°F (5538°C) at the surface and 27 million °F (14 million °C) at the core. The Sun will keep shining for over 5 billion more years.
+          Some solar systems in the galaxy have more than one star, but ours has just one: the Sun. With a diameter of 1,400,000 kilometers, the Sun is by far the largest object in our solar system. The Sun is a rotating ball of hot gases, mainly hydrogen. Temperatures reach 10,000°F (5,500°C) at the surface and 27 million °F (14 million °C) at the core. The Sun will keep shining for over 5 billion more years.
         </p>
       </div>
       <div class="Characteristics">
         <h4>Characteristics</h4>
         <ul>
           <li><strong>Radius:</strong> <a id="sun_scale" href="#">108 Earth radii</a> (700,000 km)</li>
-          <li><strong>Mass:</strong> 330,000 Earth's mass (2 &#215; 10<sup>30</sup> kg)</li>
+          <li><strong>Mass:</strong> 330,000 Earth's mass (2.0 &#215; 10<sup>30</sup> kg)</li>
+          <li><strong>Surface composition:</strong> Gaseous</li>
         </ul>
       </div>
     </Description>
