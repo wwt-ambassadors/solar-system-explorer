@@ -18,6 +18,9 @@
   // global variable to hold planet size
   var object_size = 25;
 
+  // global variable for popup clicks
+  var popup_open = false;
+
   // global variable for lighting
   var real_lighting = true;
 
@@ -143,6 +146,11 @@
             $('.fa-arrow-down').hide();
           }
 
+          // hide all scale popups
+          $(".scale_popup").hide();
+          popup_open = false;
+
+
           $.each(folder.get_children(), function (i, wwtplace) {
             if (wwtplace.get_name() == place.attr('Name')) {
               // store the object whose thumbnail was just clicked
@@ -173,13 +181,24 @@
             on_click(element, true)
           });
 
+        
+        var popup_id = "#" + place.attr('Name').toLowerCase() + "_scale"
+
         tmpdesc.find('a').mouseenter(function() {
-          var popup_id = "#" + place.attr('Name').toLowerCase() + "_scale"
-          $(popup_id).show();
+          if (!(popup_open)) {
+            $(popup_id).show();
+          }
         })
         tmpdesc.find('a').mouseleave(function() {
-          var popup_id = "#" + place.attr('Name').toLowerCase() + "_scale"
-          $(popup_id).hide();
+          if (!(popup_open)) {
+            $(popup_id).hide();
+          }
+        })
+        tmpdesc.find('a').click(function() {
+          popup_open = !(popup_open);
+          if (!(popup_open)) {
+            $(popup_id).hide();
+          }
         })
 
 
@@ -617,5 +636,11 @@
   }
   $("#size").html(object_size + '<span class="times">&#215;</span>');
   process_planet_scale(object_size);
+
+  // Close scale popups when clicking the close icon
+  $(".close_scale").click(function() {
+    $(".scale_popup").hide();
+    popup_open = false;
+  })
 
 })();

@@ -148,6 +148,11 @@ a, a:hover {
     color: lightgray;
 }
 
+#thumbs_note {
+    color: #EFA928;
+    font-size: 12px;
+}
+
 
 
 /* WWT canvas */
@@ -365,6 +370,20 @@ a, a:hover {
 
 .scale_popup img {
     width: 100%;
+    position: relative;
+}
+
+.close_scale {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black;
+    font-weight: bolder;
+}
+
+.close_scale:hover {
+/*    color: #44FF44;*/
+    cursor: pointer;
 }
 
 
