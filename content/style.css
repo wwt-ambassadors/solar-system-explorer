@@ -278,6 +278,10 @@ a, a:hover {
     font-size: 0.5em;
 }
 
+#reset_time:hover {
+    text-decoration: none;
+}
+
 .times {
     padding-left: 2px;
 }
@@ -292,7 +296,7 @@ a, a:hover {
 }
 
 
-#speed, #size {
+#time_rate, #size {
     font-family: monospace, Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
     color: #44FF44;
 }

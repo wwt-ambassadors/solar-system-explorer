@@ -8,22 +8,18 @@
   // Space Time Controller
   var wwt_stc = null;
 
-  // global variables to hold the wwt_si navigation for the last thumbnail clicked, for use by the reset button
-  var curr_obj = null;
+  // global variables to identify number of thumbnails loaded, to determine when to populate realistic lighting button
   var thumbnails_loaded = 0;
 
-  // global variable to hold the current rate of time-elapse
+  // global variable to hold the current rate of time-elapse / planet size / real lighting
   var curr_time = 1;
-
-  // global variable to hold planet size
   var object_size = 25;
+  var real_lighting = true;
 
   // global variable for popup clicks
   var popup_open = false;
 
-  // global variable for lighting
-  var real_lighting = true;
-
+  // function to start off with when $(document).ready() takes off
   function initialize() {
     // This function call is
     // wwt-web-client/HTML5SDK/wwtlib/WWTControl.cs:WWTControl::InitControlParam.
@@ -38,9 +34,11 @@
     wwt_si.add_ready(wwt_ready);
   }
 
-  // upon load of page
+  // Execute on load of DOM
   $(document).ready(initialize);
 
+
+  // If you can follow the logic above, it'll get here, and this is where the action really happens
   function wwt_ready() {
     wwt_ctl = wwtlib.WWTControl.singleton;
     wwt_stc = wwtlib.SpaceTimeController;
@@ -66,7 +64,8 @@
       var thumbTemplate = $('<div class="col_thumb"><a href="javascript:void(0)" class="thumbnail border_white"><img src=""/><div class="thumbname">example</div</a></div>');
       var descTemplate = $('<div class="obj_desc container-fluid"><div class="row"><div class="name col-xs-12 col-md-12 col-lg-12">name</div><div class="what col-xs-12 col-md-12 col-lg-12">what</div><div class="characteristics col-xs-12 col-md-12 col-lg-12">characteristics</div></div></div>');
       
-      // for each of the places in the WTML file
+
+      // iterate fully through each places object
       places.each(function (i, pl) {
         var place = $(pl);
         
@@ -74,12 +73,13 @@
         var tmpthumb = thumbTemplate.clone();
         var tmpdesc = descTemplate.clone();
 
-        // find the a element for the thumbnail -- and specify the tab-accessibility index
+
+        // find the <a> element for the thumbnail -- and specify the tab-accessibility index from the wtml
         tmpthumb.find('a').attr({
           tabindex: place.attr('Index')
         });
 
-        // find the img element for the thumbnail, and set some attributes/css
+        // find the <img> element for the thumbnail, and set some attributes/css
         tmpthumb.find('img').attr({
           src: place.find('ThumbnailUrl').text(),
           class: 'border_black',
@@ -90,15 +90,17 @@
           title: place.find('Description').attr('Title')
         });
 
+        // Set the Sun thumbnail to green border selection, since the solar system loads centered on the Sun (this does not mean Sun description has loaded as well)
         if (place.attr('Name') == "Sun") {
           tmpthumb.find('img').removeClass("border_black").addClass("border_green");
         }
 
-        // locate the thumbnail name and replace html contents with content from WTML file
+        // locate the thumbnail name text-field and replace html contents with content from WTML file
         var thumbname = place.find('.Thumbnail').html();
         tmpthumb.find('.thumbname').html(thumbname);
 
-        // grab the class = Name/What/Before/Process/After/Elements/Properties/Dive html content for each Place from the WTML file
+
+        // grab the class = Name/What/Characteristics html content for each Place from the WTML file
         var targetname = place.find('.Name').html();
         tmpdesc.find('.name').html(targetname);
 
@@ -114,9 +116,10 @@
         tmpdesc.addClass(desc_class);
 
 
-        // add event listener to every thumbnail element, which listens for single- vs. double-click
+        // click functions - add event listener to every thumbnail element, which listens for single- vs. double-click
         function on_click(element, is_dblclick) {
 
+          // ignore if wwt_si hasn't initialized yet
           if (wwt_si === null) {
             return;
           };
@@ -137,7 +140,8 @@
           var toggle_class = "." + place.find('Target').text().toLowerCase() + "_description";
           $(toggle_class).show();
             
-          // Make arrow appear only for overflow
+          
+          // Make scroll arrow appear only for overflow
           var desc_box = $('#description_container')[0];
           
           if(desc_box.scrollHeight > desc_box.clientHeight) {
@@ -146,16 +150,14 @@
             $('.fa-arrow-down').hide();
           }
 
-          // hide all scale popups
+
+          // hide all object scale image popups
           $(".scale_popup").hide();
           popup_open = false;
 
-
+          // identify from WTML file where WWT should fly to (and parse click-type)
           $.each(folder.get_children(), function (i, wwtplace) {
             if (wwtplace.get_name() == place.attr('Name')) {
-              // store the object whose thumbnail was just clicked
-              curr_obj = wwtplace;
-
               wwt_ctl.gotoTarget(
                 wwtplace,  // the Place object
                 false,  // noZoom -- false means zoom level is set to something "sensible" for the target
@@ -167,23 +169,22 @@
            
         }
 
+
+        // attach click events to thumbnails to trigger the on_click function (defined above)
         tmpthumb.find('a')
           .data('foreground-image', place.attr('Name'))
-          //'click' - false; 'dblclick' - true.  on('click', function () { on_click(false) });
-
+          // specify different functionality for click vs. dblclick
           .on('click', function(event){
             var element = event.target;
             on_click(element, false)
           })
-
           .on('dblclick', function(event){
             var element = event.target;
             on_click(element, true)
           });
 
-        
+        // pop up image of object scale, using mouseenter/mouseleave/click methods
         var popup_id = "#" + place.attr('Name').toLowerCase() + "_scale"
-
         tmpdesc.find('a').mouseenter(function() {
           if (!(popup_open)) {
             $(popup_id).show();
@@ -204,55 +205,42 @@
 
         // Plug the set of thumbnails into the #destinationThumbs element
         $('#destinationThumbs').append(tmpthumb);
+        // check whether all the thumbnails have loaded (which is hard-coded as 15), at which point populate in the lighting buttons
         thumbnails_loaded = thumbnails_loaded + 1;
         if (thumbnails_loaded == 15) {
           var lighting_buttons = $('<div class="col_thumb"><div class="thumbnail lighting_buttons"><div class="rl_text">realistic lighting</div><div class="lighting_toggle" tabindex="16"><i class="fas reallight fa-toggle-on"></i><i class="fas fulllight fa-toggle-off button_hide"></i></div></div></div>');
           $('#destinationThumbs').append(lighting_buttons);
         }
+        
+        // Add description to the desc_container
+        $("#description_container").append(tmpdesc);
 
-        // 1. Full lighting
-        $('.fulllight').click(function() {
-          $('.fulllight').addClass("button_hide")
-          $('.reallight').removeClass('button_hide');
+        
+        // Lighting - click Events, toggle between the two icons
+        $('.lighting_toggle').click(function() {
+          $('.fulllight').toggleClass("button_hide")
+          $('.reallight').toggleClass("button_hide");
 
-          real_lighting = (true);
-          wwt_si.settings.set_solarSystemLighting(real_lighting);
-
-        })
-      
-        // 2. Real Lighting
-        $('.reallight').click(function() {
-          $('.reallight').addClass("button_hide")
-          $('.fulllight').removeClass('button_hide');
-
-          real_lighting = (false);
+          real_lighting = !(real_lighting);
           wwt_si.settings.set_solarSystemLighting(real_lighting);
         })
 
-        // 3. Lighting - Key Events, toggle with focus
+        // Lighting - Keydown Events, toggle with focus (key event 13 represents "enter")
         $('.lighting_toggle').keydown(function() {
           if (event.which == 13) {
             $('.fulllight').toggleClass("button_hide")
-            $('.reallight').toggleClass('button_hide');
+            $('.reallight').toggleClass("button_hide");
 
-            if (real_lighting == true) {
-              real_lighting = false;
-            }
-            else if (real_lighting == false) {
-              real_lighting = true;
-            }
+            real_lighting = !(real_lighting);
             wwt_si.settings.set_solarSystemLighting(real_lighting);
           }
         })
 
-        // Add description to the desc_container
-        $("#description_container").append(tmpdesc);
-
       });
-
     });
-
   };
+
+
 
   // Load data from wtml file
   function loadWtml(callback) {
@@ -295,24 +283,27 @@
   };
 
 
-  // Backend details:
-  
-  // auto-resizing the WWT canvas.
+  // Backend details: auto-resizing the WWT canvas.
+
   function size_content() {
     var container = $("html");
     var top_container = $(".top_container");
 
     // Constants here must be synced with settings in style.css
-    const new_wwt_height = top_container.height() - 2;  // set wwt_canvas height to fill top_container, subtract 2 to account for border width
+    const new_wwt_height = top_container.height() - 2;
+    // set wwt_canvas height to fill top_container, subtract 2 to account for border width
+
     const colophon_height = $("#colophon").height();
     
     const bottom_height = container.height() - top_container.outerHeight() - 80;
     const description_height = bottom_height - colophon_height;
 
+    // resize wwtcanvas with new values
     $("#wwtcanvas").css({
       "height": new_wwt_height + "px"
     });
 
+    // resize description box to new value
     $("#description_box").css({
       "height": description_height + "px"
     });
@@ -321,11 +312,10 @@
 
   $(document).ready(size_content);
   $(window).resize(size_content);
-  // also triggering size_content function in the load_wtml function, because thumbnails aren't loading immediately
+  // also triggering size_content function in the load_wtml function,
+  // because thumbnails aren't loading immediately
     
     
-
-
 
   // Backend details: setting up keyboard controls.
   //
@@ -359,21 +349,21 @@
     const mouse_down = new_event("wwt-move", { movementX: 0, movementY: -53 }, true);
 
     const zoomCodes = {
-      "KeyZ": wheel_up,
-      "KeyX": wheel_down,
-      90: wheel_up,
-      88: wheel_down
+      "KeyI": wheel_up,
+      "KeyO": wheel_down,
+      73: wheel_up,
+      79: wheel_down
     };
 
     const moveCodes = {
-      "KeyJ": mouse_left,
-      "KeyI": mouse_up,
-      "KeyL": mouse_right,
-      "KeyK": mouse_down,
-      74: mouse_left,
-      73: mouse_up,
-      76: mouse_right,
-      75: mouse_down
+      "KeyA": mouse_left,
+      "KeyW": mouse_up,
+      "KeyD": mouse_right,
+      "KeyS": mouse_down,
+      65: mouse_left,
+      87: mouse_up,
+      68: mouse_right,
+      83: mouse_down
     };
 
     window.addEventListener("keydown", function (event) {
@@ -439,22 +429,18 @@
         if (!proceed)
           return false;
 
-        if (event.shiftKey){
+        if (event.shiftKey)
           delay = 500; // milliseconds
-        }
-        else{
+        else
           delay = 100;
-        }
 
         setTimeout(function () { proceed = true }, delay);
 
         if (event.deltaY < 0){
           wwt_ctl.zoom(1.43);
-          console.log("zoom level =", wwt_ctl.get_zoom);
         }
         else {
           wwt_ctl.zoom(0.7);
-          console.log("zoom level =", wwt_ctl.get_zoom);
         }
 
       }
@@ -463,10 +449,9 @@
   
   // when user scrolls to bottom of the description container, remove the down arrow icon. Add it back when scrolling back up.
   $('#description_container').on('scroll', function(event) {
-      var element = event.target;
+    var element = event.target;
     
     if(element.scrollHeight - element.scrollTop === element.clientHeight) {
-      console.log("reached bottom!");
       $('.fa-arrow-down').fadeOut(200);
     }
     else {
@@ -479,7 +464,7 @@
     $("#zoom_pan_instrux").delay(5000).fadeOut(1000);
   })
 
-  // FOUR EVENT HANDLERS FOR PAT TO EXPERIMENT WITH TIME-SCALES
+  // FOUR EVENT HANDLERS FOR TIME-RATES
   // 1. Reset Button (return to present time)
   $('#reset_time').on('click', function() {
     wwt_stc.set_syncToClock(true); 
@@ -493,19 +478,17 @@
     $('#slower_time').removeClass('time_active');
     $('#faster_time').addClass('time_active');
 
-    $('#speed').html('REAL TIME');
+    $('#time_rate').html('REAL TIME');
   })
 
-  // This will become pause/play button - needs to be updated
   // 2. Play/Pause Button (play/pause advancing time)
   $('#playpause_time').on('click', function() {
     if (curr_time != 0) {
       curr_time = 0;
       wwt_stc.set_syncToClock(false);
- //     wwt_stc.set_timeRate(curr_time);
   
       $('#faster_time').removeClass('time_active');
-      $('#speed').html('PAUSE');
+      $('#time_rate').html('PAUSE');
     }
     else {
       curr_time = 1;
@@ -520,74 +503,70 @@
     $('#reset_time').removeClass('text_orange').addClass('time_active');
   })
 
-  // 3. Slower Button (advance time more slowly)
+  // 3. Slower Button (advance time more slowly; min out at real time)
   $('#slower_time').on('click', function() {
-    // if ($('#speed').html() != ('REAL TIME' | 'PAUSE')) {
-      if (curr_time > 1) {
-        curr_time = wwt_stc.get_timeRate()/10;
-        wwt_stc.set_timeRate(curr_time);
-        $('#faster_time').addClass('time_active');
+    if (curr_time > 1) {
+      curr_time = wwt_stc.get_timeRate()/10;
+      wwt_stc.set_timeRate(curr_time);
+      $('#faster_time').addClass('time_active');
 
-        print_time(curr_time);
-      }
-      if (curr_time <= 1) {
-        $('#slower_time').removeClass('time_active');
-      }
-    // }
+      print_time(curr_time);
+    }
+    if (curr_time <= 1) {
+      $('#slower_time').removeClass('time_active');
+    }
   })
 
-  // 4. Faster Button (advance time more quickly)
+  // 4. Faster Button (advance time more quickly; max out at 1,000,000,000x)
   $('#faster_time').on('click', function() {
-    // if () {
-      if (curr_time > 0 && curr_time < 1000000000) {
-        curr_time = wwt_stc.get_timeRate()*10;
-        wwt_stc.set_timeRate(curr_time);
-        $('#slower_time').addClass('time_active');
-        $('#reset_time').removeClass('text_orange').addClass('time_active');
+    if (curr_time > 0 && curr_time < 1000000000) {
+      curr_time = wwt_stc.get_timeRate()*10;
+      wwt_stc.set_timeRate(curr_time);
+      $('#slower_time').addClass('time_active');
+      $('#reset_time').removeClass('text_orange').addClass('time_active');
 
-        print_time(curr_time);
-      }
-      if (curr_time >= 1000000000) {
-        $('#faster_time').removeClass('time_active');
-      }
-    // }
+      print_time(curr_time);
+    }
+    if (curr_time >= 1000000000) {
+      $('#faster_time').removeClass('time_active');
+    }
   })
 
-  $('#speed').html('REAL TIME');
+  // Initialize the time_rate readout to REAL TIME, since that's what WWT does
+  $('#time_rate').html('REAL TIME');
 
+  // Print the current time rate to the time_rate readout depending on the backend value (could be simplified to a switch statement)
   function print_time(num) {
-    console.log("print time");
     if (num==1){
-      $('#speed').html('REAL TIME');
+      $('#time_rate').html('REAL TIME');
     }
     else if (num==10 | num==100) {
-      $('#speed').html(num + '<span class="times">&#215;</span>');
+      $('#time_rate').html(num + '<span class="times">&#215;</span>');
     }
     else if (num==1000) {
-      $('#speed').html('1,000<span class="times">&#215;</span>');
+      $('#time_rate').html('1,000<span class="times">&#215;</span>');
     }
     else if (num==10000) {
-      $('#speed').html('10,000<span class="times">&#215;</span>');
+      $('#time_rate').html('10,000<span class="times">&#215;</span>');
     }
     else if (num==100000) {
-      $('#speed').html('100,000<span class="times">&#215;</span>');
+      $('#time_rate').html('100,000<span class="times">&#215;</span>');
     }
     else if (num==1000000) {
-      $('#speed').html('1,000,000<span class="times">&#215;</span>');
+      $('#time_rate').html('1,000,000<span class="times">&#215;</span>');
     }
     else if (num==10000000) {
-      $('#speed').html('10,000,000<span class="times">&#215;</span>');
+      $('#time_rate').html('10,000,000<span class="times">&#215;</span>');
     }
     else if (num==100000000) {
-      $('#speed').html('100,000,000<span class="times">&#215;</span>');
+      $('#time_rate').html('100,000,000<span class="times">&#215;</span>');
     }
     else if (num==1000000000) {
-      $('#speed').html('1,000,000,000<span class="times">&#215;</span>');
+      $('#time_rate').html('1,000,000,000<span class="times">&#215;</span>');
     }
   }
 
-
-  // 5. Planet Scale Slider (Planet Size smaller/larger)
+  // Planet Scale Slider (Planet Size smaller/larger)
   $('#size_slider').slider({
     value: 3,
     min: 1,
@@ -598,31 +577,27 @@
     }
   })
 
+  // Set up a switch statement for the different possible values on the slider,
+  // then print to the object_size readout
   function process_planet_scale(num) {
-    console.log("Object size: ", num);
     switch(num) {
       case 1:
-        console.log("smallest size");
         object_size = 1;
         wwt_si.settings.set_solarSystemScale(object_size);
         break;
       case 2:
-        console.log("medium size" + object_size);
         object_size = 10;
         wwt_si.settings.set_solarSystemScale(object_size); 
         break;
       case 3:
-        console.log("biggish size");
         object_size = 25;
         wwt_si.settings.set_solarSystemScale(object_size); 
         break;
       case 4:
-        console.log("bigger size");
         object_size = 50;
         wwt_si.settings.set_solarSystemScale(object_size); 
         break;
       case 5:
-        console.log("biggest size");
         object_size=100;
         wwt_si.settings.set_solarSystemScale(object_size); 
         break;
@@ -634,7 +609,8 @@
       $("#size").html(object_size + '<span class="times">&#215;</span>');
     }
   }
-  $("#size").html(object_size + '<span class="times">&#215;</span>');
+
+  // Initialize the object_size readout to the hardcoded initial value
   process_planet_scale(object_size);
 
   // Close scale popups when clicking the close icon
