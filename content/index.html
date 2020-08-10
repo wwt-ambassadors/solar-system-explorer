@@ -41,6 +41,8 @@
         <div class="left_col">
             <div id="destinationThumbs">
             </div>
+            <div id="thumbs_note">double-click to arrive<br>
+                to target immediately</div>
         </div>
         <div class="right_col">
             <div class="top_container">
@@ -51,7 +53,7 @@
 -->
                 <div id="wwtcanvas">
                     <h1 id="page_title">Solar System Explorer</h1>
-                    <div id="speed_scale_container">
+                    <div id="time_size_container">
                         <div id="time_buttons">
                             <a id="reset_time" class="fa-stack fa-sm text_orange" href="#" data-toggle="tooltip" data-placement="top" title="reset time to Now">
                                 <i class="far fa-circle fa-stack-2x"></i>
@@ -73,7 +75,7 @@
                             </a>
                         </div>
                         <div id="speedometer">
-                            time rate: <span id="speed">REAL TIME</span>
+                            time rate: <span id="time_rate">REAL TIME</span>
                         </div>
                         <div id="size_slider"></div>
                         <div id="size_text">object size: <span id="size"></span></div>
@@ -84,55 +86,68 @@
                         </div>
                     </div>
                     
-<!--                    <i id="reset_target" class="fas fa-redo-alt"></i>-->
                     <div id="zoom_pan_container">
                         <div id="zoom_pan_instrux">
-                            to zoom, scroll in or out (or use the <strong>Z-X</strong> keys)<br>
-                            to pan, click + drag (or use the <strong>I-J-K-L</strong> keys)
+                            to zoom, scroll in or out (or use the <strong>I-O</strong> keys)<br>
+                            to pan, click + drag (or use the <strong>W-A-S-D</strong> keys)
                         </div>
                     </div>
                     
                     <div id="sun_scale" class="scale_popup shadow-lg">
                         <img src="images/sun_earth_scale.jpg" alt="Sun Earth scale">
+                        <i class="fas fa-times-circle close_scale"></i>
                     </div>
                     <div id="mercury_scale" class="scale_popup shadow-lg">
                         <img src="images/mercury_earth_scale.jpg" alt="Mercury Earth scale">
+                        <i class="fas fa-times-circle close_scale"></i>
                     </div>
                     <div id="venus_scale" class="scale_popup shadow-lg">
                         <img src="images/venus_earth_scale.jpg" alt="Venus Earth scale">
+                        <i class="fas fa-times-circle close_scale"></i>
                     </div>
                     <div id="moon_scale" class="scale_popup shadow-lg">
                         <img src="images/moon_earth_scale.jpg" alt="Moon Earth scale">
+                        <i class="fas fa-times-circle close_scale"></i>
                     </div>
                     <div id="mars_scale" class="scale_popup shadow-lg">
                         <img src="images/mars_earth_scale.jpg" alt="Mars Earth scale">
+                        <i class="fas fa-times-circle close_scale"></i>
                     </div>
                     <div id="jupiter_scale" class="scale_popup shadow-lg">
                         <img src="images/jupiter_earth_scale.jpg" alt="Jupiter Earth scale">
+                        <i class="fas fa-times-circle close_scale"></i>
                     </div>
                     <div id="io_scale" class="scale_popup shadow-lg">
                         <img src="images/io_earth_scale.jpg" alt="Io Earth scale">
+                        <i class="fas fa-times-circle close_scale"></i>
                     </div>
                     <div id="europa_scale" class="scale_popup shadow-lg">
                         <img src="images/europa_earth_scale.jpg" alt="Europa Earth scale">
+                        <i class="fas fa-times-circle close_scale"></i>
                     </div>
                     <div id="ganymede_scale" class="scale_popup shadow-lg">
                         <img src="images/ganymede_earth_scale.jpg" alt="Ganymede Earth scale">
+                        <i class="fas fa-times-circle close_scale"></i>
                     </div>
                     <div id="callisto_scale" class="scale_popup shadow-lg">
                         <img src="images/callisto_earth_scale.jpg" alt="Callisto Earth scale">
+                        <i class="fas fa-times-circle close_scale"></i>
                     </div>
                     <div id="saturn_scale" class="scale_popup shadow-lg">
                         <img src="images/saturn_earth_scale.jpg" alt="Saturn Earth scale">
+                        <i class="fas fa-times-circle close_scale"></i>
                     </div>
                     <div id="uranus_scale" class="scale_popup shadow-lg">
                         <img src="images/uranus_earth_scale.jpg" alt="Uranus Earth scale">
+                        <i class="fas fa-times-circle close_scale"></i>
                     </div>
                     <div id="neptune_scale" class="scale_popup shadow-lg">
                         <img src="images/neptune_earth_scale.jpg" alt="Neptune Earth scale">
+                        <i class="fas fa-times-circle close_scale"></i>
                     </div>
                     <div id="pluto_scale" class="scale_popup shadow-lg">
                         <img src="images/pluto_earth_scale.jpg" alt="Pluto Earth scale">
+                        <i class="fas fa-times-circle close_scale"></i>
                     </div>
                     
                 </div>
@@ -156,7 +171,6 @@
                     </div>
                     <i id="scroll_arrow" class="fas fa-arrow-down"></i>
                 </div>
-                <br>
             </div>
         </div>
         
