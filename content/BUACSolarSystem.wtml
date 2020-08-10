@@ -25,7 +25,7 @@
         <ul>
           <li><strong>Radius:</strong> <a id="neptune_scale" href="#">3.9 Earth radii</a> (25,000 km)</li>
           <li><strong>Mass:</strong> 17 Earth's mass (1.0 &#215; 10<sup>26</sup> kg)</li>
-          <li><strong>Surface composition:</strong> Gaseous</li>
+          <li><strong>Structure:</strong> Gaseous</li>
           <li><strong>Average distance from Sun:</strong> 30 AU (4.5 &#215; 10<sup>9</sup> km)</li>
           <li><strong>Length of year:</strong> 160 Earth years</li>
           <li><strong>Known moons:</strong> 14</li>
@@ -57,7 +57,7 @@
         <ul>
           <li><strong>Radius:</strong> <a id="pluto_scale" href="#">0.19 Earth radii</a> (1,200 km)</li>
           <li><strong>Mass:</strong> 0.0025 Earth's mass (1.5 &#215; 10<sup>22</sup> kg)</li>
-          <li><strong>Surface composition:</strong> Icy</li>
+          <li><strong>Structure:</strong> Icy</li>
           <li><strong>Average distance from Sun:</strong> 39 AU (5.9 &#215; 10<sup>9</sup> km)</li>
           <li><strong>Length of year:</strong> 250 Earth years</li>
           <li><strong>Known moons:</strong> 5</li>
@@ -89,7 +89,7 @@
         <ul>
           <li><strong>Radius:</strong> <a id="saturn_scale" href="#">9.5 Earth radii</a> (58,000 km)</li>
           <li><strong>Mass:</strong> 95 Earth's mass (5.7 &#215; 10<sup>26</sup> kg)</li>
-          <li><strong>Surface composition:</strong> Gaseous</li>
+          <li><strong>Structure:</strong> Gaseous</li>
           <li><strong>Average distance from Sun:</strong> 9.6 AU (1.4 &#215; 10<sup>9</sup> km)</li>
           <li><strong>Length of year:</strong> 29 Earth years</li>
           <li><strong>Known moons:</strong> 82</li>
@@ -121,7 +121,7 @@
         <ul>
           <li><strong>Radius:</strong> <a id="uranus_scale" href="#">4.0 Earth radii</a> (25,000 km)</li>
           <li><strong>Mass:</strong> 15 Earth's mass (8.7 &#215; 10<sup>25</sup> kg)</li>
-          <li><strong>Surface composition:</strong> Gaseous</li>
+          <li><strong>Structure:</strong> Gaseous</li>
           <li><strong>Average distance from Sun:</strong> 19.1 AU (2.9 &#215; 10<sup>9</sup> km)</li>
           <li><strong>Length of year:</strong> 84 Earth years</li>
           <li><strong>Known moons:</strong> 27</li>
@@ -153,7 +153,7 @@
         <ul>
           <li><strong>Radius:</strong> <a id="ganymede_scale" href="#">0.41 Earth radii</a> (2,600 km)</li>
           <li><strong>Mass:</strong> 0.025 Earth's mass (1.5 &#215; 10<sup>23</sup> kg)</li>
-          <li><strong>Surface composition:</strong> Icy </li>
+          <li><strong>Structure:</strong> Icy </li>
           <li><strong>Average distance from Jupiter:</strong> 84 Earth diameters (1.1 &#215; 10<sup>6</sup> km)</li>
           <li><strong>Orbital period:</strong> 7.2 Earth days</li>
         </ul>
@@ -184,7 +184,7 @@
         <ul>
           <li><strong>Radius:</strong> <a id="callisto_scale" href="#">0.378 Earth radii</a> (2,410 km)</li>
           <li><strong>Mass:</strong> 0.018 Earth's mass (1.1 &#215; 10<sup>23</sup> kg)</li>
-          <li><strong>Surface composition:</strong> Icy</li>
+          <li><strong>Structure:</strong> Icy</li>
           <li><strong>Average distance from Jupiter:</strong> 150 Earth diameters (1.9 &#215; 10<sup>6</sup> km)</li>
           <li><strong>Orbital period:</strong> 17 Earth days</li>
         </ul>
@@ -215,7 +215,7 @@
         <ul>
           <li><strong>Radius:</strong> <a id="io_scale" href="#">0.29 Earth radii</a> (1,800 km)</li>
           <li><strong>Mass:</strong> 0.015 Earth's mass (8.9 &#215; 10<sup>22</sup> kg)</li>
-          <li><strong>Surface composition:</strong> Rocky</li>
+          <li><strong>Structure:</strong> Rocky</li>
           <li><strong>Average distance from Jupiter:</strong> 33 Earth diameters (4.2 &#215; 10<sup>5</sup> km)</li>
           <li><strong>Orbital period:</strong> 42 hours</li>
         </ul>
@@ -246,7 +246,7 @@
         <ul>
           <li><strong>Radius:</strong> <a id="europa_scale" href="#">0.25 Earth radii</a> (1,600 km)</li>
           <li><strong>Mass:</strong> 0.015 Earth's mass (4.8 &#215; 10<sup>22</sup> kg)</li>
-          <li><strong>Surface composition:</strong> Icy</li>
+          <li><strong>Structure:</strong> Icy</li>
           <li><strong>Average distance from Jupiter:</strong> 52 Earth diameters (6.7 &#215; 10<sup>5</sup> km)</li>
           <li><strong>Orbital period:</strong> 3.5 Earth days</li>
         </ul>
@@ -277,7 +277,7 @@
         <ul>
           <li><strong>Radius:</strong> <a id="mars_scale" href="#">0.53 Earth radii</a> (3,400 km)</li>
           <li><strong>Mass:</strong> 0.11 Earth's mass (6.4 &#215; 10<sup>23</sup> kg)</li>
-          <li><strong>Surface composition:</strong> Rocky</li>
+          <li><strong>Structure:</strong> Rocky</li>
           <li><strong>Average distance from Sun:</strong> 1.5 AU (2.3 &#215; 10<sup>8</sup> km)</li>
           <li><strong>Length of year:</strong> 1.9 Earth years</li>
           <li><strong>Known moons:</strong> 2</li>
@@ -309,7 +309,7 @@
         <ul>
           <li><strong>Radius:</strong> <a id="jupiter_scale" href="#">11 Earth radii</a> (71,000 km)</li>
           <li><strong>Mass:</strong> 320 Earth's mass (1.9 &#215; 10<sup>27</sup> kg)</li>
-          <li><strong>Surface composition:</strong> Gaseous</li>
+          <li><strong>Structure:</strong> Gaseous</li>
           <li><strong>Average distance from Sun:</strong> 5.2 AU (7.8 &#215; 10<sup>8</sup> km)</li>
           <li><strong>Length of year:</strong> 12 Earth years</li>
           <li><strong>Known moons:</strong> 79 (including Io, Europa, Ganymede, Callisto)</li>
@@ -341,7 +341,7 @@
         <ul>
           <li><strong>Radius:</strong> 1 Earth radius (6,400 km)</li>
           <li><strong>Mass:</strong> 1 Earth's mass (6.0 &#215; 10<sup>24</sup> kg)</li>
-          <li><strong>Surface composition:</strong> Rocky</li>
+          <li><strong>Structure:</strong> Rocky</li>
           <li><strong>Average distance from Sun:</strong> 1 AU (1.5&#215; 10<sup>8</sup> km)</li>
           <li><strong>Length of year:</strong> 1 Earth year</li>
           <li><strong>Known moons:</strong> 1 (the Moon)</li>
@@ -373,7 +373,7 @@
         <ul>
           <li><strong>Radius:</strong> <a id="moon_scale" href="#">0.27 Earth radii</a> (1,700 km)</li>
           <li><strong>Mass:</strong> 0.012 Earth's mass (7.3 &#215; 10<sup>22</sup> kg)</li>
-          <li><strong>Surface composition:</strong> Rocky</li>
+          <li><strong>Structure:</strong> Rocky</li>
           <li><strong>Average distance from Earth:</strong> 30 Earth diameters (3.8 &#215; 10<sup>5</sup> km)</li>
           <li><strong>Orbital period:</strong> roughly 1 month (27 Earth days)</li>
         </ul>
@@ -404,7 +404,7 @@
         <ul>
           <li><strong>Radius:</strong> <a id="mercury_scale" href="#">0.382 Earth radii</a> (2,440 km)</li>
           <li><strong>Mass:</strong> 0.055 Earth's mass (3.3 &#215; 10<sup>23</sup> kg)</li>
-          <li><strong>Surface composition:</strong> Rocky</li>
+          <li><strong>Structure:</strong> Rocky</li>
           <li><strong>Average distance from Sun:</strong> 0.39 AU (5.7 &#215; 10<sup>7</sup> km)</li>
           <li><strong>Length of year:</strong> 0.24 Earth years</li>
           <li><strong>Known moons:</strong> None</li>
@@ -436,7 +436,7 @@
         <ul>
           <li><strong>Radius:</strong> <a id="venus_scale" href="#">0.95 Earth radii</a> (6,100 km)</li>
           <li><strong>Mass:</strong> 0.82 Earth's mass (4.9 &#215; 10<sup>24</sup> kg)</li>
-          <li><strong>Surface composition:</strong> Rocky</li>
+          <li><strong>Structure:</strong> Rocky</li>
           <li><strong>Average distance from Sun:</strong> 0.72 AU (1.1 &#215; 10<sup>8</sup> km)</li>
           <li><strong>Length of year:</strong> 0.62 Earth years</li>
           <li><strong>Known moons:</strong> None</li>
@@ -468,7 +468,7 @@
         <ul>
           <li><strong>Radius:</strong> <a id="sun_scale" href="#">108 Earth radii</a> (700,000 km)</li>
           <li><strong>Mass:</strong> 330,000 Earth's mass (2.0 &#215; 10<sup>30</sup> kg)</li>
-          <li><strong>Surface composition:</strong> Gaseous</li>
+          <li><strong>Structure:</strong> Gaseous</li>
         </ul>
       </div>
     </Description>
