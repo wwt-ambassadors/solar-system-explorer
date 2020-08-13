@@ -45,6 +45,11 @@ a, a:hover {
     font-size: 11px;
 }
 
+.smallcaps {
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
 
 
 /* The containers, top and bottom */
