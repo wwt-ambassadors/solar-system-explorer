@@ -151,7 +151,7 @@
           }
 
 
-          // hide all object scale image popups
+          // hide all object scale image popups (including new_horizons)
           $(".scale_popup").hide();
           popup_open = false;
 
@@ -186,7 +186,8 @@
 
         // pop up image of object scale, using click methods
         var popup_id = "#" + place.attr('Name').toLowerCase() + "_scale";
-        tmpdesc.find('a').click(function() {
+        tmpdesc.find('.scalelink').click(function() {
+          $('#new_horizons').hide();
           if (popup_open) {
             $(popup_id).hide();
           }
@@ -194,6 +195,15 @@
             $(popup_id).show();
           }
           popup_open = !(popup_open);
+        });
+
+        // account for the new_horizons image in the Pluto description text (note: this is not the most elegant way of adding to code)
+        tmpdesc.find('#new_horizons_popup').click(function() {
+          if (popup_open) {
+            $('.scale_popup').hide();
+            popup_open = !(popup_open);
+          }
+          $('#new_horizons').toggle();
         });
 
 
