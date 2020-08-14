@@ -380,6 +380,10 @@ a, a:hover {
     font-weight: bolder;
 }
 
+#new_horizons .close_scale {
+    color: white;
+}
+
 .close_scale:hover {
     cursor: pointer;
 }
