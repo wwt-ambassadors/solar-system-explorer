@@ -185,6 +185,7 @@
           });
 
         // pop up image of object scale, using mouseenter/mouseleave/click methods
+
         var popup_id = "#" + place.attr('Name').toLowerCase() + "_scale"
         tmpdesc.find('a').mouseenter(function() {
           if (!(popup_open)) {
@@ -203,6 +204,24 @@
           popup_open = !(popup_open);
         })
 
+        if(place.attr('Name')=="Pluto"){
+          tmpdesc.find('a').mouseenter(function() {
+            if (!(popup_open)) {
+              $("#new_horizons").show();
+            }
+          })
+          tmpdesc.find('a').mouseleave(function() {
+            if (!(popup_open)) {
+              $("#new_horizons").hide();
+            }
+          })
+          tmpdesc.find('a').click(function() {
+            if (popup_open) {
+              $("#new_horizons").hide();
+            }
+            popup_open = !(popup_open);
+          })
+       }
 
         // Plug the set of thumbnails into the #destinationThumbs element
         $('#destinationThumbs').append(tmpthumb);
