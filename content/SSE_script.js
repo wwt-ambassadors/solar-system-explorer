@@ -165,10 +165,10 @@
                 is_dblclick,  // instant -- whether to fly the almost-instantly
                 true  // trackObject -- whether to start the camera tracking this object
               );
-            }
+            };
           });
            
-        }
+        };
 
 
         // attach click events to thumbnails to trigger the on_click function (defined above)
@@ -184,24 +184,17 @@
             on_click(element, true)
           });
 
-        // pop up image of object scale, using mouseenter/mouseleave/click methods
-        var popup_id = "#" + place.attr('Name').toLowerCase() + "_scale"
-        tmpdesc.find('a').mouseenter(function() {
-          if (!(popup_open)) {
-            $(popup_id).show();
-          }
-        })
-        tmpdesc.find('a').mouseleave(function() {
-          if (!(popup_open)) {
-            $(popup_id).hide();
-          }
-        })
+        // pop up image of object scale, using click methods
+        var popup_id = "#" + place.attr('Name').toLowerCase() + "_scale";
         tmpdesc.find('a').click(function() {
           if (popup_open) {
             $(popup_id).hide();
           }
+          else {
+            $(popup_id).show();
+          }
           popup_open = !(popup_open);
-        })
+        });
 
 
         // Plug the set of thumbnails into the #destinationThumbs element
@@ -211,7 +204,7 @@
         if (thumbnails_loaded == 15) {
           var lighting_buttons = $('<div class="col_thumb"><div class="thumbnail lighting_buttons"><div class="rl_text">realistic lighting</div><div class="lighting_toggle" tabindex="16"><i class="fas reallight fa-toggle-on"></i><i class="fas fulllight fa-toggle-off button_hide"></i></div></div></div>');
           $('#destinationThumbs').append(lighting_buttons);
-        }
+        };
         
         // Add description to the desc_container
         $("#description_container").append(tmpdesc);
