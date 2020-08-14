@@ -196,6 +196,18 @@
           popup_open = !(popup_open);
         });
 
+        if(place.attr('Name')=="Pluto"){
+          tmpdesc.find('a').click(function() {
+            if (popup_open) {
+              $("#new_horizons").hide();
+            }
+            else {
+              $("#new_horizons").show();
+            }
+            popup_open = !(popup_open);
+          });
+       }
+
 
         // Plug the set of thumbnails into the #destinationThumbs element
         $('#destinationThumbs').append(tmpthumb);
