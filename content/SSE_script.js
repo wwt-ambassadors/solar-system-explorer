@@ -27,9 +27,16 @@
     // `wwtlib.WWTControl.singleton`, and returns a singleton
     // ScriptInterface object, also accessible as
     // `wwtlib.WWTControl.scriptInterface`.
-    wwt_si = wwtlib.WWTControl.initControlParam(
-      "wwtcanvas", // id of the <div> to draw in
-      true  // use WebGL!
+    /**
+    Replaced initControl with this alternate version that allows for different starting angles for the Solar System. 
+    */
+    wwt_si = wwtlib.WWTControl.initControl6(
+      "wwtcanvas",
+      true,
+      30,
+      30,
+      300,
+      "SolarSystem"
     );
     wwt_si.add_ready(wwt_ready);
   }
