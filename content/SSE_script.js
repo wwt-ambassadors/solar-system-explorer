@@ -35,7 +35,7 @@
       true,
       30,
       30,
-      300,
+      240,
       "SolarSystem"
     );
     wwt_si.add_ready(wwt_ready);
