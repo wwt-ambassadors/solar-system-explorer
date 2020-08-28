@@ -166,7 +166,7 @@ a, a:hover {
 /* WWT canvas */
 
 #wwtcanvas {
-	width: 90%;  /* note: overridden in SSE_script.js */
+	width: 99%;  /* note: overridden in SSE_script.js */
 	height: 100%;  /* note: overridden in SSE_script.js */
 	margin: auto;
 	border: solid 1px #333;
