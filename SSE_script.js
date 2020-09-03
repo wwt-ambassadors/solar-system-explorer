@@ -384,7 +384,8 @@
       if (zoomCodes.hasOwnProperty(event.code) || zoomCodes.hasOwnProperty(event.keyCode)) {
         // remove the zoom_pan instructions
         $("#zoom_pan_instrux").delay(5000).fadeOut(1000);
-
+        $("#page_title").delay(5000).fadeOut(1000);
+        
         var action = zoomCodes.hasOwnProperty(event.code) ? zoomCodes[event.code] : zoomCodes[event.keyCode];
 
         if (event.shiftKey)
@@ -399,6 +400,7 @@
       if (moveCodes.hasOwnProperty(event.code) || moveCodes.hasOwnProperty(event.keyCode)) {
         // remove the zoom_pan instructions
         $("#zoom_pan_instrux").delay(5000).fadeOut(1000);
+        $("#page_title").delay(5000).fadeOut(1000);
 
         var action = moveCodes.hasOwnProperty(event.code) ? moveCodes[event.code] : moveCodes[event.keyCode];
 
@@ -473,6 +475,7 @@
   // remove zoom-pan instructions upon canvas click, after a 5 second delay
   $('#wwtcanvas').on('click', function() {
     $("#zoom_pan_instrux").delay(5000).fadeOut(1000);
+    $("#page_title").delay(5000).fadeOut(1000);
   })
 
   // FOUR EVENT HANDLERS FOR TIME-RATES
