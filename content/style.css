@@ -378,6 +378,8 @@ a, a:hover {
     left: 10px;
     color: black;
     font-weight: bolder;
+    border-width: 0;
+    background-color: #0000;
 }
 
 #new_horizons .close_scale {
