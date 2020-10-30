@@ -633,5 +633,14 @@
     $(".scale_popup").hide();
     popup_open = false;
   })
+  
+  // Place focus on 'Close' button upon opening of modal
+  $(document).keydown(function(e) {
+    var key = e.which;
+    if (key == 27) {
+      $(".scale_popup").hide();
+      $("#tipsModal").modal('hide');
+    }
+  })
 
 })();
