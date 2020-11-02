@@ -200,6 +200,7 @@
           }
           else {
             $(popup_id).show();
+            $(popup_id).find('.close_scale').focus();
           }
           popup_open = !(popup_open);
         });
@@ -634,7 +635,7 @@
     popup_open = false;
   })
   
-  // Place focus on 'Close' button upon opening of modal
+  // All for closing of modal or popups with 'esc' key
   $(document).keydown(function(e) {
     var key = e.which;
     if (key == 27) {
