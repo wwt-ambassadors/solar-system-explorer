@@ -19,6 +19,9 @@
   // global variable for popup clicks
   var popup_open = false;
 
+  // The WWT `Folder` instance for our WTML collection
+  var wwt_folder = null;
+
   // function to start off with when $(document).ready() takes off
   function initialize() {
     // This function call is
@@ -63,7 +66,7 @@
     setup_controls();
 
     //(variables defined inside a function are not known to other functions)
-    loadWtml(function (folder, xml) {
+    loadWtml(function (xml) {
 
       // store each of the Place objects from the WTML file in places
       var places = $(xml).find('Place');
@@ -164,7 +167,7 @@
 
           
           // identify from WTML file where WWT should fly to (and parse click-type)
-          $.each(folder.get_children(), function (i, wwtplace) {
+          $.each(wwt_folder.get_children(), function (i, wwtplace) {
             if (wwtplace.get_name() == place.attr('Name')) {
               wwt_ctl.gotoTarget(
                 wwtplace,  // the Place object
@@ -268,7 +271,7 @@
         dataType: 'xml',
         cache: false,
         success: function (xml) {
-          callback(wwt_si._imageFolder, xml)
+          callback(xml)
         },
         error: function (a, b, c) {
           console.log({ a: a, b: b, c: c });
@@ -276,10 +279,12 @@
       });
     }
 
-    // Load the image collection
+    // Load the image collection. This is an asynchronous action; wwt_folder
+    // won't actually be populated until the HTTP request is answered and
+    // we process the folder contents.
     var wtmlPath = "BUACSolarSystem.wtml";
-    wwt_si.loadImageCollection(wtmlPath);
-    console.log("Loaded Image Collection");
+    wwt_folder = wwtlib.Wtml.getWtmlFile(wtmlPath, function () { }, false);
+    console.log("Loading Image Collection");
     getWtml();
     setTimeout(function () {
       getWtml();
