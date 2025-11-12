@@ -523,6 +523,6 @@ a, a:hover {
     margin-right: 5px;
 }
 
-
-
-
+#script-error-warning {
+  display: none;
+}

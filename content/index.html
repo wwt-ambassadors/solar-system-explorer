@@ -18,9 +18,49 @@
 		
 		<!-- import Roboto font -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+        <script>
+          window.onloadCallbacks = [];
+
+          window.onload = function() {
+            window.onloadCallbacks.forEach(func => func());
+            delete window.onloadCallbacks;
+          }
+
+          function runOnLoad(func) {
+            if (document.readyState != "loading") {
+              func();
+            } else {
+              window.onloadCallbacks.push(func);
+            }
+          }
+
+          function sdkTimeoutClear() {
+            clearTimeout(window.sdkTimeout);
+          }
+
+          function showSdkErrorBanner() {
+            const banner = document.getElementById('script-error-warning');
+            if (banner) {
+              banner.style.display = 'unset';
+            }
+          }
+
+          function onSdkError() {
+            runOnLoad(showSdkErrorBanner);
+          }
+
+          window.sdkTimeout = setTimeout(function timeout() {
+            runOnLoad(showSdkErrorBanner);
+          }, 10_000);
+        </script>
 		
         <!-- Newer SDK! -->
-        <script src="//web.wwtassets.org/engine/7/wwtsdk.js"></script>
+        <script
+          src="//web.wwtassets.org/engine/7/wwtsdk.js"
+          onload="sdkTimeoutClear()"
+          onerror="onSdkError()"
+        ></script>
 		
 		<!-- Javascript links for jQuery and Bootstrap and FontAwesome -->
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -47,6 +87,9 @@
 	</head>
 	
 	<body>
+        <div id="script-error-warning" style="position: fixed; top: 0; left: 0; right: 0; z-index: 9999; margin: 0; padding: 12px 20px; background-color: #dc3545; color: #fff; text-align: center; font-size: 14px;">
+            <strong>Warning:</strong>There was an issue loading WorldWide Telescope; the app and imagery may load slowly or not at all. We apologize for the inconvenience. Please try again later.
+        </div>
         <div class="left_col">
             <div id="destinationThumbs">
             </div>

@@ -47,9 +47,10 @@
   // Execute on load of DOM
   $(document).ready(initialize);
 
-
   // If you can follow the logic above, it'll get here, and this is where the action really happens
   function wwt_ready() {
+
+
     wwt_ctl = wwtlib.WWTControl.singleton;
     wwt_stc = wwtlib.SpaceTimeController;
 
